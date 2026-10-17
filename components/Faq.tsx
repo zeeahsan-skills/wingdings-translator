@@ -52,15 +52,15 @@ export default function Faq() {
 
   return (
     <section id="faq" aria-label="Frequently asked questions" className="scroll-mt-24">
-      <h2 className="text-2xl font-bold tracking-tight text-slate-900">Frequently asked questions</h2>
+      <h2 className="text-2xl font-bold tracking-tight text-zinc-100">Frequently asked questions</h2>
       <div className="mt-4 space-y-2">
         {FAQS.map((f) => (
-          <details key={f.q} className="group rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-sm">
-            <summary className="cursor-pointer list-none text-base font-semibold text-slate-900 marker:hidden [&::-webkit-details-marker]:hidden">
-              <span className="mr-2 inline-block text-indigo-600 transition group-open:rotate-90" aria-hidden="true">▸</span>
+          <details key={f.q} className="group rounded-2xl border border-zinc-800 bg-zinc-900 px-5 py-4 shadow-sm">
+            <summary className="cursor-pointer list-none text-base font-semibold text-zinc-100 marker:hidden [&::-webkit-details-marker]:hidden">
+              <span className="mr-2 inline-block text-indigo-400 transition group-open:rotate-90" aria-hidden="true">▸</span>
               {f.q}
             </summary>
-            <p className="mt-2 text-sm leading-relaxed text-slate-600">{f.a}</p>
+            <p className="mt-2 text-sm leading-relaxed text-zinc-400">{f.a}</p>
           </details>
         ))}
       </div>

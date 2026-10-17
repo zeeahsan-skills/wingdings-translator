@@ -33,8 +33,8 @@ const FAQS = [
 export default function AlphabetChartPage() {
   return (
     <div className="mx-auto max-w-5xl px-4 pb-16">
-      <nav aria-label="Breadcrumb" className="pt-6 text-sm text-slate-500">
-        <Link href="/" className="hover:text-indigo-600">Wingdings Translator</Link>
+      <nav aria-label="Breadcrumb" className="pt-6 text-sm text-zinc-500">
+        <Link href="/" className="hover:text-indigo-400">Wingdings Translator</Link>
         <span aria-hidden="true"> / </span>
         <span aria-current="page">Wingdings Alphabet Chart</span>
       </nav>
@@ -43,7 +43,7 @@ export default function AlphabetChartPage() {
         <h1 className="text-gradient-flow mx-auto max-w-3xl text-4xl font-extrabold tracking-tight sm:text-5xl">
           Wingdings Alphabet Chart
         </h1>
-        <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600">
+        <p className="mx-auto mt-4 max-w-2xl text-lg text-zinc-400">
           Every Wingdings 1, Wingdings 2, Wingdings 3 and Webdings symbol in one searchable
           reference. <strong>Click any symbol to copy it</strong> — no retyping from a static image.
         </p>
@@ -51,17 +51,17 @@ export default function AlphabetChartPage() {
 
       <SymbolReference />
 
-      <section className="mt-14 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-        <h2 className="text-xl font-bold text-slate-900">How to use this chart</h2>
-        <p className="mt-3 text-sm leading-relaxed text-slate-600">
+      <section className="mt-14 rounded-2xl border border-zinc-800 bg-zinc-900 p-6 shadow-sm">
+        <h2 className="text-xl font-bold text-zinc-100">How to use this chart</h2>
+        <p className="mt-3 text-sm leading-relaxed text-zinc-400">
           Each card shows the symbol, the keyboard key that produces it in the original font, and
           its Unicode code point. Click a card to copy the symbol, then paste it into a chat, bio,
           document or design file. To convert whole sentences instead of single symbols, use the{" "}
-          <Link href="/" className="font-semibold text-indigo-600 hover:underline">
+          <Link href="/" className="font-semibold text-indigo-400 hover:underline">
             Wingdings translator
           </Link>
           . Fans decoding Undertale&apos;s hidden character may prefer the{" "}
-          <Link href="/gaster-translator/" className="font-semibold text-indigo-600 hover:underline">
+          <Link href="/gaster-translator/" className="font-semibold text-indigo-400 hover:underline">
             Gaster translator
           </Link>
           .

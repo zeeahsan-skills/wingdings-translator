@@ -30,8 +30,8 @@ const FAQS = [
 export default function WebdingsPage() {
   return (
     <div className="mx-auto max-w-5xl px-4 pb-16">
-      <nav aria-label="Breadcrumb" className="pt-6 text-sm text-slate-500">
-        <Link href="/" className="hover:text-indigo-600">Wingdings Translator</Link>
+      <nav aria-label="Breadcrumb" className="pt-6 text-sm text-zinc-500">
+        <Link href="/" className="hover:text-indigo-400">Wingdings Translator</Link>
         <span aria-hidden="true"> / </span>
         <span aria-current="page">Webdings Translator</span>
       </nav>
@@ -40,7 +40,7 @@ export default function WebdingsPage() {
         <h1 className="text-gradient-flow mx-auto max-w-3xl text-4xl font-extrabold tracking-tight sm:text-5xl">
           Webdings Translator
         </h1>
-        <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600">
+        <p className="mx-auto mt-4 max-w-2xl text-lg text-zinc-400">
           Convert English to Webdings icons and decode Webdings back to English — live as you type.
           Free, no sign-up, runs entirely in your browser.
         </p>
@@ -48,21 +48,21 @@ export default function WebdingsPage() {
 
       <VariantTool defaultVariant="webdings" />
 
-      <section className="mt-14 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-        <h2 className="text-xl font-bold text-slate-900">About Webdings</h2>
-        <p className="mt-3 text-sm leading-relaxed text-slate-600">
+      <section className="mt-14 rounded-2xl border border-zinc-800 bg-zinc-900 p-6 shadow-sm">
+        <h2 className="text-xl font-bold text-zinc-100">About Webdings</h2>
+        <p className="mt-3 text-sm leading-relaxed text-zinc-400">
           Webdings took the dingbat idea to the early web: spiders, buildings, vehicles, media
           controls and interface glyphs. It shares the one-key-one-picture concept with Wingdings
           but none of the mappings, so treat it as its own code. Also see the{" "}
-          <Link href="/wingdings-2-translator/" className="font-semibold text-indigo-600 hover:underline">
+          <Link href="/wingdings-2-translator/" className="font-semibold text-indigo-400 hover:underline">
             Wingdings 2 translator
           </Link>
           , the{" "}
-          <Link href="/wingdings-3-translator/" className="font-semibold text-indigo-600 hover:underline">
+          <Link href="/wingdings-3-translator/" className="font-semibold text-indigo-400 hover:underline">
             Wingdings 3 translator
           </Link>
           , or the{" "}
-          <Link href="/" className="font-semibold text-indigo-600 hover:underline">
+          <Link href="/" className="font-semibold text-indigo-400 hover:underline">
             main translator
           </Link>{" "}
           covering all four fonts.

@@ -30,8 +30,8 @@ const FAQS = [
 export default function Wingdings3Page() {
   return (
     <div className="mx-auto max-w-5xl px-4 pb-16">
-      <nav aria-label="Breadcrumb" className="pt-6 text-sm text-slate-500">
-        <Link href="/" className="hover:text-indigo-600">Wingdings Translator</Link>
+      <nav aria-label="Breadcrumb" className="pt-6 text-sm text-zinc-500">
+        <Link href="/" className="hover:text-indigo-400">Wingdings Translator</Link>
         <span aria-hidden="true"> / </span>
         <span aria-current="page">Wingdings 3 Translator</span>
       </nav>
@@ -40,7 +40,7 @@ export default function Wingdings3Page() {
         <h1 className="text-gradient-flow mx-auto max-w-3xl text-4xl font-extrabold tracking-tight sm:text-5xl">
           Wingdings 3 Translator
         </h1>
-        <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600">
+        <p className="mx-auto mt-4 max-w-2xl text-lg text-zinc-400">
           Convert English to Wingdings 3 arrows and geometric symbols — or decode them back to
           English. Live conversion, free, no sign-up.
         </p>
@@ -48,22 +48,22 @@ export default function Wingdings3Page() {
 
       <VariantTool defaultVariant="wingdings3" />
 
-      <section className="mt-14 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-        <h2 className="text-xl font-bold text-slate-900">About Wingdings 3</h2>
-        <p className="mt-3 text-sm leading-relaxed text-slate-600">
+      <section className="mt-14 rounded-2xl border border-zinc-800 bg-zinc-900 p-6 shadow-sm">
+        <h2 className="text-xl font-bold text-zinc-100">About Wingdings 3</h2>
+        <p className="mt-3 text-sm leading-relaxed text-zinc-400">
           Where Wingdings 1 is pictograms and Wingdings 2 is stationery and ornaments, Wingdings 3
           is almost entirely directional: arrows in every direction, triangles, circles, squares and
           key-cap style symbols. It is the go-to font in the family for diagrams and navigation
           cues. For the other symbol sets, try the{" "}
-          <Link href="/wingdings-2-translator/" className="font-semibold text-indigo-600 hover:underline">
+          <Link href="/wingdings-2-translator/" className="font-semibold text-indigo-400 hover:underline">
             Wingdings 2 translator
           </Link>
           , the{" "}
-          <Link href="/webdings-translator/" className="font-semibold text-indigo-600 hover:underline">
+          <Link href="/webdings-translator/" className="font-semibold text-indigo-400 hover:underline">
             Webdings translator
           </Link>
           , or the{" "}
-          <Link href="/" className="font-semibold text-indigo-600 hover:underline">
+          <Link href="/" className="font-semibold text-indigo-400 hover:underline">
             main translator
           </Link>{" "}
           with all four fonts.

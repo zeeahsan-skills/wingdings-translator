@@ -20,16 +20,16 @@ const NOTES = [
 export default function CompatibilityGuide() {
   return (
     <section id="compatibility" aria-label="Compatibility guide" className="scroll-mt-24">
-      <h2 className="text-2xl font-bold tracking-tight text-slate-900">Compatibility guide</h2>
-      <p className="mt-2 max-w-2xl text-slate-600">
+      <h2 className="text-2xl font-bold tracking-tight text-zinc-100">Compatibility guide</h2>
+      <p className="mt-2 max-w-2xl text-zinc-400">
         Honest notes on where Wingdings text works, where it doesn&apos;t, and why — so you&apos;re
         never surprised after hitting copy.
       </p>
       <div className="mt-4 grid gap-3 md:grid-cols-2">
         {NOTES.map((n) => (
-          <article key={n.title} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-            <h3 className="text-base font-bold text-slate-900">{n.title}</h3>
-            <p className="mt-2 text-sm leading-relaxed text-slate-600">{n.body}</p>
+          <article key={n.title} className="rounded-2xl border border-zinc-800 bg-zinc-900 p-5 shadow-sm">
+            <h3 className="text-base font-bold text-zinc-100">{n.title}</h3>
+            <p className="mt-2 text-sm leading-relaxed text-zinc-400">{n.body}</p>
           </article>
         ))}
       </div>

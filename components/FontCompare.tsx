@@ -33,15 +33,15 @@ export default function FontCompare() {
 
   return (
     <section aria-label="Compare Wingdings fonts side by side" className="scroll-mt-24">
-      <h2 className="text-2xl font-bold tracking-tight text-slate-900">Compare all four fonts</h2>
-      <p className="mt-2 max-w-2xl text-slate-600">
+      <h2 className="text-2xl font-bold tracking-tight text-zinc-100">Compare all four fonts</h2>
+      <p className="mt-2 max-w-2xl text-zinc-400">
         Type once and see your text in <strong>Wingdings 1, 2, 3 and Webdings</strong> at the same
         time — the fastest way to pick the right look, or to work out which font a mystery message
         was written in.
       </p>
 
-      <div className="mt-4 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6">
-        <label htmlFor="compare-input" className="text-sm font-semibold text-slate-900">
+      <div className="mt-4 rounded-2xl border border-zinc-800 bg-zinc-900 p-4 shadow-sm sm:p-6">
+        <label htmlFor="compare-input" className="text-sm font-semibold text-zinc-100">
           Type text to compare
         </label>
         <input
@@ -50,30 +50,30 @@ export default function FontCompare() {
           value={text}
           onChange={(e) => setText(e.target.value)}
           placeholder="Type something…"
-          className="mt-2 w-full rounded-xl border border-slate-300 px-4 py-2.5 text-base text-slate-900 placeholder:text-slate-400 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-200"
+          className="mt-2 w-full rounded-xl border border-zinc-700 px-4 py-2.5 text-base text-zinc-100 placeholder:text-zinc-500 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-800"
         />
 
         <ul className="mt-4 grid gap-3 sm:grid-cols-2">
           {rows.map(({ variant, output }) => (
             <li
               key={variant.id}
-              className="rounded-xl border border-slate-200 bg-slate-50 p-4"
+              className="rounded-xl border border-zinc-800 bg-zinc-900 p-4"
             >
               <div className="flex items-center justify-between gap-2">
-                <p className="text-sm font-bold text-slate-900">{variant.label}</p>
+                <p className="text-sm font-bold text-zinc-100">{variant.label}</p>
                 <button
                   type="button"
                   onClick={() => handleCopy(variant.id, output)}
                   disabled={!output}
-                  className="rounded-lg border border-slate-200 bg-white px-3 py-1 text-xs font-semibold text-slate-700 hover:bg-slate-100 disabled:opacity-50"
+                  className="rounded-lg border border-zinc-800 bg-zinc-900 px-3 py-1 text-xs font-semibold text-zinc-300 hover:bg-zinc-800 disabled:opacity-50"
                 >
                   {copiedId === variant.id ? "✓ Copied!" : "Copy"}
                 </button>
               </div>
-              <p className="mt-2 min-h-12 break-words text-2xl leading-relaxed text-slate-900">
-                {output || <span className="text-base text-slate-400">—</span>}
+              <p className="mt-2 min-h-12 break-words text-2xl leading-relaxed text-zinc-100">
+                {output || <span className="text-base text-zinc-500">—</span>}
               </p>
-              <p className="mt-1 text-xs text-slate-500">{variant.description}</p>
+              <p className="mt-1 text-xs text-zinc-500">{variant.description}</p>
             </li>
           ))}
         </ul>
