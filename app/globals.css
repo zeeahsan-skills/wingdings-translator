@@ -3,6 +3,15 @@
 :root {
   --background: #000000;
   --foreground: #f4f4f5;
+  color-scheme: dark;
+}
+
+/* Native dropdown options must stay readable: browsers render the option
+   popup with a light background unless told otherwise, which makes
+   white-on-dark select text invisible. */
+select option {
+  background-color: #18181b; /* zinc-900 */
+  color: #f4f4f5; /* zinc-100 */
 }
 
 /* Flowing gradient text — the gradient drifts from start to end like water. */
@@ -49,6 +58,11 @@
 [data-theme="light"] {
   --background: #ffffff;
   --foreground: #171717;
+  color-scheme: light;
+}
+[data-theme="light"] select option {
+  background-color: #ffffff;
+  color: #171717;
 }
 [data-theme="light"] .bg-black {
   background-color: #ffffff;
