@@ -44,8 +44,10 @@ export default function GasterTranslatorPage() {
           Gaster Translator
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-lg text-zinc-400">
-          Decode W. D. Gaster&apos;s mysterious Undertale messages — or write your own text in his
-          Wingdings &ldquo;language&rdquo;. Free, instant, and runs entirely in your browser.
+          Decode W. D. (WD) Gaster&apos;s mysterious Undertale messages — translate any Gaster text
+          to English, or write your own with this Gaster text generator. Get an instant English
+          translation of his Wingdings &ldquo;language&rdquo;. Free, instant, runs entirely in your
+          browser.
         </p>
       </div>
 
