@@ -52,6 +52,38 @@ select option {
   }
 }
 
+/* ---- Logo entrance ----
+   On page load the header logo does a 3D flip, lifts up, then settles back. */
+@keyframes logo-flip-entrance {
+  0% {
+    transform: perspective(500px) rotateY(0deg) translateY(0) scale(1);
+  }
+  35% {
+    transform: perspective(500px) rotateY(180deg) translateY(-14px) scale(1.08);
+  }
+  65% {
+    transform: perspective(500px) rotateY(360deg) translateY(-6px) scale(1.02);
+  }
+  85% {
+    transform: perspective(500px) rotateY(360deg) translateY(3px) scale(1);
+  }
+  100% {
+    transform: perspective(500px) rotateY(360deg) translateY(0) scale(1);
+  }
+}
+
+.animate-logo-entrance {
+  animation: logo-flip-entrance 1.6s cubic-bezier(0.22, 1, 0.36, 1) 0.3s 1 both;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-logo-entrance {
+    animation: none;
+  }
+}
+
 /* ---- Light theme ----
    The markup is authored for the dark theme; these rules flip the dark
    utility colors back to light values when the toggle switches to white mode. */

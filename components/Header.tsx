@@ -22,7 +22,7 @@ export default function Header() {
             alt="Wingdings Translator logo"
             width={36}
             height={36}
-            className="h-9 w-9 rounded-xl shadow-sm"
+            className="h-9 w-9 rounded-xl shadow-sm animate-logo-entrance"
             priority
           />
           <span className="bg-gradient-to-r from-indigo-700 via-violet-700 to-fuchsia-700 bg-clip-text text-lg font-bold tracking-tight text-transparent">{SITE_NAME}</span>
