@@ -19,8 +19,28 @@ export default function Home() {
     <div className="mx-auto max-w-5xl px-4 pb-16">
       {/* Hero */}
       <div className="py-10 text-center sm:py-14">
-        <h1 className="text-gradient-flow mx-auto mt-3 max-w-3xl text-5xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl">
-          Wingdings Translator
+        <h1
+          className="mx-auto mt-3 max-w-3xl text-5xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl"
+          aria-label="Wingdings Translator"
+        >
+          {"Wingdings Translator".split(" ").map((word, wi) => (
+            <span key={wi} className="inline-block whitespace-nowrap">
+              {word.split("").map((ch, i) => {
+                const idx = wi === 0 ? i : "Wingdings".length + 1 + i;
+                return (
+                  <span
+                    key={i}
+                    aria-hidden="true"
+                    className="animate-letter-jerk text-gradient-flow"
+                    style={{ animationDelay: `${1.5 + idx * 0.05}s` }}
+                  >
+                    {ch}
+                  </span>
+                );
+              })}
+              {wi === 0 && " "}
+            </span>
+          ))}
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-lg text-zinc-400">
           This free online Wingdings translator and generator converts English into Wingdings
