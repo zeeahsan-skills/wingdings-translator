@@ -41,8 +41,8 @@ const FAQS = [
 export default function HowToWritePage() {
   return (
     <div className="mx-auto max-w-5xl px-4 pb-16">
-      <nav aria-label="Breadcrumb" className="pt-6 text-sm text-slate-500">
-        <Link href="/" className="hover:text-indigo-600">Wingdings Translator</Link>
+      <nav aria-label="Breadcrumb" className="pt-6 text-sm text-zinc-500">
+        <Link href="/" className="hover:text-indigo-400">Wingdings Translator</Link>
         <span aria-hidden="true"> / </span>
         <span aria-current="page">How to Write in Wingdings</span>
       </nav>
@@ -51,34 +51,34 @@ export default function HowToWritePage() {
         <h1 className="text-gradient-flow mx-auto max-w-3xl text-4xl font-extrabold tracking-tight sm:text-5xl">
           How to Write in Wingdings
         </h1>
-        <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600">
+        <p className="mx-auto mt-4 max-w-2xl text-lg text-zinc-400">
           The practical guide to typing Wingdings in Word, Google Docs and on your phone — including
           the honest limitations nobody tells you about.
         </p>
       </div>
 
       <div className="space-y-10">
-        <section aria-label="Three ways to write Wingdings" className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-          <h2 className="text-xl font-bold text-slate-900">Three ways to write Wingdings</h2>
-          <ol className="mt-4 space-y-4 text-sm leading-relaxed text-slate-600">
+        <section aria-label="Three ways to write Wingdings" className="rounded-2xl border border-zinc-800 bg-zinc-900 p-6 shadow-sm">
+          <h2 className="text-xl font-bold text-zinc-100">Three ways to write Wingdings</h2>
+          <ol className="mt-4 space-y-4 text-sm leading-relaxed text-zinc-400">
             <li>
-              <strong className="text-slate-900">1. Apply the font (Word, Excel, PowerPoint).</strong>{" "}
+              <strong className="text-zinc-100">1. Apply the font (Word, Excel, PowerPoint).</strong>{" "}
               Type normally, select the text, and choose Wingdings from the font menu. This gives the
               exact original glyphs — the most faithful method on Windows and Mac Office apps.
             </li>
             <li>
-              <strong className="text-slate-900">2. Copy-paste Unicode symbols.</strong>{" "}
+              <strong className="text-zinc-100">2. Copy-paste Unicode symbols.</strong>{" "}
               Use the{" "}
-              <Link href="/" className="font-semibold text-indigo-600 hover:underline">
+              <Link href="/" className="font-semibold text-indigo-400 hover:underline">
                 Wingdings translator
               </Link>{" "}
               to convert text, then copy the symbols anywhere: Google Docs, chats, bios, social
               media. No font needed — but expect emoji-style rendering on some phones.
             </li>
             <li>
-              <strong className="text-slate-900">3. Pick symbols individually.</strong>{" "}
+              <strong className="text-zinc-100">3. Pick symbols individually.</strong>{" "}
               Need just one icon? Browse the{" "}
-              <Link href="/wingdings-alphabet-chart/" className="font-semibold text-indigo-600 hover:underline">
+              <Link href="/wingdings-alphabet-chart/" className="font-semibold text-indigo-400 hover:underline">
                 Wingdings alphabet chart
               </Link>{" "}
               and click any symbol to copy it.
@@ -88,21 +88,21 @@ export default function HowToWritePage() {
 
         <CompatibilityGuide />
 
-        <section aria-label="Wingdings vs Webdings note" className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-          <h2 className="text-xl font-bold text-slate-900">Match the font before you decode</h2>
-          <p className="mt-3 text-sm leading-relaxed text-slate-600">
+        <section aria-label="Wingdings vs Webdings note" className="rounded-2xl border border-zinc-800 bg-zinc-900 p-6 shadow-sm">
+          <h2 className="text-xl font-bold text-zinc-100">Match the font before you decode</h2>
+          <p className="mt-3 text-sm leading-relaxed text-zinc-400">
             The most common decoding mistake is using the wrong font table. Wingdings 1, Wingdings 2,
             Wingdings 3 and Webdings each map the same keys to different symbols. If a message
             won&apos;t decode sensibly, try the other variants: the{" "}
-            <Link href="/wingdings-2-translator/" className="font-semibold text-indigo-600 hover:underline">
+            <Link href="/wingdings-2-translator/" className="font-semibold text-indigo-400 hover:underline">
               Wingdings 2 translator
             </Link>
             ,{" "}
-            <Link href="/wingdings-3-translator/" className="font-semibold text-indigo-600 hover:underline">
+            <Link href="/wingdings-3-translator/" className="font-semibold text-indigo-400 hover:underline">
               Wingdings 3 translator
             </Link>
             {" "}and{" "}
-            <Link href="/webdings-translator/" className="font-semibold text-indigo-600 hover:underline">
+            <Link href="/webdings-translator/" className="font-semibold text-indigo-400 hover:underline">
               Webdings translator
             </Link>{" "}
             each use their own mapping.

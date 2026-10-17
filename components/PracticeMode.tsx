@@ -81,13 +81,13 @@ export default function PracticeMode() {
   if (question === null) {
     return (
       <section aria-label="Wingdings practice mode" className="scroll-mt-24">
-        <h2 className="text-2xl font-bold tracking-tight text-slate-900">Practice mode</h2>
-        <p className="mt-2 max-w-2xl text-sm text-slate-600">
+        <h2 className="text-2xl font-bold tracking-tight text-zinc-100">Practice mode</h2>
+        <p className="mt-2 max-w-2xl text-sm text-zinc-400">
           Learning Wingdings for puzzles, worksheets or Undertale lore? Quiz yourself: we show a
           symbol, you pick the key that produces it. Explanations appear after every answer.
         </p>
-        <div className="mt-4 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm" aria-busy="true">
-          <p className="text-sm text-slate-500">Loading your first question…</p>
+        <div className="mt-4 rounded-2xl border border-zinc-800 bg-zinc-900 p-6 shadow-sm" aria-busy="true">
+          <p className="text-sm text-zinc-500">Loading your first question…</p>
         </div>
       </section>
     );
@@ -95,22 +95,22 @@ export default function PracticeMode() {
 
   return (
     <section aria-label="Wingdings practice mode" className="scroll-mt-24">
-      <h2 className="text-2xl font-bold tracking-tight text-slate-900">Practice mode</h2>
-      <p className="mt-2 max-w-2xl text-sm text-slate-600">
+      <h2 className="text-2xl font-bold tracking-tight text-zinc-100">Practice mode</h2>
+      <p className="mt-2 max-w-2xl text-sm text-zinc-400">
         Learning Wingdings for puzzles, worksheets or Undertale lore? Quiz yourself: we show a
         symbol, you pick the key that produces it. Explanations appear after every answer.
       </p>
 
-      <div className="mt-4 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <div className="mt-4 rounded-2xl border border-zinc-800 bg-zinc-900 p-6 shadow-sm">
         <div className="flex flex-wrap items-center gap-3">
-          <label htmlFor="practice-variant" className="text-sm font-semibold text-slate-700">
+          <label htmlFor="practice-variant" className="text-sm font-semibold text-zinc-300">
             Font
           </label>
           <select
             id="practice-variant"
             value={variant}
             onChange={(e) => changeVariant(e.target.value as VariantId)}
-            className="rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-sm"
+            className="rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-1.5 text-sm"
           >
             {VARIANTS.map((v) => (
               <option key={v.id} value={v.id}>
@@ -118,17 +118,17 @@ export default function PracticeMode() {
               </option>
             ))}
           </select>
-          <div className="ml-auto flex items-center gap-4 text-sm text-slate-600" aria-live="polite">
+          <div className="ml-auto flex items-center gap-4 text-sm text-zinc-400" aria-live="polite">
             <span>
-              Score: <strong className="text-slate-900">{correct}/{total}</strong>
+              Score: <strong className="text-zinc-100">{correct}/{total}</strong>
             </span>
             <span>
-              Streak: <strong className="text-slate-900">{streak}🔥</strong>
+              Streak: <strong className="text-zinc-100">{streak}🔥</strong>
             </span>
             <button
               type="button"
               onClick={reset}
-              className="rounded-lg border border-slate-300 px-3 py-1 text-sm hover:bg-slate-50"
+              className="rounded-lg border border-zinc-700 px-3 py-1 text-sm hover:bg-zinc-900"
             >
               Reset
             </button>
@@ -136,7 +136,7 @@ export default function PracticeMode() {
         </div>
 
         <div className="mt-6 text-center">
-          <p className="text-xs font-semibold uppercase tracking-widest text-slate-400">
+          <p className="text-xs font-semibold uppercase tracking-widest text-zinc-500">
             Which key makes this symbol in {variantLabel}?
           </p>
           <p className="mt-2 text-7xl" aria-label={`Symbol to identify: ${question.entry.name}`}>
@@ -148,11 +148,11 @@ export default function PracticeMode() {
           {question.options.map((ch) => {
             const isAnswer = ch === question.entry.char;
             const wasPicked = picked === ch;
-            let cls = "border-slate-300 bg-white hover:border-indigo-400 hover:bg-indigo-50";
+            let cls = "border-zinc-700 bg-zinc-900 hover:border-indigo-400 hover:bg-indigo-950";
             if (picked !== null) {
-              if (isAnswer) cls = "border-green-500 bg-green-50 font-bold";
-              else if (wasPicked) cls = "border-red-400 bg-red-50";
-              else cls = "border-slate-200 bg-slate-50 opacity-60";
+              if (isAnswer) cls = "border-emerald-700 bg-emerald-950 font-bold";
+              else if (wasPicked) cls = "border-red-700 bg-red-950";
+              else cls = "border-zinc-800 bg-zinc-900 opacity-60";
             }
             return (
               <button
@@ -172,14 +172,14 @@ export default function PracticeMode() {
         {picked !== null && (
           <div
             className={`mx-auto mt-4 max-w-md rounded-xl border p-4 text-sm ${
-              isRight ? "border-green-300 bg-green-50" : "border-amber-300 bg-amber-50"
+              isRight ? "border-emerald-800 bg-emerald-950" : "border-amber-800 bg-amber-950"
             }`}
             aria-live="polite"
           >
-            <p className="font-bold text-slate-900">
+            <p className="font-bold text-zinc-100">
               {isRight ? "✓ Correct!" : `✗ Not quite — the answer is “${question.entry.char}”.`}
             </p>
-            <p className="mt-1 text-slate-600">
+            <p className="mt-1 text-zinc-400">
               {question.entry.symbol} = key <strong>{question.entry.char}</strong> ({question.entry.codepoint})
               {" "}in {variantLabel} — “{question.entry.name}”.
             </p>

@@ -33,8 +33,8 @@ const FAQS = [
 export default function GasterTranslatorPage() {
   return (
     <div className="mx-auto max-w-5xl px-4 pb-16">
-      <nav aria-label="Breadcrumb" className="pt-6 text-sm text-slate-500">
-        <Link href="/" className="hover:text-indigo-600">Wingdings Translator</Link>
+      <nav aria-label="Breadcrumb" className="pt-6 text-sm text-zinc-500">
+        <Link href="/" className="hover:text-indigo-400">Wingdings Translator</Link>
         <span aria-hidden="true"> / </span>
         <span aria-current="page">Gaster Translator</span>
       </nav>
@@ -43,7 +43,7 @@ export default function GasterTranslatorPage() {
         <h1 className="text-gradient-flow mx-auto max-w-3xl text-4xl font-extrabold tracking-tight sm:text-5xl">
           Gaster Translator
         </h1>
-        <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600">
+        <p className="mx-auto mt-4 max-w-2xl text-lg text-zinc-400">
           Decode W. D. Gaster&apos;s mysterious Undertale messages — or write your own text in his
           Wingdings &ldquo;language&rdquo;. Free, instant, and runs entirely in your browser.
         </p>
@@ -51,9 +51,9 @@ export default function GasterTranslatorPage() {
 
       <VariantTool defaultVariant="wingdings1" />
 
-      <section aria-label="Lab Entry 17 decoded" className="mt-14 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-        <h2 className="text-xl font-bold text-slate-900">Lab Entry Number 17 — decoded</h2>
-        <p className="mt-3 text-sm leading-relaxed text-slate-600">
+      <section aria-label="Lab Entry 17 decoded" className="mt-14 rounded-2xl border border-zinc-800 bg-zinc-900 p-6 shadow-sm">
+        <h2 className="text-xl font-bold text-zinc-100">Lab Entry Number 17 — decoded</h2>
+        <p className="mt-3 text-sm leading-relaxed text-zinc-400">
           This is the passage most people come here to decode. In the game it appears as Wingdings
           symbols; with the standard Wingdings&nbsp;1 mapping it reads:
         </p>
@@ -71,8 +71,8 @@ export default function GasterTranslatorPage() {
 ✡☟✌❄ 👎⚐ ☯⚐✞ ❄✡⚐ ❄☟✋☠😐✍`}
           </p>
         </div>
-        <div className="mt-4 rounded-xl bg-indigo-50 p-4 text-sm leading-relaxed text-slate-700">
-          <p className="font-semibold text-slate-900">The decoded text:</p>
+        <div className="mt-4 rounded-xl bg-indigo-950 p-4 text-sm leading-relaxed text-zinc-300">
+          <p className="font-semibold text-zinc-100">The decoded text:</p>
           <p className="mt-2 whitespace-pre-line font-medium">
 {`ENTRY NUMBER SEVENTEEN
 DARK DARKER YET DARKER
@@ -86,30 +86,30 @@ VERY INTERESTING
 WHAT DO YOU TWO THINK?`}
           </p>
         </div>
-        <p className="mt-3 text-sm leading-relaxed text-slate-600">
+        <p className="mt-3 text-sm leading-relaxed text-zinc-400">
           Try it yourself: copy the symbols above and look each one up on the Wingdings alphabet chart
           with Wingdings&nbsp;1 selected — you&apos;ll get the same text. The
           encoding above was generated with this site&apos;s own Wingdings&nbsp;1 table.
         </p>
       </section>
 
-      <section className="mt-14 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-        <h2 className="text-xl font-bold text-slate-900">Who is W. D. Gaster?</h2>
-        <p className="mt-3 text-sm leading-relaxed text-slate-600">
+      <section className="mt-14 rounded-2xl border border-zinc-800 bg-zinc-900 p-6 shadow-sm">
+        <h2 className="text-xl font-bold text-zinc-100">Who is W. D. Gaster?</h2>
+        <p className="mt-3 text-sm leading-relaxed text-zinc-400">
           W. D. Gaster is a hidden character in the game Undertale, known only through scattered
           references and one famous passage — Lab Entry Number 17. His dialogue is rendered in
           Wingdings, which fans adopted as &ldquo;Gaster&apos;s language&rdquo;. Because the game
           uses the standard Wingdings 1 mapping, decoding his messages is straightforward: paste the
           symbols, pick Wingdings 1, and read the English underneath.
         </p>
-        <p className="mt-3 text-sm leading-relaxed text-slate-600">
+        <p className="mt-3 text-sm leading-relaxed text-zinc-400">
           The same mapping powers fan content across Reddit, Discord and Tumblr, where lore theories
           are routinely written in Wingdings. If you want the full symbol set instead, see the{" "}
-          <Link href="/wingdings-alphabet-chart/" className="font-semibold text-indigo-600 hover:underline">
+          <Link href="/wingdings-alphabet-chart/" className="font-semibold text-indigo-400 hover:underline">
             Wingdings alphabet chart
           </Link>
           , or use the{" "}
-          <Link href="/" className="font-semibold text-indigo-600 hover:underline">
+          <Link href="/" className="font-semibold text-indigo-400 hover:underline">
             main Wingdings translator
           </Link>{" "}
           for all four font variants.

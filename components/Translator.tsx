@@ -75,10 +75,10 @@ export default function Translator({ text, setText, variant, setVariant }: Props
 
   return (
     <section id="translator" aria-label="Wingdings translator tool" className="scroll-mt-24">
-      <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6">
+      <div className="rounded-2xl border border-zinc-800 bg-zinc-900 p-4 shadow-sm sm:p-6">
         {/* Variant selector — the 4-way converter is the headline differentiator */}
         <div role="group" aria-label="Choose a symbol font">
-          <p className="text-sm font-semibold text-slate-900">
+          <p className="text-sm font-semibold text-zinc-100">
             <span className="mr-1.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-gradient-to-br from-indigo-600 to-violet-600 text-[11px] font-bold text-white shadow-sm">1</span>
             Pick a font
           </p>
@@ -91,12 +91,12 @@ export default function Translator({ text, setText, variant, setVariant }: Props
                 aria-pressed={variant === v.id}
                 className={`rounded-xl border p-3 text-left transition ${
                   variant === v.id
-                    ? "border-violet-600 bg-gradient-to-br from-indigo-50 to-violet-50 ring-1 ring-violet-600"
-                    : "border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50"
+                    ? "border-violet-600 bg-gradient-to-br from-indigo-950 to-violet-950 ring-1 ring-violet-600"
+                    : "border-zinc-800 bg-zinc-900 hover:border-zinc-700 hover:bg-zinc-900"
                 }`}
               >
-                <span className="block text-sm font-bold text-slate-900">{v.label}</span>
-                <span className="mt-0.5 block text-xs leading-snug text-slate-500">{v.description}</span>
+                <span className="block text-sm font-bold text-zinc-100">{v.label}</span>
+                <span className="mt-0.5 block text-xs leading-snug text-zinc-500">{v.description}</span>
               </button>
             ))}
           </div>
@@ -104,7 +104,7 @@ export default function Translator({ text, setText, variant, setVariant }: Props
 
         {/* Input */}
         <div className="mt-5">
-          <label htmlFor="translator-input" className="text-sm font-semibold text-slate-900">
+          <label htmlFor="translator-input" className="text-sm font-semibold text-zinc-100">
             <span className="mr-1.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-gradient-to-br from-indigo-600 to-violet-600 text-[11px] font-bold text-white shadow-sm">2</span>
             Type or paste your text
           </label>
@@ -114,22 +114,22 @@ export default function Translator({ text, setText, variant, setVariant }: Props
             onChange={(e) => setText(e.target.value)}
             rows={4}
             placeholder="Type English here — symbols appear instantly…"
-            className="mt-2 w-full rounded-xl border border-slate-300 p-3 text-base text-slate-900 placeholder:text-slate-400 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-200"
+            className="mt-2 w-full rounded-xl border border-zinc-700 p-3 text-base text-zinc-100 placeholder:text-zinc-500 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-800"
           />
           <div className="mt-2 flex flex-wrap items-center gap-2">
-            <span className="text-xs font-medium text-slate-500">Try:</span>
+            <span className="text-xs font-medium text-zinc-500">Try:</span>
             {["Hello World!", "I love you", "Secret message"].map((ex) => (
               <button
                 key={ex}
                 type="button"
                 onClick={() => setText(ex)}
-                className="rounded-full border border-indigo-200 bg-indigo-50 px-3 py-1 text-xs font-semibold text-indigo-700 hover:bg-indigo-100"
+                className="rounded-full border border-indigo-800 bg-indigo-950 px-3 py-1 text-xs font-semibold text-indigo-300 hover:bg-indigo-950"
               >
                 {ex}
               </button>
             ))}
           </div>
-          <p className="mt-1 text-xs text-slate-500" aria-live="polite">
+          <p className="mt-1 text-xs text-zinc-500" aria-live="polite">
             {text.length} character{text.length === 1 ? "" : "s"} · converts live as you type
           </p>
         </div>
@@ -137,16 +137,16 @@ export default function Translator({ text, setText, variant, setVariant }: Props
         {/* Output */}
         <div className="mt-4">
           <div className="flex flex-wrap items-center justify-between gap-2">
-            <p className="text-sm font-semibold text-slate-900" id="translator-output-label">
+            <p className="text-sm font-semibold text-zinc-100" id="translator-output-label">
               <span className="mr-1.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-gradient-to-br from-indigo-600 to-violet-600 text-[11px] font-bold text-white shadow-sm">3</span>
-              Your result <span className="font-normal text-slate-500">({activeVariant.label})</span>
+              Your result <span className="font-normal text-zinc-500">({activeVariant.label})</span>
             </p>
             <div className="flex gap-2">
               <button
                 type="button"
                 onClick={handleCopy}
                 disabled={!output}
-                className="rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:from-indigo-700 hover:to-violet-700 disabled:cursor-not-allowed disabled:bg-slate-300 disabled:bg-none"
+                className="rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:from-indigo-700 hover:to-violet-700 disabled:cursor-not-allowed disabled:bg-zinc-700 disabled:bg-none"
               >
                 {copied ? "✓ Copied!" : "⧉ Copy result"}
               </button>
@@ -154,7 +154,7 @@ export default function Translator({ text, setText, variant, setVariant }: Props
                 type="button"
                 onClick={downloadPng}
                 disabled={!output}
-                className="rounded-xl border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-50"
+                className="rounded-xl border border-zinc-800 px-4 py-2 text-sm font-semibold text-zinc-300 hover:bg-zinc-900 disabled:cursor-not-allowed disabled:opacity-50"
                 title="Download the result as a PNG image — looks identical on every device"
               >
                 ⬇ PNG
@@ -163,7 +163,7 @@ export default function Translator({ text, setText, variant, setVariant }: Props
                 type="button"
                 onClick={() => setText("")}
                 disabled={!text}
-                className="rounded-xl border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-50"
+                className="rounded-xl border border-zinc-800 px-4 py-2 text-sm font-semibold text-zinc-300 hover:bg-zinc-900 disabled:cursor-not-allowed disabled:opacity-50"
               >
                 Clear
               </button>
@@ -172,15 +172,15 @@ export default function Translator({ text, setText, variant, setVariant }: Props
           <div
             role="status"
             aria-labelledby="translator-output-label"
-            className="mt-2 min-h-24 whitespace-pre-wrap break-words rounded-xl border border-slate-200 bg-slate-50 p-3 text-lg leading-relaxed text-slate-900"
+            className="mt-2 min-h-24 whitespace-pre-wrap break-words rounded-xl border border-zinc-800 bg-zinc-900 p-3 text-lg leading-relaxed text-zinc-100"
           >
-            {output || <span className="text-slate-400">Your converted text will appear here…</span>}
+            {output || <span className="text-zinc-500">Your converted text will appear here…</span>}
           </div>
         </div>
 
         {/* Honest notice — competitors pass these through silently */}
         {unsupported.length > 0 && (
-          <p role="alert" className="mt-3 rounded-xl bg-amber-50 px-3 py-2 text-sm text-amber-800">
+          <p role="alert" className="mt-3 rounded-xl bg-amber-950 px-3 py-2 text-sm text-amber-200">
             These characters have no {activeVariant.label} mapping and were kept as-is:{" "}
             <strong>{unsupported.slice(0, 12).join(" ")}</strong>
             {unsupported.length > 12 && ` (+${unsupported.length - 12} more)`}

@@ -50,13 +50,13 @@ export default function SymbolReference({ defaultFilter = "all" }: { defaultFilt
 
   return (
     <section id="symbols" aria-label="Searchable symbol reference" className="scroll-mt-24">
-      <h2 className="text-2xl font-bold tracking-tight text-slate-900">Symbol reference</h2>
-      <p className="mt-2 max-w-2xl text-slate-600">
+      <h2 className="text-2xl font-bold tracking-tight text-zinc-100">Symbol reference</h2>
+      <p className="mt-2 max-w-2xl text-zinc-400">
         Search every mapped symbol by name — try “arrow”, “heart”, “check”, “star” — or filter
         by font. <strong>Click any card to copy that symbol instantly.</strong>
       </p>
 
-      <div className="mt-4 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6">
+      <div className="mt-4 rounded-2xl border border-zinc-800 bg-zinc-900 p-4 shadow-sm sm:p-6">
         <div className="flex flex-col gap-2 sm:flex-row">
           <label htmlFor="symbol-search" className="sr-only">Search symbols by name</label>
           <input
@@ -65,14 +65,14 @@ export default function SymbolReference({ defaultFilter = "all" }: { defaultFilt
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search: arrow, check, star, heart…"
-            className="w-full rounded-xl border border-slate-300 px-4 py-2.5 text-base text-slate-900 placeholder:text-slate-400 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-200"
+            className="w-full rounded-xl border border-zinc-700 px-4 py-2.5 text-base text-zinc-100 placeholder:text-zinc-500 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-800"
           />
           <label htmlFor="symbol-filter" className="sr-only">Filter by font variant</label>
           <select
             id="symbol-filter"
             value={filter}
             onChange={(e) => setFilter(e.target.value as Filter)}
-            className="rounded-xl border border-slate-300 px-3 py-2.5 text-sm text-slate-900 focus:border-indigo-500 focus:outline-none"
+            className="rounded-xl border border-zinc-700 px-3 py-2.5 text-sm text-zinc-100 focus:border-indigo-500 focus:outline-none"
           >
             <option value="all">All fonts</option>
             {VARIANTS.map((v) => (
@@ -80,12 +80,12 @@ export default function SymbolReference({ defaultFilter = "all" }: { defaultFilt
             ))}
           </select>
         </div>
-        <p className="mt-2 text-xs text-slate-500" aria-live="polite">
+        <p className="mt-2 text-xs text-zinc-500" aria-live="polite">
           {results.length} symbol{results.length === 1 ? "" : "s"} shown — click a card to copy it.
         </p>
 
         {results.length === 0 ? (
-          <p className="mt-4 rounded-xl bg-slate-50 p-4 text-sm text-slate-500">
+          <p className="mt-4 rounded-xl bg-zinc-900 p-4 text-sm text-zinc-500">
             No symbols match “{query}”. Try a simpler word like “arrow” or “check”.
           </p>
         ) : (
@@ -101,18 +101,18 @@ export default function SymbolReference({ defaultFilter = "all" }: { defaultFilt
                     aria-label={`Copy ${e.name} symbol, key ${e.char}, ${e.codepoint}`}
                     className={`flex h-full w-full flex-col items-center gap-1 rounded-xl border p-3 text-center transition ${
                       copied
-                        ? "border-emerald-500 bg-emerald-50"
-                        : "border-slate-200 bg-white hover:border-indigo-400 hover:bg-indigo-50"
+                        ? "border-emerald-700 bg-emerald-950"
+                        : "border-zinc-800 bg-zinc-900 hover:border-indigo-400 hover:bg-indigo-950"
                     }`}
                   >
                     <span aria-hidden="true" className="text-3xl leading-none">{e.symbol}</span>
-                    <span className="font-mono text-xs font-bold text-slate-700">
-                      key: <kbd className="rounded bg-slate-100 px-1">{e.char}</kbd>
+                    <span className="font-mono text-xs font-bold text-zinc-300">
+                      key: <kbd className="rounded bg-zinc-800 px-1">{e.char}</kbd>
                     </span>
-                    <span className="font-mono text-[11px] text-slate-500">{e.codepoint}</span>
-                    <span className="text-[11px] capitalize leading-tight text-slate-600">{e.name}</span>
-                    <span className="text-[11px] font-semibold text-indigo-600">{e.variantLabel}</span>
-                    <span className={`text-[11px] font-bold ${copied ? "text-emerald-600" : "text-slate-400"}`}>
+                    <span className="font-mono text-[11px] text-zinc-500">{e.codepoint}</span>
+                    <span className="text-[11px] capitalize leading-tight text-zinc-400">{e.name}</span>
+                    <span className="text-[11px] font-semibold text-indigo-400">{e.variantLabel}</span>
+                    <span className={`text-[11px] font-bold ${copied ? "text-emerald-400" : "text-zinc-500"}`}>
                       {copied ? "✓ Copied!" : "Click to copy"}
                     </span>
                   </button>
