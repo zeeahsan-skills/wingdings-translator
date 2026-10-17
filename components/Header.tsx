@@ -20,9 +20,9 @@ export default function Header() {
           <Image
             src="/logo.png"
             alt="Wingdings Translator logo"
-            width={48}
-            height={48}
-            className="h-12 w-12 rounded-xl shadow-sm"
+            width={36}
+            height={36}
+            className="h-9 w-9 rounded-xl shadow-sm"
             priority
           />
           <span className="bg-gradient-to-r from-indigo-700 via-violet-700 to-fuchsia-700 bg-clip-text text-lg font-bold tracking-tight text-transparent">{SITE_NAME}</span>
