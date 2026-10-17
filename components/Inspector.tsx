@@ -47,8 +47,8 @@ export default function Inspector({ text, variant }: Props) {
                 aria-label={`Inspect character ${ch === " " ? "space" : ch}`}
                 className={`min-w-9 rounded-lg border px-2 py-1.5 font-mono text-base transition ${
                   selectedIndex === i
-                    ? "border-transparent bg-gradient-to-br from-sky-500 to-teal-500 text-white shadow-sm"
-                    : "border-zinc-800 bg-zinc-900 text-zinc-200 hover:border-sky-600 hover:bg-sky-950"
+                    ? "border-transparent bg-gradient-to-br from-indigo-600 to-violet-600 text-white shadow-sm"
+                    : "border-zinc-800 bg-zinc-900 text-zinc-200 hover:border-indigo-700 hover:bg-indigo-950"
                 }`}
               >
                 {ch === " " ? "␣" : ch === "\n" ? "↵" : ch}

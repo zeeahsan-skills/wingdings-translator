@@ -46,7 +46,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           __html: `(function(){try{var t=localStorage.getItem('wt-theme');document.documentElement.dataset.theme=(t==='light'||t==='dark')?t:'dark';}catch(e){document.documentElement.dataset.theme='dark';}})();`,
         }}
       />
-      <body className="flex min-h-full flex-col bg-navy text-zinc-100">
+      <body className="flex min-h-full flex-col bg-black text-zinc-100">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

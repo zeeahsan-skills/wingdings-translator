@@ -31,7 +31,7 @@ export default function WebdingsPage() {
   return (
     <div className="mx-auto max-w-5xl px-4 pb-16">
       <nav aria-label="Breadcrumb" className="pt-6 text-sm text-zinc-500">
-        <Link href="/" className="hover:text-sky-400">Wingdings Translator</Link>
+        <Link href="/" className="hover:text-indigo-400">Wingdings Translator</Link>
         <span aria-hidden="true"> / </span>
         <span aria-current="page">Webdings Translator</span>
       </nav>
@@ -54,15 +54,15 @@ export default function WebdingsPage() {
           Webdings took the dingbat idea to the early web: spiders, buildings, vehicles, media
           controls and interface glyphs. It shares the one-key-one-picture concept with Wingdings
           but none of the mappings, so treat it as its own code. Also see the{" "}
-          <Link href="/wingdings-2-translator/" className="font-semibold text-sky-400 hover:underline">
+          <Link href="/wingdings-2-translator/" className="font-semibold text-indigo-400 hover:underline">
             Wingdings 2 translator
           </Link>
           , the{" "}
-          <Link href="/wingdings-3-translator/" className="font-semibold text-sky-400 hover:underline">
+          <Link href="/wingdings-3-translator/" className="font-semibold text-indigo-400 hover:underline">
             Wingdings 3 translator
           </Link>
           , or the{" "}
-          <Link href="/" className="font-semibold text-sky-400 hover:underline">
+          <Link href="/" className="font-semibold text-indigo-400 hover:underline">
             main translator
           </Link>{" "}
           covering all four fonts.
