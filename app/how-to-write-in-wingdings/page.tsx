@@ -3,6 +3,7 @@ import Link from "next/link";
 import CompatibilityGuide from "@/components/CompatibilityGuide";
 import PageFaq from "@/components/PageFaq";
 import { SITE_URL } from "@/lib/site";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "How to Write in Wingdings — Word, Google Docs & Mobile Guide",
@@ -40,6 +41,8 @@ const FAQS = [
 
 export default function HowToWritePage() {
   return (
+    <>
+      <BreadcrumbJsonLd trail={[{ name: "Home", path: "/" }, { name: "How to Write in Wingdings", path: "/how-to-write-in-wingdings/" }]} />
     <div className="mx-auto max-w-5xl px-4 pb-16">
       <nav aria-label="Breadcrumb" className="pt-6 text-sm text-zinc-500">
         <Link href="/" className="hover:text-indigo-400">Wingdings Translator</Link>
@@ -112,5 +115,6 @@ export default function HowToWritePage() {
         <PageFaq items={FAQS} />
       </div>
     </div>
+    </>
   );
 }

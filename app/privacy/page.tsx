@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { CONTACT_EMAIL, SITE_NAME } from "@/lib/site";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
@@ -8,6 +9,8 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
+    <>
+      <BreadcrumbJsonLd trail={[{ name: "Home", path: "/" }, { name: "Privacy Policy", path: "/privacy/" }]} />
     <div className="mx-auto max-w-3xl px-4 py-10">
       <h1 className="text-3xl font-extrabold tracking-tight text-zinc-100">Privacy Policy</h1>
       <p className="mt-2 text-sm text-zinc-500">Last updated: October 2026</p>
@@ -41,5 +44,6 @@ export default function PrivacyPage() {
         </p>
       </div>
     </div>
+    </>
   );
 }

@@ -3,6 +3,7 @@ import Link from "next/link";
 import VariantTool from "@/components/VariantTool";
 import PageFaq from "@/components/PageFaq";
 import { SITE_URL } from "@/lib/site";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Gaster Translator — Decode W. D. Gaster's Wingdings Messages",
@@ -32,6 +33,8 @@ const FAQS = [
 
 export default function GasterTranslatorPage() {
   return (
+    <>
+      <BreadcrumbJsonLd trail={[{ name: "Home", path: "/" }, { name: "Gaster Translator", path: "/gaster-translator/" }]} />
     <div className="mx-auto max-w-5xl px-4 pb-16">
       <nav aria-label="Breadcrumb" className="pt-6 text-sm text-zinc-500">
         <Link href="/" className="hover:text-indigo-400">Wingdings Translator</Link>
@@ -122,5 +125,6 @@ WHAT DO YOU TWO THINK?`}
         <PageFaq items={FAQS} />
       </div>
     </div>
+    </>
   );
 }

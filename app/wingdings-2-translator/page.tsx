@@ -4,6 +4,7 @@ import VariantTool from "@/components/VariantTool";
 import SymbolReference from "@/components/SymbolReference";
 import PageFaq from "@/components/PageFaq";
 import { SITE_URL } from "@/lib/site";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Wingdings 2 Translator — Convert Text to Wingdings 2 Symbols",
@@ -29,6 +30,8 @@ const FAQS = [
 
 export default function Wingdings2Page() {
   return (
+    <>
+      <BreadcrumbJsonLd trail={[{ name: "Home", path: "/" }, { name: "Wingdings 2 Translator", path: "/wingdings-2-translator/" }]} />
     <div className="mx-auto max-w-5xl px-4 pb-16">
       <nav aria-label="Breadcrumb" className="pt-6 text-sm text-zinc-500">
         <Link href="/" className="hover:text-indigo-400">Wingdings Translator</Link>
@@ -79,5 +82,6 @@ export default function Wingdings2Page() {
         <PageFaq items={FAQS} />
       </div>
     </div>
+    </>
   );
 }

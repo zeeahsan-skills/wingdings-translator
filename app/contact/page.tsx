@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { CONTACT_EMAIL, SITE_NAME } from "@/lib/site";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -8,6 +9,8 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
+    <>
+      <BreadcrumbJsonLd trail={[{ name: "Home", path: "/" }, { name: "Contact", path: "/contact/" }]} />
     <div className="mx-auto max-w-3xl px-4 py-10">
       <h1 className="text-3xl font-extrabold tracking-tight text-zinc-100">Contact</h1>
       <div className="mt-6 space-y-4 text-zinc-400 leading-relaxed">
@@ -31,5 +34,6 @@ export default function ContactPage() {
         <p className="text-sm text-zinc-500">{SITE_NAME} is a free tool; we read every message but can&apos;t promise a reply timeline.</p>
       </div>
     </div>
+    </>
   );
 }

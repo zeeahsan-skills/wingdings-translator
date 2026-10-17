@@ -3,6 +3,7 @@ import Link from "next/link";
 import SymbolReference from "@/components/SymbolReference";
 import PageFaq from "@/components/PageFaq";
 import { SITE_URL } from "@/lib/site";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Wingdings Alphabet Chart — Searchable Symbol Reference (Click to Copy)",
@@ -32,6 +33,8 @@ const FAQS = [
 
 export default function AlphabetChartPage() {
   return (
+    <>
+      <BreadcrumbJsonLd trail={[{ name: "Home", path: "/" }, { name: "Wingdings Alphabet Chart", path: "/wingdings-alphabet-chart/" }]} />
     <div className="mx-auto max-w-5xl px-4 pb-16">
       <nav aria-label="Breadcrumb" className="pt-6 text-sm text-zinc-500">
         <Link href="/" className="hover:text-indigo-400">Wingdings Translator</Link>
@@ -74,5 +77,6 @@ export default function AlphabetChartPage() {
         <PageFaq items={FAQS} />
       </div>
     </div>
+    </>
   );
 }
