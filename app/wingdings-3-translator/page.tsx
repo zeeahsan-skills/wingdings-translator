@@ -31,7 +31,7 @@ export default function Wingdings3Page() {
   return (
     <div className="mx-auto max-w-5xl px-4 pb-16">
       <nav aria-label="Breadcrumb" className="pt-6 text-sm text-zinc-500">
-        <Link href="/" className="hover:text-indigo-400">Wingdings Translator</Link>
+        <Link href="/" className="hover:text-sky-400">Wingdings Translator</Link>
         <span aria-hidden="true"> / </span>
         <span aria-current="page">Wingdings 3 Translator</span>
       </nav>
@@ -55,15 +55,15 @@ export default function Wingdings3Page() {
           is almost entirely directional: arrows in every direction, triangles, circles, squares and
           key-cap style symbols. It is the go-to font in the family for diagrams and navigation
           cues. For the other symbol sets, try the{" "}
-          <Link href="/wingdings-2-translator/" className="font-semibold text-indigo-400 hover:underline">
+          <Link href="/wingdings-2-translator/" className="font-semibold text-sky-400 hover:underline">
             Wingdings 2 translator
           </Link>
           , the{" "}
-          <Link href="/webdings-translator/" className="font-semibold text-indigo-400 hover:underline">
+          <Link href="/webdings-translator/" className="font-semibold text-sky-400 hover:underline">
             Webdings translator
           </Link>
           , or the{" "}
-          <Link href="/" className="font-semibold text-indigo-400 hover:underline">
+          <Link href="/" className="font-semibold text-sky-400 hover:underline">
             main translator
           </Link>{" "}
           with all four fonts.

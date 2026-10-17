@@ -37,7 +37,7 @@ export default function PrivacyPage() {
         </p>
         <h2 className="text-xl font-bold text-zinc-100">Contact</h2>
         <p>
-          Questions about this policy: <a className="text-indigo-400 underline" href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+          Questions about this policy: <a className="text-sky-400 underline" href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
         </p>
       </div>
     </div>

@@ -65,14 +65,14 @@ export default function SymbolReference({ defaultFilter = "all" }: { defaultFilt
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search: arrow, check, star, heart…"
-            className="w-full rounded-xl border border-zinc-700 px-4 py-2.5 text-base text-zinc-100 placeholder:text-zinc-500 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-800"
+            className="w-full rounded-xl border border-zinc-700 px-4 py-2.5 text-base text-zinc-100 placeholder:text-zinc-500 focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-800"
           />
           <label htmlFor="symbol-filter" className="sr-only">Filter by font variant</label>
           <select
             id="symbol-filter"
             value={filter}
             onChange={(e) => setFilter(e.target.value as Filter)}
-            className="rounded-xl border border-zinc-700 px-3 py-2.5 text-sm text-zinc-100 focus:border-indigo-500 focus:outline-none"
+            className="rounded-xl border border-zinc-700 px-3 py-2.5 text-sm text-zinc-100 focus:border-sky-500 focus:outline-none"
           >
             <option value="all">All fonts</option>
             {VARIANTS.map((v) => (
@@ -102,7 +102,7 @@ export default function SymbolReference({ defaultFilter = "all" }: { defaultFilt
                     className={`flex h-full w-full flex-col items-center gap-1 rounded-xl border p-3 text-center transition ${
                       copied
                         ? "border-emerald-700 bg-emerald-950"
-                        : "border-zinc-800 bg-zinc-900 hover:border-indigo-400 hover:bg-indigo-950"
+                        : "border-zinc-800 bg-zinc-900 hover:border-sky-400 hover:bg-sky-950"
                     }`}
                   >
                     <span aria-hidden="true" className="text-3xl leading-none">{e.symbol}</span>
@@ -111,7 +111,7 @@ export default function SymbolReference({ defaultFilter = "all" }: { defaultFilt
                     </span>
                     <span className="font-mono text-[11px] text-zinc-500">{e.codepoint}</span>
                     <span className="text-[11px] capitalize leading-tight text-zinc-400">{e.name}</span>
-                    <span className="text-[11px] font-semibold text-indigo-400">{e.variantLabel}</span>
+                    <span className="text-[11px] font-semibold text-sky-400">{e.variantLabel}</span>
                     <span className={`text-[11px] font-bold ${copied ? "text-emerald-400" : "text-zinc-500"}`}>
                       {copied ? "✓ Copied!" : "Click to copy"}
                     </span>

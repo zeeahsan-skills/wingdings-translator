@@ -34,7 +34,7 @@ export default function AlphabetChartPage() {
   return (
     <div className="mx-auto max-w-5xl px-4 pb-16">
       <nav aria-label="Breadcrumb" className="pt-6 text-sm text-zinc-500">
-        <Link href="/" className="hover:text-indigo-400">Wingdings Translator</Link>
+        <Link href="/" className="hover:text-sky-400">Wingdings Translator</Link>
         <span aria-hidden="true"> / </span>
         <span aria-current="page">Wingdings Alphabet Chart</span>
       </nav>
@@ -59,11 +59,11 @@ export default function AlphabetChartPage() {
           Each card shows the symbol, the keyboard key that produces it in the original font, and
           its Unicode code point. Click a card to copy the symbol, then paste it into a chat, bio,
           document or design file. To convert whole sentences instead of single symbols, use the{" "}
-          <Link href="/" className="font-semibold text-indigo-400 hover:underline">
+          <Link href="/" className="font-semibold text-sky-400 hover:underline">
             Wingdings translator
           </Link>
           . Fans decoding Undertale&apos;s hidden character may prefer the{" "}
-          <Link href="/gaster-translator/" className="font-semibold text-indigo-400 hover:underline">
+          <Link href="/gaster-translator/" className="font-semibold text-sky-400 hover:underline">
             Gaster translator
           </Link>
           .

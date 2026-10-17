@@ -64,13 +64,13 @@ export default function BatchConverter() {
             id="batch-variant"
             value={variant}
             onChange={(e) => setVariant(e.target.value as VariantId)}
-            className="rounded-xl border border-zinc-700 px-3 py-2 text-sm text-zinc-100 focus:border-indigo-500 focus:outline-none"
+            className="rounded-xl border border-zinc-700 px-3 py-2 text-sm text-zinc-100 focus:border-sky-500 focus:outline-none"
           >
             {VARIANTS.map((v) => (
               <option key={v.id} value={v.id}>{v.label}</option>
             ))}
           </select>
-          <span className="rounded-lg bg-gradient-to-r from-indigo-600 to-violet-600 px-3 py-1.5 text-sm font-medium text-white shadow-sm">
+          <span className="rounded-lg bg-gradient-to-r from-sky-500 to-blue-600 px-3 py-1.5 text-sm font-medium text-white shadow-sm">
             English → Symbols
           </span>
         </div>
@@ -84,14 +84,14 @@ export default function BatchConverter() {
           onChange={(e) => setInput(e.target.value)}
           rows={5}
           placeholder={"Line one\nLine two\nLine three"}
-          className="mt-2 w-full rounded-xl border border-zinc-700 p-3 text-base text-zinc-100 placeholder:text-zinc-500 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-800"
+          className="mt-2 w-full rounded-xl border border-zinc-700 p-3 text-base text-zinc-100 placeholder:text-zinc-500 focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-800"
         />
         <div className="mt-3 flex flex-wrap items-center gap-2">
           <button
             type="button"
             onClick={copyAll}
             disabled={results.length === 0}
-            className="rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:from-indigo-700 hover:to-violet-700 disabled:cursor-not-allowed disabled:bg-zinc-700 disabled:bg-none"
+            className="rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:from-sky-600 hover:to-blue-700 disabled:cursor-not-allowed disabled:bg-zinc-700 disabled:bg-none"
           >
             {copiedKey === "all" ? "✓ Copied all!" : "⧉ Copy all results"}
           </button>
@@ -119,7 +119,7 @@ export default function BatchConverter() {
           <ol className="mt-4 space-y-2">
             {results.map((r, i) => (
               <li key={i} className="flex items-start gap-3 rounded-xl border border-zinc-800 bg-zinc-900 p-3">
-                <span className="mt-0.5 grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-indigo-950 text-xs font-bold text-indigo-300">
+                <span className="mt-0.5 grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-sky-950 text-xs font-bold text-sky-300">
                   {i + 1}
                 </span>
                 <p className="min-w-0 flex-1 break-words text-base text-zinc-100">{r || <span className="text-zinc-500">(empty)</span>}</p>

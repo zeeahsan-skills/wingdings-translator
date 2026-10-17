@@ -52,12 +52,12 @@ export default function Home() {
         <nav aria-label="More translators" className="rounded-2xl border border-zinc-800 bg-zinc-900 p-6 shadow-sm">
           <h2 className="text-xl font-bold text-zinc-100">More Wingdings tools</h2>
           <ul className="mt-3 grid gap-2 text-sm sm:grid-cols-2">
-            <li><Link href="/gaster-translator/" className="font-semibold text-indigo-400 hover:underline">Gaster translator</Link><span className="text-zinc-500"> — decode W. D. Gaster&apos;s Undertale messages</span></li>
-            <li><Link href="/wingdings-alphabet-chart/" className="font-semibold text-indigo-400 hover:underline">Wingdings alphabet chart</Link><span className="text-zinc-500"> — searchable symbols, click to copy</span></li>
-            <li><Link href="/wingdings-2-translator/" className="font-semibold text-indigo-400 hover:underline">Wingdings 2 translator</Link><span className="text-zinc-500"> — stationery &amp; ornament symbols</span></li>
-            <li><Link href="/wingdings-3-translator/" className="font-semibold text-indigo-400 hover:underline">Wingdings 3 translator</Link><span className="text-zinc-500"> — arrows &amp; directional symbols</span></li>
-            <li><Link href="/webdings-translator/" className="font-semibold text-indigo-400 hover:underline">Webdings translator</Link><span className="text-zinc-500"> — web-style icon font</span></li>
-            <li><Link href="/how-to-write-in-wingdings/" className="font-semibold text-indigo-400 hover:underline">How to write in Wingdings</Link><span className="text-zinc-500"> — Word, Google Docs &amp; mobile guide</span></li>
+            <li><Link href="/gaster-translator/" className="font-semibold text-sky-400 hover:underline">Gaster translator</Link><span className="text-zinc-500"> — decode W. D. Gaster&apos;s Undertale messages</span></li>
+            <li><Link href="/wingdings-alphabet-chart/" className="font-semibold text-sky-400 hover:underline">Wingdings alphabet chart</Link><span className="text-zinc-500"> — searchable symbols, click to copy</span></li>
+            <li><Link href="/wingdings-2-translator/" className="font-semibold text-sky-400 hover:underline">Wingdings 2 translator</Link><span className="text-zinc-500"> — stationery &amp; ornament symbols</span></li>
+            <li><Link href="/wingdings-3-translator/" className="font-semibold text-sky-400 hover:underline">Wingdings 3 translator</Link><span className="text-zinc-500"> — arrows &amp; directional symbols</span></li>
+            <li><Link href="/webdings-translator/" className="font-semibold text-sky-400 hover:underline">Webdings translator</Link><span className="text-zinc-500"> — web-style icon font</span></li>
+            <li><Link href="/how-to-write-in-wingdings/" className="font-semibold text-sky-400 hover:underline">How to write in Wingdings</Link><span className="text-zinc-500"> — Word, Google Docs &amp; mobile guide</span></li>
           </ul>
         </nav>
       </div>

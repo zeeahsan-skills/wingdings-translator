@@ -30,13 +30,11 @@ select option {
 .text-gradient-flow {
   background: linear-gradient(
     90deg,
-    #4f46e5,
-    #0ea5e9,
-    #10b981,
-    #f59e0b,
-    #ef4444,
-    #d946ef,
-    #4f46e5
+    #38bdf8,
+    #22d3ee,
+    #3b82f6,
+    #6366f1,
+    #38bdf8
   );
   background-size: 300% auto;
   -webkit-background-clip: text;
@@ -106,32 +104,32 @@ select option {
 [data-theme="light"] .hover\:bg-zinc-800:hover {
   background-color: #f4f4f5;
 }
-[data-theme="light"] .bg-indigo-950 {
-  background-color: #eef2ff;
+[data-theme="light"] .bg-sky-950 {
+  background-color: #f0f9ff;
 }
-[data-theme="light"] .bg-indigo-900 {
-  background-color: #e0e7ff;
+[data-theme="light"] .bg-sky-900 {
+  background-color: #e0f2fe;
 }
-[data-theme="light"] .text-indigo-400 {
-  color: #4f46e5;
+[data-theme="light"] .text-sky-400 {
+  color: #0284c7;
 }
-[data-theme="light"] .text-indigo-300 {
-  color: #4338ca;
+[data-theme="light"] .text-sky-300 {
+  color: #0369a1;
 }
-[data-theme="light"] .border-indigo-800 {
-  border-color: #c7d2fe;
+[data-theme="light"] .border-sky-800 {
+  border-color: #bae6fd;
 }
-[data-theme="light"] .border-indigo-700 {
-  border-color: #a5b4fc;
+[data-theme="light"] .border-sky-700 {
+  border-color: #7dd3fc;
 }
-[data-theme="light"] .ring-indigo-800 {
-  --tw-ring-color: #c7d2fe;
+[data-theme="light"] .ring-sky-800 {
+  --tw-ring-color: #bae6fd;
 }
-[data-theme="light"] .from-indigo-950 {
-  --tw-gradient-from: #eef2ff;
+[data-theme="light"] .from-sky-950 {
+  --tw-gradient-from: #f0f9ff;
 }
-[data-theme="light"] .to-violet-950 {
-  --tw-gradient-to: #f5f3ff;
+[data-theme="light"] .to-blue-950 {
+  --tw-gradient-to: #eff6ff;
 }
 [data-theme="light"] .text-amber-200 {
   color: #92400e;

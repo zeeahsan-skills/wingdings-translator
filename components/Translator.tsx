@@ -79,7 +79,7 @@ export default function Translator({ text, setText, variant, setVariant }: Props
         {/* Variant selector — the 4-way converter is the headline differentiator */}
         <div role="group" aria-label="Choose a symbol font">
           <p className="text-sm font-semibold text-zinc-100">
-            <span className="mr-1.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-gradient-to-br from-indigo-600 to-violet-600 text-[11px] font-bold text-white shadow-sm">1</span>
+            <span className="mr-1.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-gradient-to-br from-sky-500 to-blue-600 text-[11px] font-bold text-white shadow-sm">1</span>
             Pick a font
           </p>
           <div className="mt-2 grid grid-cols-2 gap-2 lg:grid-cols-4">
@@ -91,7 +91,7 @@ export default function Translator({ text, setText, variant, setVariant }: Props
                 aria-pressed={variant === v.id}
                 className={`rounded-xl border p-3 text-left transition ${
                   variant === v.id
-                    ? "border-violet-600 bg-gradient-to-br from-indigo-950 to-violet-950 ring-1 ring-violet-600"
+                    ? "border-blue-600 bg-gradient-to-br from-sky-950 to-blue-950 ring-1 ring-blue-600"
                     : "border-zinc-800 bg-zinc-900 hover:border-zinc-700 hover:bg-zinc-900"
                 }`}
               >
@@ -106,7 +106,7 @@ export default function Translator({ text, setText, variant, setVariant }: Props
           {/* Input */}
           <div>
           <label htmlFor="translator-input" className="text-sm font-semibold text-zinc-100">
-            <span className="mr-1.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-gradient-to-br from-indigo-600 to-violet-600 text-[11px] font-bold text-white shadow-sm">2</span>
+            <span className="mr-1.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-gradient-to-br from-sky-500 to-blue-600 text-[11px] font-bold text-white shadow-sm">2</span>
             Type or paste your text
           </label>
           <textarea
@@ -115,7 +115,7 @@ export default function Translator({ text, setText, variant, setVariant }: Props
             onChange={(e) => setText(e.target.value)}
             rows={6}
             placeholder="Type English here — symbols appear instantly…"
-            className="mt-2 w-full rounded-xl border border-zinc-700 p-3 text-base text-zinc-100 placeholder:text-zinc-500 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-800"
+            className="mt-2 w-full rounded-xl border border-zinc-700 p-3 text-base text-zinc-100 placeholder:text-zinc-500 focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-800"
           />
           <div className="mt-2 flex flex-wrap items-center gap-2">
             <span className="text-xs font-medium text-zinc-500">Try:</span>
@@ -124,7 +124,7 @@ export default function Translator({ text, setText, variant, setVariant }: Props
                 key={ex}
                 type="button"
                 onClick={() => setText(ex)}
-                className="rounded-full border border-indigo-800 bg-indigo-950 px-3 py-1 text-xs font-semibold text-indigo-300 hover:bg-indigo-950"
+                className="rounded-full border border-sky-800 bg-sky-950 px-3 py-1 text-xs font-semibold text-sky-300 hover:bg-sky-950"
               >
                 {ex}
               </button>
@@ -139,7 +139,7 @@ export default function Translator({ text, setText, variant, setVariant }: Props
           <div>
           <div className="flex flex-wrap items-center justify-between gap-2">
             <p className="text-sm font-semibold text-zinc-100" id="translator-output-label">
-              <span className="mr-1.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-gradient-to-br from-indigo-600 to-violet-600 text-[11px] font-bold text-white shadow-sm">3</span>
+              <span className="mr-1.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-gradient-to-br from-sky-500 to-blue-600 text-[11px] font-bold text-white shadow-sm">3</span>
               Your result <span className="font-normal text-zinc-500">({activeVariant.label})</span>
             </p>
             <div className="flex gap-2">
@@ -147,7 +147,7 @@ export default function Translator({ text, setText, variant, setVariant }: Props
                 type="button"
                 onClick={handleCopy}
                 disabled={!output}
-                className="rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:from-indigo-700 hover:to-violet-700 disabled:cursor-not-allowed disabled:bg-zinc-700 disabled:bg-none"
+                className="rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:from-sky-600 hover:to-blue-700 disabled:cursor-not-allowed disabled:bg-zinc-700 disabled:bg-none"
               >
                 {copied ? "✓ Copied!" : "⧉ Copy result"}
               </button>
