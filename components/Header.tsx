@@ -30,8 +30,18 @@ export default function Header() {
               <span
                 key={i}
                 aria-hidden="true"
-                className="animate-letter-flip bg-gradient-to-r from-indigo-700 via-violet-700 to-fuchsia-700 bg-clip-text text-transparent"
-                style={{ animationDelay: `${0.7 + i * 0.05}s` }}
+                className="animate-letter-flip"
+                style={{
+                  animationDelay: `${0.7 + i * 0.05}s`,
+                  backgroundImage:
+                    "linear-gradient(to right, #4338ca, #7c3aed, #a21caf)",
+                  backgroundSize: "2000% 100%",
+                  backgroundPosition: `${(i / (SITE_NAME.length - 1)) * 100}% 0`,
+                  WebkitBackgroundClip: "text",
+                  backgroundClip: "text",
+                  color: "transparent",
+                  WebkitTextFillColor: "transparent",
+                }}
               >
                 {ch === " " ? "\u00A0" : ch}
               </span>

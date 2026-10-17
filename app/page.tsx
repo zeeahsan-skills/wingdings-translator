@@ -31,8 +31,13 @@ export default function Home() {
                   <span
                     key={i}
                     aria-hidden="true"
-                    className="animate-letter-jerk text-gradient-flow"
-                    style={{ animationDelay: `${1.5 + idx * 0.05}s` }}
+                    className="animate-letter-jerk text-gradient-flow-letter"
+                    style={
+                      {
+                        animationDelay: `${1.5 + idx * 0.05}s`,
+                        "--i": idx,
+                      } as React.CSSProperties
+                    }
                   >
                     {ch}
                   </span>
