@@ -102,8 +102,9 @@ export default function Translator({ text, setText, variant, setVariant }: Props
           </div>
         </div>
 
-        {/* Input */}
-        <div className="mt-5">
+        <div className="mt-5 grid gap-5 md:grid-cols-2">
+          {/* Input */}
+          <div>
           <label htmlFor="translator-input" className="text-sm font-semibold text-zinc-100">
             <span className="mr-1.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-gradient-to-br from-indigo-600 to-violet-600 text-[11px] font-bold text-white shadow-sm">2</span>
             Type or paste your text
@@ -134,8 +135,8 @@ export default function Translator({ text, setText, variant, setVariant }: Props
           </p>
         </div>
 
-        {/* Output */}
-        <div className="mt-4">
+          {/* Output */}
+          <div>
           <div className="flex flex-wrap items-center justify-between gap-2">
             <p className="text-sm font-semibold text-zinc-100" id="translator-output-label">
               <span className="mr-1.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-gradient-to-br from-indigo-600 to-violet-600 text-[11px] font-bold text-white shadow-sm">3</span>
@@ -175,6 +176,7 @@ export default function Translator({ text, setText, variant, setVariant }: Props
             className="mt-2 min-h-24 whitespace-pre-wrap break-words rounded-xl border border-zinc-800 bg-zinc-900 p-3 text-lg leading-relaxed text-zinc-100"
           >
             {output || <span className="text-zinc-500">Your converted text will appear here…</span>}
+          </div>
           </div>
         </div>
 
