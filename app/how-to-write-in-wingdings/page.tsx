@@ -30,7 +30,7 @@ const FAQS = [
   },
   {
     q: "How do I decode a Wingdings message someone sent me?",
-    a: "Paste the symbols into a Wingdings decoder with the direction set to “Symbols → English” and the right font selected (usually Wingdings 1). Try the main translator on this site — it decodes live and flags ambiguous symbols.",
+    a: "Look each symbol up on a Wingdings alphabet chart with the right font selected (usually Wingdings 1) — every symbol is listed with the key that produces it. Try the chart on this site to read messages by hand.",
   },
   {
     q: "Can Google Translate convert English to Wingdings?",

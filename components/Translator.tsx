@@ -2,32 +2,23 @@
 
 import { useMemo, useState } from "react";
 import { VARIANTS, type VariantId } from "@/lib/wingdings-maps";
-import { decodeText, encodeText } from "@/lib/translate";
+import { encodeText } from "@/lib/translate";
 import { copyText } from "@/lib/clipboard";
-
-export type Direction = "encode" | "decode";
 
 interface Props {
   text: string;
   setText: (t: string) => void;
   variant: VariantId;
   setVariant: (v: VariantId) => void;
-  direction: Direction;
-  setDirection: (d: Direction) => void;
 }
 
-export default function Translator({ text, setText, variant, setVariant, direction, setDirection }: Props) {
+export default function Translator({ text, setText, variant, setVariant }: Props) {
   const [copied, setCopied] = useState(false);
 
-  const result = useMemo(
-    () => (direction === "encode" ? encodeText(text, variant) : decodeText(text, variant)),
-    [text, variant, direction]
-  );
+  const result = useMemo(() => encodeText(text, variant), [text, variant]);
   const output = result.output;
 
-  const unsupported = direction === "encode" ? (result as { unsupported: string[] }).unsupported : [];
-  const ambiguous = direction === "decode" ? (result as { ambiguous: { symbol: string; chosen: string; alternatives: string[] }[] }).ambiguous : [];
-  const unmapped = direction === "decode" ? (result as { unmapped: string[] }).unmapped : [];
+  const unsupported = result.unsupported;
 
   const activeVariant = VARIANTS.find((v) => v.id === variant)!;
 
@@ -37,11 +28,6 @@ export default function Translator({ text, setText, variant, setVariant, directi
       setCopied(true);
       window.setTimeout(() => setCopied(false), 1600);
     }
-  }
-
-  function swap() {
-    setDirection(direction === "encode" ? "decode" : "encode");
-    setText(output);
   }
 
   /** Render the result to a PNG image and download it. Useful because some
@@ -116,44 +102,10 @@ export default function Translator({ text, setText, variant, setVariant, directi
           </div>
         </div>
 
-        {/* Direction */}
-        <div className="mt-5 flex flex-wrap items-center gap-2" role="group" aria-label="Translation direction">
-          <p className="text-sm font-semibold text-slate-900">
-            <span className="mr-1.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-indigo-600 text-[11px] font-bold text-white">2</span>
-            Direction
-          </p>
-          <div className="flex rounded-xl border border-slate-200 p-1">
-            <button
-              type="button"
-              onClick={() => setDirection("encode")}
-              aria-pressed={direction === "encode"}
-              className={`rounded-lg px-3 py-1.5 text-sm font-medium ${direction === "encode" ? "bg-indigo-600 text-white" : "text-slate-600 hover:bg-slate-100"}`}
-            >
-              English → Symbols
-            </button>
-            <button
-              type="button"
-              onClick={() => setDirection("decode")}
-              aria-pressed={direction === "decode"}
-              className={`rounded-lg px-3 py-1.5 text-sm font-medium ${direction === "decode" ? "bg-indigo-600 text-white" : "text-slate-600 hover:bg-slate-100"}`}
-            >
-              Symbols → English
-            </button>
-          </div>
-          <button
-            type="button"
-            onClick={swap}
-            className="rounded-xl border border-slate-200 px-3 py-1.5 text-sm font-semibold text-slate-700 hover:bg-slate-50"
-            aria-label="Swap direction and move output to input"
-          >
-            ⇄ Swap
-          </button>
-        </div>
-
         {/* Input */}
         <div className="mt-5">
           <label htmlFor="translator-input" className="text-sm font-semibold text-slate-900">
-            <span className="mr-1.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-indigo-600 text-[11px] font-bold text-white">3</span>
+            <span className="mr-1.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-indigo-600 text-[11px] font-bold text-white">2</span>
             Type or paste your text
           </label>
           <textarea
@@ -161,7 +113,7 @@ export default function Translator({ text, setText, variant, setVariant, directi
             value={text}
             onChange={(e) => setText(e.target.value)}
             rows={4}
-            placeholder={direction === "encode" ? "Type English here — symbols appear instantly…" : "Paste Wingdings symbols here to decode…"}
+            placeholder="Type English here — symbols appear instantly…"
             className="mt-2 w-full rounded-xl border border-slate-300 p-3 text-base text-slate-900 placeholder:text-slate-400 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-200"
           />
           <div className="mt-2 flex flex-wrap items-center gap-2">
@@ -186,7 +138,7 @@ export default function Translator({ text, setText, variant, setVariant, directi
         <div className="mt-4">
           <div className="flex flex-wrap items-center justify-between gap-2">
             <p className="text-sm font-semibold text-slate-900" id="translator-output-label">
-              <span className="mr-1.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-indigo-600 text-[11px] font-bold text-white">4</span>
+              <span className="mr-1.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-indigo-600 text-[11px] font-bold text-white">3</span>
               Your result <span className="font-normal text-slate-500">({activeVariant.label})</span>
             </p>
             <div className="flex gap-2">
@@ -226,29 +178,12 @@ export default function Translator({ text, setText, variant, setVariant, directi
           </div>
         </div>
 
-        {/* Honest notices — competitors pass these through silently */}
+        {/* Honest notice — competitors pass these through silently */}
         {unsupported.length > 0 && (
           <p role="alert" className="mt-3 rounded-xl bg-amber-50 px-3 py-2 text-sm text-amber-800">
             These characters have no {activeVariant.label} mapping and were kept as-is:{" "}
             <strong>{unsupported.slice(0, 12).join(" ")}</strong>
             {unsupported.length > 12 && ` (+${unsupported.length - 12} more)`}
-          </p>
-        )}
-        {ambiguous.length > 0 && (
-          <div role="alert" className="mt-3 rounded-xl bg-amber-50 px-3 py-2 text-sm text-amber-800">
-            <p className="font-semibold">Ambiguous symbols decoded with a best guess:</p>
-            <ul className="mt-1 list-disc pl-5">
-              {ambiguous.slice(0, 6).map((a) => (
-                <li key={a.symbol}>
-                  {a.symbol} → <strong>{a.chosen}</strong> (could also be {a.alternatives.join(", ")})
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
-        {unmapped.length > 0 && (
-          <p role="alert" className="mt-3 rounded-xl bg-slate-100 px-3 py-2 text-sm text-slate-700">
-            Not recognised as {activeVariant.label} symbols, kept as-is: <strong>{unmapped.slice(0, 12).join(" ")}</strong>
           </p>
         )}
       </div>

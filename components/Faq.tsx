@@ -11,11 +11,11 @@ const FAQS = [
   },
   {
     q: "How do I decode Wingdings back to English?",
-    a: "Switch the direction to “Symbols → English” and paste the symbols in. The tool maps each symbol back to its letter. If one symbol could come from several keys, you'll see an ambiguity note telling you which reading was chosen and what the alternatives are.",
+    a: "Match each symbol against the Wingdings alphabet chart — every symbol is listed with the key that produces it, so you can read the letters off one by one. This site's chart covers all four fonts, so make sure you're looking at the right font's table.",
   },
   {
     q: "What is the difference between Wingdings 1, 2 and 3?",
-    a: "They are three separate fonts, not versions of one alphabet. Wingdings 1 (1990) has the classic pictograms — hands, faces, zodiac, office symbols. Wingdings 2 adds stationery icons, more hand gestures and circled numbers. Wingdings 3 is almost entirely arrows, triangles and keyboard-key symbols. Webdings is a fourth, web-themed pictogram font. Keep them separate when encoding and decoding.",
+    a: "They are three separate fonts, not versions of one alphabet. Wingdings 1 (1990) has the classic pictograms — hands, faces, zodiac, office symbols. Wingdings 2 adds stationery icons, more hand gestures and circled numbers. Wingdings 3 is almost entirely arrows, triangles and keyboard-key symbols. Webdings is a fourth, web-themed pictogram font. Keep them separate when encoding.",
   },
   {
     q: "Why do my Wingdings symbols show up as emoji?",
@@ -23,11 +23,11 @@ const FAQS = [
   },
   {
     q: "What is the Gaster / Undertale connection?",
-    a: "In the game Undertale, the hidden character W. D. Gaster “speaks” in Wingdings — his dialogue (notably Lab Entry 17) is encoded with the standard Wingdings 1 mapping. Fans use Wingdings translators to read his messages and to write their own. Select Wingdings 1 and the Symbols → English direction to decode them.",
+    a: "In the game Undertale, the hidden character W. D. Gaster “speaks” in Wingdings — his dialogue (notably Lab Entry 17) is encoded with the standard Wingdings 1 mapping. Fans use the Wingdings alphabet chart to read his messages and this translator to write their own. Select Wingdings 1 to match the game's mapping.",
   },
   {
     q: "Is Wingdings a secret code or encryption?",
-    a: "No — it's a fixed one-to-one substitution of pictures for letters, not encryption. Anyone with the chart (or this decoder) can read it instantly. It's great for fun puzzles and decoration, but never use it for anything that actually needs to stay private.",
+    a: "No — it's a fixed one-to-one substitution of pictures for letters, not encryption. Anyone with the chart can read it instantly. It's great for fun puzzles and decoration, but never use it for anything that actually needs to stay private.",
   },
   {
     q: "Can I use Wingdings symbols in Roblox?",

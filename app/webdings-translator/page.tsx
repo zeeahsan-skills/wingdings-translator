@@ -23,7 +23,7 @@ const FAQS = [
   },
   {
     q: "Can I decode Webdings symbols to English?",
-    a: "Yes. Set the direction to “Symbols → English”, paste the symbols, and keep Webdings selected. Ambiguous symbols trigger a note showing the alternatives.",
+    a: "Yes. Look each symbol up on the Webdings alphabet chart — every symbol is listed with the key that produces it, so you can read the letters off one by one.",
   },
 ];
 

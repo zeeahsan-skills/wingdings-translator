@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Translator, { type Direction } from "./Translator";
+import Translator from "./Translator";
 import Inspector from "./Inspector";
 import type { VariantId } from "@/lib/wingdings-maps";
 
@@ -9,7 +9,6 @@ import type { VariantId } from "@/lib/wingdings-maps";
 export default function VariantTool({ defaultVariant }: { defaultVariant: VariantId }) {
   const [text, setText] = useState("Hello World!");
   const [variant, setVariant] = useState<VariantId>(defaultVariant);
-  const [direction, setDirection] = useState<Direction>("encode");
 
   return (
     <div className="space-y-10">
@@ -18,10 +17,8 @@ export default function VariantTool({ defaultVariant }: { defaultVariant: Varian
         setText={setText}
         variant={variant}
         setVariant={setVariant}
-        direction={direction}
-        setDirection={setDirection}
       />
-      <Inspector text={direction === "encode" ? text : ""} variant={variant} />
+      <Inspector text={text} variant={variant} />
     </div>
   );
 }

@@ -18,11 +18,11 @@ const FAQS = [
   },
   {
     q: "How do I decode Gaster's messages?",
-    a: "Paste the symbols into the translator above, switch the direction to “Symbols → English”, and make sure Wingdings 1 is selected. Gaster's text follows the standard Wingdings 1 mapping, so it decodes accurately — including the well-known Entry 17 passage.",
+    a: "Look each symbol up on the Wingdings alphabet chart with Wingdings 1 selected. Gaster's text follows the standard Wingdings 1 mapping, so it decodes accurately — including the well-known Entry 17 passage.",
   },
   {
     q: "Can I write my own text like Gaster?",
-    a: "Yes. Type English text with Wingdings 1 selected and the direction set to “English → Symbols”. The output uses the same mapping the game uses for Gaster's dialogue, which is why fan communities write lore theories and messages in it.",
+    a: "Yes. Type English text with Wingdings 1 selected. The output uses the same mapping the game uses for Gaster's dialogue, which is why fan communities write lore theories and messages in it.",
   },
   {
     q: "Is the Gaster translator the same as a Wingdings translator?",
@@ -87,8 +87,8 @@ WHAT DO YOU TWO THINK?`}
           </p>
         </div>
         <p className="mt-3 text-sm leading-relaxed text-slate-600">
-          Try it yourself: copy the symbols above, paste them into the translator with direction set
-          to “Symbols → English” and Wingdings&nbsp;1 selected — you&apos;ll get the same text. The
+          Try it yourself: copy the symbols above and look each one up on the Wingdings alphabet chart
+          with Wingdings&nbsp;1 selected — you&apos;ll get the same text. The
           encoding above was generated with this site&apos;s own Wingdings&nbsp;1 table.
         </p>
       </section>

@@ -23,7 +23,7 @@ const FAQS = [
   },
   {
     q: "Can I decode Wingdings 2 symbols back to English?",
-    a: "Yes. Switch the direction to “Symbols → English” and paste the symbols. If a symbol could come from more than one key, the tool shows an ambiguity note explaining which reading it chose.",
+    a: "Yes. Look each symbol up on the Wingdings 2 alphabet chart — every symbol is listed with the key that produces it, so you can read the letters off one by one.",
   },
 ];
 
@@ -55,7 +55,7 @@ export default function Wingdings2Page() {
           stationery icons, circled and boxed numbers, and ornamental marks. Because its mapping is
           unique, generic &ldquo;Wingdings translators&rdquo; that only implement the original font
           will decode Wingdings 2 text incorrectly. This page uses the dedicated Wingdings 2 table
-          for both directions. Compare with the{" "}
+          for encoding. Compare with the{" "}
           <Link href="/wingdings-3-translator/" className="font-semibold text-indigo-600 hover:underline">
             Wingdings 3 translator
           </Link>

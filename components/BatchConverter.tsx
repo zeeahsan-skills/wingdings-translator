@@ -2,24 +2,19 @@
 
 import { useMemo, useState } from "react";
 import { VARIANTS, type VariantId } from "@/lib/wingdings-maps";
-import { decodeText, encodeText } from "@/lib/translate";
+import { encodeText } from "@/lib/translate";
 import { copyText } from "@/lib/clipboard";
-import type { Direction } from "./Translator";
 
 export default function BatchConverter() {
   const [input, setInput] = useState("");
   const [variant, setVariant] = useState<VariantId>("wingdings1");
-  const [direction, setDirection] = useState<Direction>("encode");
   const [copiedKey, setCopiedKey] = useState<string | null>(null);
 
   const lines = useMemo(() => input.split("\n").filter((l) => l.trim().length > 0).slice(0, 200), [input]);
 
   const results = useMemo(
-    () =>
-      lines.map((line) =>
-        direction === "encode" ? encodeText(line, variant).output : decodeText(line, variant).output
-      ),
-    [lines, variant, direction]
+    () => lines.map((line) => encodeText(line, variant).output),
+    [lines, variant]
   );
 
   async function copyOne(i: number) {
@@ -34,7 +29,7 @@ export default function BatchConverter() {
   function downloadTxt() {
     if (results.length === 0) return;
     const body = results.map((r, i) => `${i + 1}. ${r}`).join("\n");
-    const header = `Wingdings batch conversion (${variant}, ${direction === "encode" ? "English → symbols" : "symbols → English"})\nGenerated locally in your browser — nothing was uploaded.\n\n`;
+    const header = `Wingdings batch conversion (${variant}, English → symbols)\nGenerated locally in your browser — nothing was uploaded.\n\n`;
     const blob = new Blob([header + body + "\n"], { type: "text/plain;charset=utf-8" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
@@ -75,24 +70,9 @@ export default function BatchConverter() {
               <option key={v.id} value={v.id}>{v.label}</option>
             ))}
           </select>
-          <div className="flex rounded-xl border border-slate-200 p-1" role="group" aria-label="Batch direction">
-            <button
-              type="button"
-              onClick={() => setDirection("encode")}
-              aria-pressed={direction === "encode"}
-              className={`rounded-lg px-3 py-1.5 text-sm font-medium ${direction === "encode" ? "bg-indigo-600 text-white" : "text-slate-600 hover:bg-slate-100"}`}
-            >
-              English → Symbols
-            </button>
-            <button
-              type="button"
-              onClick={() => setDirection("decode")}
-              aria-pressed={direction === "decode"}
-              className={`rounded-lg px-3 py-1.5 text-sm font-medium ${direction === "decode" ? "bg-indigo-600 text-white" : "text-slate-600 hover:bg-slate-100"}`}
-            >
-              Symbols → English
-            </button>
-          </div>
+          <span className="rounded-lg bg-indigo-600 px-3 py-1.5 text-sm font-medium text-white">
+            English → Symbols
+          </span>
         </div>
 
         <label htmlFor="batch-input" className="mt-4 block text-sm font-semibold text-slate-900">
