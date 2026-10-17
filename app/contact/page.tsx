@@ -18,7 +18,7 @@ export default function ContactPage() {
         </p>
         <p>
           Email us at{" "}
-          <a className="font-semibold text-sky-400 underline" href={`mailto:${CONTACT_EMAIL}`}>
+          <a className="font-semibold text-indigo-400 underline" href={`mailto:${CONTACT_EMAIL}`}>
             {CONTACT_EMAIL}
           </a>
         </p>

@@ -22,7 +22,7 @@ export default function PageFaq({ items, heading = "Frequently asked questions" 
         {items.map((f) => (
           <details key={f.q} className="group rounded-2xl border border-zinc-800 bg-zinc-900 px-5 py-4 shadow-sm">
             <summary className="cursor-pointer list-none text-base font-semibold text-zinc-100 marker:hidden [&::-webkit-details-marker]:hidden">
-              <span className="mr-2 inline-block text-sky-400 transition group-open:rotate-90" aria-hidden="true">▸</span>
+              <span className="mr-2 inline-block text-indigo-400 transition group-open:rotate-90" aria-hidden="true">▸</span>
               {f.q}
             </summary>
             <p className="mt-2 text-sm leading-relaxed text-zinc-400">{f.a}</p>

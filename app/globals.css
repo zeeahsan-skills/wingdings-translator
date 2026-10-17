@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #000000;
+  --background: #0a1428;
   --foreground: #f4f4f5;
   color-scheme: dark;
 }
@@ -30,11 +30,13 @@ select option {
 .text-gradient-flow {
   background: linear-gradient(
     90deg,
-    #38bdf8,
-    #22d3ee,
-    #3b82f6,
-    #6366f1,
-    #38bdf8
+    #4f46e5,
+    #0ea5e9,
+    #10b981,
+    #f59e0b,
+    #ef4444,
+    #d946ef,
+    #4f46e5
   );
   background-size: 300% auto;
   -webkit-background-clip: text;
@@ -130,6 +132,17 @@ select option {
 }
 [data-theme="light"] .to-blue-950 {
   --tw-gradient-to: #eff6ff;
+}
+/* Deep navy page background (replaces pure black) */
+.bg-navy {
+  background-color: #0a1428;
+}
+.bg-navy\/80 {
+  background-color: rgb(10 20 40 / 0.8);
+}
+[data-theme="light"] .bg-navy,
+[data-theme="light"] .bg-navy\/80 {
+  background-color: #ffffff;
 }
 [data-theme="light"] .text-amber-200 {
   color: #92400e;

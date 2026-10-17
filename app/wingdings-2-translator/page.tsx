@@ -31,7 +31,7 @@ export default function Wingdings2Page() {
   return (
     <div className="mx-auto max-w-5xl px-4 pb-16">
       <nav aria-label="Breadcrumb" className="pt-6 text-sm text-zinc-500">
-        <Link href="/" className="hover:text-sky-400">Wingdings Translator</Link>
+        <Link href="/" className="hover:text-indigo-400">Wingdings Translator</Link>
         <span aria-hidden="true"> / </span>
         <span aria-current="page">Wingdings 2 Translator</span>
       </nav>
@@ -56,15 +56,15 @@ export default function Wingdings2Page() {
           unique, generic &ldquo;Wingdings translators&rdquo; that only implement the original font
           will decode Wingdings 2 text incorrectly. This page uses the dedicated Wingdings 2 table
           for encoding. Compare with the{" "}
-          <Link href="/wingdings-3-translator/" className="font-semibold text-sky-400 hover:underline">
+          <Link href="/wingdings-3-translator/" className="font-semibold text-indigo-400 hover:underline">
             Wingdings 3 translator
           </Link>
           , the{" "}
-          <Link href="/webdings-translator/" className="font-semibold text-sky-400 hover:underline">
+          <Link href="/webdings-translator/" className="font-semibold text-indigo-400 hover:underline">
             Webdings translator
           </Link>
           , or the{" "}
-          <Link href="/" className="font-semibold text-sky-400 hover:underline">
+          <Link href="/" className="font-semibold text-indigo-400 hover:underline">
             main translator
           </Link>{" "}
           covering all four fonts.

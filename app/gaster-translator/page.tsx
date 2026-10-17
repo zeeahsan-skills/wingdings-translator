@@ -34,7 +34,7 @@ export default function GasterTranslatorPage() {
   return (
     <div className="mx-auto max-w-5xl px-4 pb-16">
       <nav aria-label="Breadcrumb" className="pt-6 text-sm text-zinc-500">
-        <Link href="/" className="hover:text-sky-400">Wingdings Translator</Link>
+        <Link href="/" className="hover:text-indigo-400">Wingdings Translator</Link>
         <span aria-hidden="true"> / </span>
         <span aria-current="page">Gaster Translator</span>
       </nav>
@@ -73,7 +73,7 @@ export default function GasterTranslatorPage() {
 ✡☟✌❄ 👎⚐ ☯⚐✞ ❄✡⚐ ❄☟✋☠😐✍`}
           </p>
         </div>
-        <div className="mt-4 rounded-xl bg-sky-950 p-4 text-sm leading-relaxed text-zinc-300">
+        <div className="mt-4 rounded-xl bg-indigo-950 p-4 text-sm leading-relaxed text-zinc-300">
           <p className="font-semibold text-zinc-100">The decoded text:</p>
           <p className="mt-2 whitespace-pre-line font-medium">
 {`ENTRY NUMBER SEVENTEEN
@@ -107,11 +107,11 @@ WHAT DO YOU TWO THINK?`}
         <p className="mt-3 text-sm leading-relaxed text-zinc-400">
           The same mapping powers fan content across Reddit, Discord and Tumblr, where lore theories
           are routinely written in Wingdings. If you want the full symbol set instead, see the{" "}
-          <Link href="/wingdings-alphabet-chart/" className="font-semibold text-sky-400 hover:underline">
+          <Link href="/wingdings-alphabet-chart/" className="font-semibold text-indigo-400 hover:underline">
             Wingdings alphabet chart
           </Link>
           , or use the{" "}
-          <Link href="/" className="font-semibold text-sky-400 hover:underline">
+          <Link href="/" className="font-semibold text-indigo-400 hover:underline">
             main Wingdings translator
           </Link>{" "}
           for all four font variants.
