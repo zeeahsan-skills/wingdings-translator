@@ -84,6 +84,33 @@ select option {
   }
 }
 
+/* ---- Title rope-flip ----
+   Each letter of the site title flips (rotateX) in sequence like a rope wave. */
+@keyframes letter-rope-flip {
+  0% {
+    transform: perspective(400px) rotateX(0deg);
+  }
+  50% {
+    transform: perspective(400px) rotateX(180deg);
+  }
+  100% {
+    transform: perspective(400px) rotateX(360deg);
+  }
+}
+
+.animate-letter-flip {
+  display: inline-block;
+  animation: letter-rope-flip 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-letter-flip {
+    animation: none;
+  }
+}
+
 /* ---- Light theme ----
    The markup is authored for the dark theme; these rules flip the dark
    utility colors back to light values when the toggle switches to white mode. */

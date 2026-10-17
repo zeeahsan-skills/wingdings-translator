@@ -25,7 +25,18 @@ export default function Header() {
             className="h-9 w-9 rounded-xl shadow-sm animate-logo-entrance"
             priority
           />
-          <span className="bg-gradient-to-r from-indigo-700 via-violet-700 to-fuchsia-700 bg-clip-text text-lg font-bold tracking-tight text-transparent">{SITE_NAME}</span>
+          <span className="text-lg font-bold tracking-tight" aria-label={SITE_NAME} role="text">
+            {SITE_NAME.split("").map((ch, i) => (
+              <span
+                key={i}
+                aria-hidden="true"
+                className="animate-letter-flip bg-gradient-to-r from-indigo-700 via-violet-700 to-fuchsia-700 bg-clip-text text-transparent"
+                style={{ animationDelay: `${0.7 + i * 0.05}s` }}
+              >
+                {ch === " " ? "\u00A0" : ch}
+              </span>
+            ))}
+          </span>
         </Link>
         <nav aria-label="Primary" className="hidden items-center gap-1 md:flex">
           {NAV.map((item) => (
