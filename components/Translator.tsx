@@ -96,7 +96,7 @@ export default function Translator({ text, setText, variant, setVariant }: Props
                 }`}
               >
                 <span className="block text-sm font-bold text-zinc-100">{v.label}</span>
-                <span className="mt-0.5 block text-xs leading-snug text-zinc-500">{v.description}</span>
+                <span className="mt-0.5 block text-xs leading-snug text-zinc-300">{v.description}</span>
               </button>
             ))}
           </div>
