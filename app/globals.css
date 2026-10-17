@@ -30,13 +30,11 @@ select option {
 .text-gradient-flow {
   background: linear-gradient(
     90deg,
-    #4f46e5,
+    #38bdf8,
+    #2dd4bf,
     #0ea5e9,
-    #10b981,
-    #f59e0b,
-    #ef4444,
-    #d946ef,
-    #4f46e5
+    #14b8a6,
+    #38bdf8
   );
   background-size: 300% auto;
   -webkit-background-clip: text;
@@ -130,8 +128,14 @@ select option {
 [data-theme="light"] .from-sky-950 {
   --tw-gradient-from: #f0f9ff;
 }
-[data-theme="light"] .to-blue-950 {
-  --tw-gradient-to: #eff6ff;
+[data-theme="light"] .to-teal-950 {
+  --tw-gradient-to: #f0fdfa;
+}
+[data-theme="light"] .border-teal-500 {
+  border-color: #99f6e4;
+}
+[data-theme="light"] .ring-teal-500 {
+  --tw-ring-color: #99f6e4;
 }
 /* Deep navy page background (replaces pure black) */
 .bg-navy {

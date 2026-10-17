@@ -50,7 +50,7 @@ export default function FontCompare() {
           value={text}
           onChange={(e) => setText(e.target.value)}
           placeholder="Type something…"
-          className="mt-2 w-full rounded-xl border border-zinc-700 px-4 py-2.5 text-base text-zinc-100 placeholder:text-zinc-500 focus:border-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-800"
+          className="mt-2 w-full rounded-xl border border-zinc-700 px-4 py-2.5 text-base text-zinc-100 placeholder:text-zinc-500 focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-800"
         />
 
         <ul className="mt-4 grid gap-3 sm:grid-cols-2">
