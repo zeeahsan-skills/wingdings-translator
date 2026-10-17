@@ -70,7 +70,7 @@ export default function BatchConverter() {
               <option key={v.id} value={v.id}>{v.label}</option>
             ))}
           </select>
-          <span className="rounded-lg bg-indigo-600 px-3 py-1.5 text-sm font-medium text-white">
+          <span className="rounded-lg bg-gradient-to-r from-indigo-600 to-violet-600 px-3 py-1.5 text-sm font-medium text-white shadow-sm">
             English → Symbols
           </span>
         </div>
@@ -91,7 +91,7 @@ export default function BatchConverter() {
             type="button"
             onClick={copyAll}
             disabled={results.length === 0}
-            className="rounded-xl bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-700 disabled:cursor-not-allowed disabled:bg-slate-300"
+            className="rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:from-indigo-700 hover:to-violet-700 disabled:cursor-not-allowed disabled:bg-slate-300 disabled:bg-none"
           >
             {copiedKey === "all" ? "✓ Copied all!" : "⧉ Copy all results"}
           </button>

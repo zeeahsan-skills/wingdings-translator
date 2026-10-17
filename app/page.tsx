@@ -20,10 +20,10 @@ export default function Home() {
     <div className="mx-auto max-w-5xl px-4 pb-16">
       {/* Hero */}
       <div className="py-10 text-center sm:py-14">
-        <p className="text-xs font-bold uppercase tracking-widest text-indigo-600">
+        <p className="bg-gradient-to-r from-indigo-600 via-violet-600 to-fuchsia-600 bg-clip-text text-xs font-bold uppercase tracking-widest text-transparent">
           Free · Instant · No sign-up · Works offline in your browser
         </p>
-        <h1 className="mx-auto mt-3 max-w-3xl text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
+        <h1 className="text-gradient-flow mx-auto mt-3 max-w-3xl text-4xl font-extrabold tracking-tight sm:text-5xl">
           Wingdings Translator
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600">

@@ -48,7 +48,7 @@ export default function HowToWritePage() {
       </nav>
 
       <div className="py-8 text-center">
-        <h1 className="mx-auto max-w-3xl text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
+        <h1 className="text-gradient-flow mx-auto max-w-3xl text-4xl font-extrabold tracking-tight sm:text-5xl">
           How to Write in Wingdings
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600">
