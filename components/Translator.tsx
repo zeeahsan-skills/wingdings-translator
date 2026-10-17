@@ -113,7 +113,7 @@ export default function Translator({ text, setText, variant, setVariant }: Props
             id="translator-input"
             value={text}
             onChange={(e) => setText(e.target.value)}
-            rows={4}
+            rows={6}
             placeholder="Type English here — symbols appear instantly…"
             className="mt-2 w-full rounded-xl border border-zinc-700 p-3 text-base text-zinc-100 placeholder:text-zinc-500 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-800"
           />
@@ -173,7 +173,7 @@ export default function Translator({ text, setText, variant, setVariant }: Props
           <div
             role="status"
             aria-labelledby="translator-output-label"
-            className="mt-2 min-h-24 whitespace-pre-wrap break-words rounded-xl border border-zinc-800 bg-zinc-900 p-3 text-lg leading-relaxed text-zinc-100"
+            className="mt-2 min-h-36 whitespace-pre-wrap break-words rounded-xl border border-zinc-800 bg-zinc-900 p-3 text-lg leading-relaxed text-zinc-100"
           >
             {output || <span className="text-zinc-500">Your converted text will appear here…</span>}
           </div>
