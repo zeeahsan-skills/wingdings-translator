@@ -23,8 +23,9 @@ export default function Home() {
           Wingdings Translator
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-lg text-zinc-400">
-          Convert English to Wingdings symbols and decode symbols back to English — live as you
-          type, across <strong>Wingdings 1, Wingdings 2, Wingdings 3 and Webdings</strong>.
+          This free online Wingdings translator and generator converts English into Wingdings
+          symbols live as you type — get an instant Wingdings translation across{" "}
+          <strong>Wingdings 1, Wingdings 2, Wingdings 3 and Webdings</strong>.
         </p>
       </div>
 
@@ -42,7 +43,8 @@ export default function Home() {
           <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-relaxed text-zinc-400">
             <li><strong className="text-zinc-200">Four real converters, not one.</strong> Most tools only do Wingdings 1 — here Wingdings 1, 2, 3 and Webdings each get a full converter with per-variant results.</li>
             <li><strong className="text-zinc-200">Click-to-copy symbol reference.</strong> Every symbol card copies on click — no static charts you have to retype from.</li>
-            <li><strong className="text-zinc-200">Honest decoding.</strong> Ambiguous symbols are flagged with alternatives instead of silently guessed; unsupported characters are named, not swallowed.</li>
+            <li><strong className="text-zinc-200">Honest conversion.</strong> Unsupported characters are named, not silently swallowed.</li>
+            <li><strong className="text-zinc-200">Doubles as a Wingdings decoder.</strong> Need to read symbols instead of writing them? The alphabet chart works as a decoder — look up any symbol to find its letter.</li>
             <li><strong className="text-zinc-200">Private by design.</strong> All conversion runs locally in your browser. Nothing is uploaded, stored or tracked.</li>
           </ul>
         </section>

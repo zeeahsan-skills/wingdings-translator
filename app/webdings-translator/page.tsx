@@ -8,7 +8,7 @@ import { SITE_URL } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Webdings Translator — Convert Text to Webdings Symbols",
   description:
-    "Free Webdings translator: turn English into Webdings web-style icons and decode Webdings back to English. Live conversion, copy button, no sign-up.",
+    "Free Webdings translator and generator: turn English into Webdings web-style icons with live conversion, copy button and no sign-up.",
   alternates: { canonical: `${SITE_URL}/webdings-translator/` },
 };
 
@@ -41,7 +41,7 @@ export default function WebdingsPage() {
           Webdings Translator
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-lg text-zinc-400">
-          Convert English to Webdings icons and decode Webdings back to English — live as you type.
+          Convert English to Webdings icons with this free online translator — live as you type.
           Free, no sign-up, runs entirely in your browser.
         </p>
       </div>

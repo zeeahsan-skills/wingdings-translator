@@ -3,7 +3,7 @@ import { SITE_NAME } from "@/lib/site";
 const FAQS = [
   {
     q: "What is Wingdings?",
-    a: "Wingdings is a symbol font Microsoft has shipped with Windows since 1992. Instead of letters, each key shows a small picture — hands, arrows, faces, office icons. Typing a word with the Wingdings font applied turns it into a row of symbols, which is why people use it for puzzles and hidden messages.",
+    a: "Wingdings is a symbol font Microsoft has shipped with Windows since 1992. Instead of letters, each key shows a small picture — hands, arrows, faces, office icons. Typing a word with the Wingdings font applied turns it into a row of symbols, which is why people use it for puzzles and hidden messages — and why some casually call it the Wingdings language.",
   },
   {
     q: "How do I translate English into Wingdings?",

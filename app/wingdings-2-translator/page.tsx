@@ -8,7 +8,7 @@ import { SITE_URL } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Wingdings 2 Translator — Convert Text to Wingdings 2 Symbols",
   description:
-    "Free Wingdings 2 translator: convert English to Wingdings 2 symbols and decode them back. Live conversion, copy button, no sign-up. Also supports Wingdings 1, 3 and Webdings.",
+    "Free Wingdings 2 translator and generator: convert English to Wingdings 2 symbols with live conversion, copy button and no sign-up. Also supports Wingdings 1, 3 and Webdings.",
   alternates: { canonical: `${SITE_URL}/wingdings-2-translator/` },
 };
 
@@ -41,8 +41,8 @@ export default function Wingdings2Page() {
           Wingdings 2 Translator
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-lg text-zinc-400">
-          Convert English to Wingdings 2 symbols and decode Wingdings 2 back to English — live as
-          you type. Free, no sign-up, runs entirely in your browser.
+          Convert English to Wingdings 2 symbols with this free online translator and generator —
+          live as you type. Free, no sign-up, runs entirely in your browser.
         </p>
       </div>
 

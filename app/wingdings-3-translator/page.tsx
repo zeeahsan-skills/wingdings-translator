@@ -8,7 +8,7 @@ import { SITE_URL } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Wingdings 3 Translator — Arrows & Directional Symbols Converter",
   description:
-    "Free Wingdings 3 translator: convert English to Wingdings 3 arrow and shape symbols, or decode them back. Live conversion, copy button, no sign-up.",
+    "Free Wingdings 3 translator: convert English to Wingdings 3 arrow and shape symbols with live conversion, copy button and no sign-up.",
   alternates: { canonical: `${SITE_URL}/wingdings-3-translator/` },
 };
 
@@ -41,8 +41,8 @@ export default function Wingdings3Page() {
           Wingdings 3 Translator
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-lg text-zinc-400">
-          Convert English to Wingdings 3 arrows and geometric symbols — or decode them back to
-          English. Live conversion, free, no sign-up.
+          Convert English to Wingdings 3 arrows and geometric symbols with this Wingdings 3
+          character map and translator. Live conversion, free, no sign-up.
         </p>
       </div>
 

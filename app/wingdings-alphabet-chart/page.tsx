@@ -45,7 +45,9 @@ export default function AlphabetChartPage() {
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-lg text-zinc-400">
           Every Wingdings 1, Wingdings 2, Wingdings 3 and Webdings symbol in one searchable
-          reference. <strong>Click any symbol to copy it</strong> — no retyping from a static image.
+          character map — the complete list of Wingdings symbols with the original font mapping,
+          including hard-to-find checkbox &#9744; &#9745; glyphs. <strong>Click any symbol to copy
+          it</strong> — no retyping from a static image.
         </p>
       </div>
 
