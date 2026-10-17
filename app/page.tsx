@@ -8,7 +8,6 @@ import SymbolReference from "@/components/SymbolReference";
 import CompatibilityGuide from "@/components/CompatibilityGuide";
 import Faq from "@/components/Faq";
 import { SITE_NAME, SITE_TAGLINE } from "@/lib/site";
-import { ALL_TAGGED, VARIANTS } from "@/lib/wingdings-maps";
 
 export const metadata: Metadata = {
   title: `${SITE_NAME} — Convert English to Wingdings Symbols & Back`,
@@ -20,33 +19,13 @@ export default function Home() {
     <div className="mx-auto max-w-5xl px-4 pb-16">
       {/* Hero */}
       <div className="py-10 text-center sm:py-14">
-        <p className="bg-gradient-to-r from-indigo-600 via-violet-600 to-fuchsia-600 bg-clip-text text-xs font-bold uppercase tracking-widest text-transparent">
-          Free · Instant · No sign-up · Works offline in your browser
-        </p>
-        <h1 className="text-gradient-flow mx-auto mt-3 max-w-3xl text-4xl font-extrabold tracking-tight sm:text-5xl">
+        <h1 className="text-gradient-flow mx-auto mt-3 max-w-3xl text-5xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl">
           Wingdings Translator
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-lg text-zinc-400">
           Convert English to Wingdings symbols and decode symbols back to English — live as you
           type, across <strong>Wingdings 1, Wingdings 2, Wingdings 3 and Webdings</strong>.
         </p>
-        <dl className="mx-auto mt-6 flex max-w-lg justify-center gap-6 text-center">
-          <div>
-            <dt className="sr-only">Font variants</dt>
-            <dd className="text-2xl font-extrabold text-zinc-100">{VARIANTS.length}</dd>
-            <dd className="text-xs text-zinc-500">font variants</dd>
-          </div>
-          <div>
-            <dt className="sr-only">Mapped symbols</dt>
-            <dd className="text-2xl font-extrabold text-zinc-100">{ALL_TAGGED.length}</dd>
-            <dd className="text-xs text-zinc-500">mapped symbols</dd>
-          </div>
-          <div>
-            <dt className="sr-only">Price</dt>
-            <dd className="text-2xl font-extrabold text-zinc-100">$0</dd>
-            <dd className="text-xs text-zinc-500">free forever</dd>
-          </div>
-        </dl>
       </div>
 
       <div className="space-y-16">

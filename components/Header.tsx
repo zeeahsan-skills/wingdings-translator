@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { SITE_NAME } from "@/lib/site";
+import ThemeToggle from "./ThemeToggle";
 
 const NAV = [
   { href: "/", label: "Translator" },
@@ -31,12 +32,15 @@ export default function Header() {
             </Link>
           ))}
         </nav>
-        <Link
-          href="/#translator"
-          className="rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:from-indigo-700 hover:to-violet-700 md:hidden"
-        >
-          Open tool
-        </Link>
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          <Link
+            href="/#translator"
+            className="rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:from-indigo-700 hover:to-violet-700 md:hidden"
+          >
+            Open tool
+          </Link>
+        </div>
       </div>
       <nav aria-label="Primary mobile" className="flex gap-1 overflow-x-auto border-t border-zinc-800 px-4 py-2 md:hidden">
         {NAV.map((item) => (
