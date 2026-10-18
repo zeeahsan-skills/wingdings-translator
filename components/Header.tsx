@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { SITE_NAME } from "@/lib/site";
 import ThemeToggle from "./ThemeToggle";
 
@@ -13,11 +16,13 @@ const NAV = [
 ];
 
 export default function Header() {
+  const pathname = usePathname();
   return (
     <header className="sticky top-0 z-40 border-b border-zinc-800/70 bg-black/75 shadow-[0_8px_30px_-12px_rgba(99,102,241,0.35)] backdrop-blur-xl">
       <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-3">
         <Link href="/" className="flex items-center gap-2" aria-label={`${SITE_NAME} home`}>
           <Image
+            key={pathname}
             src="/logo.png"
             alt="Wingdings Translator logo"
             width={36}
