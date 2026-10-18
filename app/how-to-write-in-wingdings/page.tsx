@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import CompatibilityGuide from "@/components/CompatibilityGuide";
+import AnimatedTitle from "@/components/AnimatedTitle";
 import PageFaq from "@/components/PageFaq";
 import { SITE_URL } from "@/lib/site";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
@@ -51,8 +52,8 @@ export default function HowToWritePage() {
       </nav>
 
       <div className="py-8 text-center">
-        <h1 className="text-gradient-flow mx-auto max-w-3xl text-5xl font-extrabold tracking-tight sm:text-6xl">
-          How to Write in Wingdings
+        <h1 className="font-display mx-auto max-w-3xl text-5xl font-extrabold tracking-tight sm:text-6xl" aria-label="How to Write in Wingdings">
+          <AnimatedTitle text="How to Write in Wingdings" />
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-lg text-zinc-400">
           The practical guide to typing Wingdings in Word, Google Docs and on your phone — including

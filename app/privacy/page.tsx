@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { CONTACT_EMAIL, SITE_NAME } from "@/lib/site";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
+import AnimatedTitle from "@/components/AnimatedTitle";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
@@ -12,7 +13,7 @@ export default function PrivacyPage() {
     <>
       <BreadcrumbJsonLd trail={[{ name: "Home", path: "/" }, { name: "Privacy Policy", path: "/privacy/" }]} />
     <div className="mx-auto max-w-3xl px-4 py-10">
-      <h1 className="text-3xl font-extrabold tracking-tight text-zinc-100">Privacy Policy</h1>
+      <h1 className="text-3xl font-extrabold tracking-tight" aria-label="Privacy Policy"><AnimatedTitle text="Privacy Policy" /></h1>
       <p className="mt-2 text-sm text-zinc-500">Last updated: October 2026</p>
       <div className="mt-6 space-y-4 text-zinc-400 leading-relaxed">
         <h2 className="text-xl font-bold text-zinc-100">The short version</h2>

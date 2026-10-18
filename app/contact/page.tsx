@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { CONTACT_EMAIL, SITE_NAME } from "@/lib/site";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
+import AnimatedTitle from "@/components/AnimatedTitle";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -12,7 +13,7 @@ export default function ContactPage() {
     <>
       <BreadcrumbJsonLd trail={[{ name: "Home", path: "/" }, { name: "Contact", path: "/contact/" }]} />
     <div className="mx-auto max-w-3xl px-4 py-10">
-      <h1 className="text-3xl font-extrabold tracking-tight text-zinc-100">Contact</h1>
+      <h1 className="text-3xl font-extrabold tracking-tight" aria-label="Contact"><AnimatedTitle text="Contact" /></h1>
       <div className="mt-6 space-y-4 text-zinc-400 leading-relaxed">
         <p>
           Found a symbol mapping that looks wrong, or want to suggest a feature? We&apos;d like to

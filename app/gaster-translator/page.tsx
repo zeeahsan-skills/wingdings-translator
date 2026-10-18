@@ -4,6 +4,7 @@ import VariantTool from "@/components/VariantTool";
 import PageFaq from "@/components/PageFaq";
 import { SITE_URL } from "@/lib/site";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
+import AnimatedTitle from "@/components/AnimatedTitle";
 
 export const metadata: Metadata = {
   title: "Gaster Translator — Decode W. D. Gaster's Wingdings Messages",
@@ -43,8 +44,8 @@ export default function GasterTranslatorPage() {
       </nav>
 
       <div className="py-8 text-center">
-        <h1 className="text-gradient-flow mx-auto max-w-3xl text-5xl font-extrabold tracking-tight sm:text-6xl">
-          Gaster Translator
+        <h1 className="font-display mx-auto max-w-3xl text-5xl font-extrabold tracking-tight sm:text-6xl" aria-label="Gaster Translator">
+          <AnimatedTitle text="Gaster Translator" />
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-lg text-zinc-400">
           Decode W. D. (WD) Gaster&apos;s mysterious Undertale messages — translate any Gaster text

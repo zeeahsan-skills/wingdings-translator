@@ -70,16 +70,17 @@ select option {
   -webkit-text-fill-color: transparent;
 }
 
-/* Per-letter slice of the flowing gradient: --i is the letter index (0-18).
-   Keeps the gradient continuous across the split letters, exactly like the
-   original single-element text-gradient-flow. */
+/* Per-letter slice of the flowing gradient: --i is the letter index,
+   --n is the letter count (excludes spaces). Keeps the gradient continuous
+   across the split letters, exactly like the original single-element
+   text-gradient-flow. background-size is set inline to (n*300%). */
 @keyframes gradient-flow-letter {
   0%,
   100% {
-    background-position: calc(var(--i, 0) * 100% / 56) 50%;
+    background-position: calc(var(--i, 0) * 100% / (3 * var(--n, 19) - 1)) 50%;
   }
   50% {
-    background-position: calc((3800% + var(--i, 0) * 100%) / 56) 50%;
+    background-position: calc((2 * var(--n, 19) * 100% + var(--i, 0) * 100%) / (3 * var(--n, 19) - 1)) 50%;
   }
 }
 

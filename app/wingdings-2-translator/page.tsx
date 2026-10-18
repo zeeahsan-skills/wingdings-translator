@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import VariantTool from "@/components/VariantTool";
+import AnimatedTitle from "@/components/AnimatedTitle";
 import SymbolReference from "@/components/SymbolReference";
 import PageFaq from "@/components/PageFaq";
 import { SITE_URL } from "@/lib/site";
@@ -40,8 +41,8 @@ export default function Wingdings2Page() {
       </nav>
 
       <div className="py-8 text-center">
-        <h1 className="text-gradient-flow mx-auto max-w-3xl text-5xl font-extrabold tracking-tight sm:text-6xl">
-          Wingdings 2 Translator
+        <h1 className="font-display mx-auto max-w-3xl text-5xl font-extrabold tracking-tight sm:text-6xl" aria-label="Wingdings 2 Translator">
+          <AnimatedTitle text="Wingdings 2 Translator" />
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-lg text-zinc-400">
           Convert English to Wingdings 2 symbols with this free online translator and generator —
