@@ -19,15 +19,17 @@ const NAV = [
 export default function Header() {
   const pathname = usePathname();
   const brandRef = useRef<HTMLAnchorElement>(null);
-  const prevPath = useRef<string | null>(null);
+  const isFirstRun = useRef(true);
 
   // Replay the logo + title entrance animations on every page navigation.
   // The header persists across client-side route changes, so we restart the
   // CSS animations imperatively. NOTE: do NOT remount via key={pathname} —
   // remounting next/image appends a duplicate <img> on every navigation.
   useEffect(() => {
-    if (prevPath.current === pathname) return;
-    prevPath.current = pathname;
+    if (isFirstRun.current) {
+      isFirstRun.current = false;
+      return; // initial page load already plays the animations via CSS
+    }
     const brand = brandRef.current;
     if (!brand) return;
     const animated = brand.querySelectorAll(".animate-logo-entrance, .animate-letter-flip");
