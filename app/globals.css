@@ -104,19 +104,19 @@ select option {
    On page load the header logo does a 3D flip, lifts up, then settles back. */
 @keyframes logo-flip-entrance {
   0% {
-    transform: perspective(500px) rotateY(0deg) translateY(0) scale(1);
+    transform: perspective(500px) rotateY(0deg) translateY(0);
   }
   35% {
-    transform: perspective(500px) rotateY(180deg) translateY(-14px) scale(1.08);
+    transform: perspective(500px) rotateY(180deg) translateY(-14px);
   }
   65% {
-    transform: perspective(500px) rotateY(360deg) translateY(-6px) scale(1.02);
+    transform: perspective(500px) rotateY(360deg) translateY(-6px);
   }
   85% {
-    transform: perspective(500px) rotateY(360deg) translateY(3px) scale(1);
+    transform: perspective(500px) rotateY(360deg) translateY(3px);
   }
   100% {
-    transform: perspective(500px) rotateY(360deg) translateY(0) scale(1);
+    transform: perspective(500px) rotateY(360deg) translateY(0);
   }
 }
 
