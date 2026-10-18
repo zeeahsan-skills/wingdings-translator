@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useRef } from "react";
 import { SITE_NAME } from "@/lib/site";
 import ThemeToggle from "./ThemeToggle";
 
@@ -17,12 +18,33 @@ const NAV = [
 
 export default function Header() {
   const pathname = usePathname();
+  const brandRef = useRef<HTMLAnchorElement>(null);
+  const prevPath = useRef<string | null>(null);
+
+  // Replay the logo + title entrance animations on every page navigation.
+  // The header persists across client-side route changes, so we restart the
+  // CSS animations imperatively. NOTE: do NOT remount via key={pathname} —
+  // remounting next/image appends a duplicate <img> on every navigation.
+  useEffect(() => {
+    if (prevPath.current === pathname) return;
+    prevPath.current = pathname;
+    const brand = brandRef.current;
+    if (!brand) return;
+    const animated = brand.querySelectorAll(".animate-logo-entrance, .animate-letter-flip");
+    animated.forEach((el) => {
+      (el as HTMLElement).style.animation = "none";
+    });
+    void brand.offsetWidth; // reflow so the change applies
+    animated.forEach((el) => {
+      (el as HTMLElement).style.animation = "";
+    });
+  }, [pathname]);
+
   return (
     <header className="sticky top-0 z-40 border-b border-zinc-800/70 bg-black/75 shadow-[0_8px_30px_-12px_rgba(99,102,241,0.35)] backdrop-blur-xl">
       <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-3">
-        <Link href="/" className="flex items-center gap-2" aria-label={`${SITE_NAME} home`}>
+        <Link ref={brandRef} href="/" className="flex items-center gap-2" aria-label={`${SITE_NAME} home`}>
           <Image
-            key={pathname}
             src="/logo.png"
             alt="Wingdings Translator logo"
             width={36}
@@ -30,7 +52,7 @@ export default function Header() {
             className="h-9 w-9 rounded-xl shadow-sm animate-logo-entrance"
             priority
           />
-          <span key={pathname} className="text-lg font-bold tracking-tight" aria-label={SITE_NAME} role="text">
+          <span className="text-lg font-bold tracking-tight" aria-label={SITE_NAME} role="text">
             {SITE_NAME.split("").map((ch, i) => (
               <span
                 key={i}
