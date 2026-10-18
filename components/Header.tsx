@@ -14,7 +14,7 @@ const NAV = [
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-40 border-b border-zinc-800 bg-black/80 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-zinc-800/70 bg-black/75 shadow-[0_8px_30px_-12px_rgba(99,102,241,0.35)] backdrop-blur-xl">
       <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-3">
         <Link href="/" className="flex items-center gap-2" aria-label={`${SITE_NAME} home`}>
           <Image
@@ -53,7 +53,7 @@ export default function Header() {
             <Link
               key={item.href + item.label}
               href={item.href}
-              className="rounded-lg px-3 py-2 text-sm font-medium text-zinc-400 hover:bg-zinc-800 hover:text-zinc-100"
+              className="rounded-lg px-3 py-2 text-sm font-medium text-zinc-400 transition hover:bg-indigo-500/10 hover:text-zinc-100"
             >
               {item.label}
             </Link>

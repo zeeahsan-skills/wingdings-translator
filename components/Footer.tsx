@@ -3,10 +3,11 @@ import { SITE_NAME } from "@/lib/site";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-zinc-800 bg-black">
-      <div className="mx-auto grid max-w-5xl gap-8 px-4 py-10 md:grid-cols-3">
+    <footer className="relative border-t border-zinc-800/80 bg-black">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-indigo-500/70 to-transparent" aria-hidden="true" />
+      <div className="mx-auto grid max-w-5xl gap-8 px-4 py-12 md:grid-cols-3">
         <div>
-          <p className="text-sm font-bold text-zinc-100">{SITE_NAME}</p>
+          <p className="font-display text-sm font-bold tracking-wide text-zinc-100">{SITE_NAME}</p>
           <p className="mt-2 text-sm text-zinc-400">
             A free, instant Wingdings translator for Wingdings 1, Wingdings 2, Wingdings 3 and Webdings.
             Everything runs in your browser — no sign-up, no uploads.
