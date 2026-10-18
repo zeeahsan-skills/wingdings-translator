@@ -41,7 +41,7 @@ export default function Wingdings3Page() {
       </nav>
 
       <div className="py-8 text-center">
-        <h1 className="mx-auto max-w-3xl text-5xl font-extrabold tracking-tight sm:text-6xl" aria-label="Wingdings 3 Translator">
+        <h1 className="font-title mx-auto max-w-3xl text-5xl font-extrabold tracking-tight sm:text-6xl" aria-label="Wingdings 3 Translator">
           <AnimatedTitle text="Wingdings 3 Translator" />
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-lg text-zinc-400">

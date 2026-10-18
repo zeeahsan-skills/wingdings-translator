@@ -13,7 +13,7 @@ export default function AboutPage() {
     <>
       <BreadcrumbJsonLd trail={[{ name: "Home", path: "/" }, { name: "About", path: "/about/" }]} />
     <div className="mx-auto max-w-3xl px-4 py-10">
-      <h1 className="text-3xl font-extrabold tracking-tight" aria-label="About Wingdings Translator"><AnimatedTitle text="About Wingdings Translator" /></h1>
+      <h1 className="font-title text-3xl font-extrabold tracking-tight" aria-label="About Wingdings Translator"><AnimatedTitle text="About Wingdings Translator" /></h1>
       <div className="mt-6 space-y-4 text-zinc-400 leading-relaxed">
         <p>
           {SITE_NAME} is a free online tool that converts English text into Wingdings-style symbols

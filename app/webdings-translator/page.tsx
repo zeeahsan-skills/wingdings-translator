@@ -41,7 +41,7 @@ export default function WebdingsPage() {
       </nav>
 
       <div className="py-8 text-center">
-        <h1 className="mx-auto max-w-3xl text-5xl font-extrabold tracking-tight sm:text-6xl" aria-label="Webdings Translator">
+        <h1 className="font-title mx-auto max-w-3xl text-5xl font-extrabold tracking-tight sm:text-6xl" aria-label="Webdings Translator">
           <AnimatedTitle text="Webdings Translator" />
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-lg text-zinc-400">
