@@ -35,7 +35,7 @@ export default function Home() {
             FREE FOREVER · NO SIGN-UP · INSTANT
           </p>
           <h1
-            className="mx-auto mt-5 max-w-3xl text-5xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl"
+            className="font-title mx-auto mt-5 max-w-3xl text-5xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl"
             aria-label="Wingdings Translator"
           >
             {"Wingdings Translator".split(" ").map((word, wi) => (

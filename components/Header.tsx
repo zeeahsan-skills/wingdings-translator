@@ -54,7 +54,7 @@ export default function Header() {
             className="h-9 w-9 rounded-xl shadow-sm animate-logo-entrance"
             priority
           />
-          <span className="text-lg font-bold tracking-tight" aria-label={SITE_NAME} role="text">
+          <span className="font-title text-lg font-bold tracking-tight" aria-label={SITE_NAME} role="text">
             {SITE_NAME.split("").map((ch, i) => (
               <span
                 key={i}
