@@ -17,7 +17,7 @@ interface Props {
  * The parent h1 should carry aria-label={text} for screen readers; the
  * individual letters are aria-hidden.
  */
-export default function AnimatedTitle({ text, delayBase = 0.4, stagger = 0.035 }: Props) {
+export default function AnimatedTitle({ text, delayBase = 0.1, stagger = 0.035 }: Props) {
   const n = text.replace(/ /g, "").length;
   const words: { word: string; start: number }[] = [];
   let pos = 0;

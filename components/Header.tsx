@@ -37,7 +37,7 @@ export default function Header() {
                 aria-hidden="true"
                 className="animate-letter-flip"
                 style={{
-                  animationDelay: `${0.7 + i * 0.05}s`,
+                  animationDelay: `${0.05 + i * 0.05}s`,
                   backgroundImage:
                     "linear-gradient(to right, #4338ca, #7c3aed, #a21caf)",
                   backgroundSize: "2000% 100%",

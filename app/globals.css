@@ -121,7 +121,7 @@ select option {
 }
 
 .animate-logo-entrance {
-  animation: logo-flip-entrance 1.6s cubic-bezier(0.22, 1, 0.36, 1) 0.3s 1 both;
+  animation: logo-flip-entrance 1.6s cubic-bezier(0.22, 1, 0.36, 1) 0.05s 1 both;
   transform-style: preserve-3d;
   will-change: transform;
 }

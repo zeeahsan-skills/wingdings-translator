@@ -49,7 +49,7 @@ export default function Home() {
                       className="animate-letter-jerk text-gradient-flow-letter"
                       style={
                         {
-                          animationDelay: `${1.5 + idx * 0.05}s`,
+                          animationDelay: `${0.15 + idx * 0.05}s`,
                           "--i": idx,
                         } as React.CSSProperties
                       }
