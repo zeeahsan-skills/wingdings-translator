@@ -202,7 +202,7 @@ export default function Translator({ text, setText, variant, setVariant }: Props
               <div
                 role="status"
                 aria-labelledby="translator-output-label"
-                className="mt-2.5 min-h-36 whitespace-pre-wrap break-words rounded-2xl border border-violet-500/25 bg-gradient-to-b from-violet-950/40 to-black/60 p-4 text-2xl leading-relaxed text-zinc-100"
+                className="translator-output mt-2.5 min-h-36 whitespace-pre-wrap break-words rounded-2xl p-4 text-2xl leading-relaxed text-zinc-100"
               >
                 <MorphingOutput output={output} />
               </div>

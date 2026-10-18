@@ -559,3 +559,49 @@ body {
     linear-gradient(rgba(79, 70, 229, 0.08) 1px, transparent 1px),
     linear-gradient(90deg, rgba(79, 70, 229, 0.08) 1px, transparent 1px);
 }
+
+/* ---- Light theme: cipher UI consistency ----
+   Opacity-variant backgrounds must turn clean in white mode too,
+   otherwise some sections stay grey while the rest goes white. */
+[data-theme="light"] .bg-black\/75 {
+  background-color: rgb(255 255 255 / 0.88);
+}
+[data-theme="light"] .bg-black\/60 {
+  background-color: #ffffff;
+}
+[data-theme="light"] .bg-black\/50 {
+  background-color: rgb(255 255 255 / 0.8);
+}
+[data-theme="light"] .bg-zinc-900\/70 {
+  background-color: rgb(255 255 255 / 0.92);
+}
+[data-theme="light"] .border-zinc-800\/80 {
+  border-color: rgb(228 228 231 / 0.9);
+}
+[data-theme="light"] .border-zinc-800\/70 {
+  border-color: rgb(228 228 231 / 0.85);
+}
+
+/* Translator output pane — dark glass in black mode, clean light in white mode */
+.translator-output {
+  background-color: #0c0a1d;
+  background-image: linear-gradient(to bottom, rgba(46, 16, 101, 0.35), rgba(0, 0, 0, 0.45));
+  border: 1px solid rgba(139, 92, 246, 0.25);
+}
+[data-theme="light"] .translator-output {
+  background-color: #ffffff;
+  background-image: linear-gradient(to bottom, #ede9fe, #ffffff);
+  border-color: rgba(167, 139, 250, 0.45);
+}
+
+/* Hero badge — deep indigo in black mode, soft indigo tint in white mode */
+.hero-badge {
+  background-image: linear-gradient(to right, rgba(30, 27, 75, 0.88), rgba(46, 16, 101, 0.88), rgba(30, 27, 75, 0.88));
+  border: 1px solid rgba(129, 140, 248, 0.4);
+  color: #c7d2fe;
+}
+[data-theme="light"] .hero-badge {
+  background-image: linear-gradient(to right, #eef2ff, #f5f3ff, #eef2ff);
+  border-color: rgba(129, 140, 248, 0.5);
+  color: #4f46e5;
+}

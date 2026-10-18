@@ -30,7 +30,7 @@ export default function Home() {
         <div className="animate-orb pointer-events-none absolute -bottom-24 right-1/4 h-72 w-72 rounded-full bg-fuchsia-600/20" style={{ animationDelay: "-5s" }} aria-hidden="true" />
 
         <div className="relative">
-          <p className="badge-shimmer mx-auto inline-flex items-center gap-2 rounded-full border border-indigo-500/40 bg-gradient-to-r from-indigo-950/80 via-violet-950/80 to-indigo-950/80 px-4 py-1.5 text-xs font-bold tracking-wide text-indigo-200">
+          <p className="badge-shimmer hero-badge mx-auto inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-bold tracking-wide">
             <span className="live-dot relative inline-block h-1.5 w-1.5 rounded-full bg-emerald-400" />
             FREE FOREVER · NO SIGN-UP · INSTANT
           </p>
