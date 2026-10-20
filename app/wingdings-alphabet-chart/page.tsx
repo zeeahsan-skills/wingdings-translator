@@ -5,11 +5,12 @@ import AnimatedTitle from "@/components/AnimatedTitle";
 import PageFaq from "@/components/PageFaq";
 import { SITE_URL } from "@/lib/site";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
+import WebAppJsonLd from "@/components/WebAppJsonLd";
 
 export const metadata: Metadata = {
-  title: "Wingdings Alphabet Chart — Searchable Symbol Reference (Click to Copy)",
+  title: "Wingdings Alphabet Chart — Click to Copy",
   description:
-    "Browse every Wingdings 1, 2, 3 and Webdings symbol in one searchable chart. Click any symbol to copy it, see its keyboard key and Unicode value. Free, no sign-up.",
+    "Browse every Wingdings 1, 2, 3 and Webdings symbol in one searchable chart. Click any symbol to copy it, with its keyboard key and Unicode value.",
   alternates: { canonical: `${SITE_URL}/wingdings-alphabet-chart/` },
 };
 
@@ -30,12 +31,17 @@ const FAQS = [
     q: "Can I use these symbols in Word or Google Docs?",
     a: "Yes — copy any symbol and paste it into your document. In Word you can also type the key character and apply the Wingdings font for the exact original glyph. Google Docs does not ship Microsoft's Wingdings font, so the Unicode symbol is the safer choice there.",
   },
+  {
+    q: "What is a Wingding chart?",
+    a: "A wingding chart (also written Wingdings chart) is the complete map of every Wingdings symbol to the keyboard key that produces it. The chart above is a full, searchable wingding chart covering Wingdings 1, 2 and 3 plus Webdings — click any card to copy its symbol.",
+  },
 ];
 
 export default function AlphabetChartPage() {
   return (
     <>
       <BreadcrumbJsonLd trail={[{ name: "Home", path: "/" }, { name: "Wingdings Alphabet Chart", path: "/wingdings-alphabet-chart/" }]} />
+      <WebAppJsonLd name="Wingdings Alphabet Chart" path="/wingdings-alphabet-chart/" description="Searchable Wingdings alphabet chart: every Wingdings 1, 2, 3 and Webdings symbol with keyboard key and Unicode value. Click to copy." />
     <div className="mx-auto max-w-5xl px-4 pb-16">
       <nav aria-label="Breadcrumb" className="pt-6 text-sm text-zinc-500">
         <Link href="/" className="hover:text-indigo-400">Wingdings Translator</Link>

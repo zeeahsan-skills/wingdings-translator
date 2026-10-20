@@ -37,6 +37,14 @@ const FAQS = [
     q: "Is this translator free? Do I need an account?",
     a: `Yes — ${SITE_NAME} is completely free with no account, no usage limits and no sign-up. Conversion runs entirely in your browser, so your text is never uploaded anywhere.`,
   },
+  {
+    q: "Is it “Wingding” or “Wingdings”?",
+    a: "The font’s official name is Wingdings, with an S — but plenty of people search for a “wingding translator”, “wing ding translator” or “wingding language”. They all mean the same thing, and this tool covers them all: type text, get Wingdings symbols, copy and use them anywhere.",
+  },
+  {
+    q: "Can I copy and paste Wingdings symbols?",
+    a: "Yes. Convert your text, hit “Copy result”, and paste the symbols into chats, bios, documents or social posts. For individual glyphs, use the Wingdings alphabet chart — every symbol card copies on click. That covers “wingdings copy paste” and “wingding copy paste” searches in one go.",
+  },
 ];
 
 export default function Faq() {

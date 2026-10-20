@@ -3,7 +3,7 @@ import { SITE_URL } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Fixed date string keeps the sitemap fully static/prerenderable.
-  const lastModified = "2026-10-16";
+  const lastModified = "2026-10-20";
   return [
     { url: `${SITE_URL}/`, lastModified, changeFrequency: "weekly", priority: 1 },
     { url: `${SITE_URL}/gaster-translator/`, lastModified, changeFrequency: "monthly", priority: 0.9 },

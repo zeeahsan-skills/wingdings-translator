@@ -6,11 +6,12 @@ import SymbolReference from "@/components/SymbolReference";
 import PageFaq from "@/components/PageFaq";
 import { SITE_URL } from "@/lib/site";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
+import WebAppJsonLd from "@/components/WebAppJsonLd";
 
 export const metadata: Metadata = {
-  title: "Wingdings 2 Translator — Convert Text to Wingdings 2 Symbols",
+  title: "Wingdings 2 Translator — Free & Instant",
   description:
-    "Free Wingdings 2 translator and generator: convert English to Wingdings 2 symbols with live conversion, copy button and no sign-up. Also supports Wingdings 1, 3 and Webdings.",
+    "Free Wingdings 2 translator and generator: convert English to Wingdings 2 symbols with live conversion and a copy button. No sign-up.",
   alternates: { canonical: `${SITE_URL}/wingdings-2-translator/` },
 };
 
@@ -33,6 +34,7 @@ export default function Wingdings2Page() {
   return (
     <>
       <BreadcrumbJsonLd trail={[{ name: "Home", path: "/" }, { name: "Wingdings 2 Translator", path: "/wingdings-2-translator/" }]} />
+      <WebAppJsonLd name="Wingdings 2 Translator" path="/wingdings-2-translator/" description="Free Wingdings 2 translator and generator: convert English to Wingdings 2 symbols with live conversion and copy button." />
     <div className="mx-auto max-w-5xl px-4 pb-16">
       <nav aria-label="Breadcrumb" className="pt-6 text-sm text-zinc-500">
         <Link href="/" className="hover:text-indigo-400">Wingdings Translator</Link>

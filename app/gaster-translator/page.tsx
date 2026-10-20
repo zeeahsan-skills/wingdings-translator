@@ -4,12 +4,13 @@ import VariantTool from "@/components/VariantTool";
 import PageFaq from "@/components/PageFaq";
 import { SITE_URL } from "@/lib/site";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
+import WebAppJsonLd from "@/components/WebAppJsonLd";
 import AnimatedTitle from "@/components/AnimatedTitle";
 
 export const metadata: Metadata = {
-  title: "Gaster Translator — Decode W. D. Gaster's Wingdings Messages",
+  title: "Gaster Translator — Undertale Wingdings",
   description:
-    "Translate W. D. Gaster's mysterious Undertale dialogue with this free Gaster translator. Type English to write like Gaster, or paste Wingdings symbols to decode his messages — instant, no sign-up.",
+    "Translate W. D. Gaster's Undertale dialogue with this free Gaster translator. Type English to write like Gaster — instant, no sign-up.",
   alternates: { canonical: `${SITE_URL}/gaster-translator/` },
 };
 
@@ -30,12 +31,17 @@ const FAQS = [
     q: "Is the Gaster translator the same as a Wingdings translator?",
     a: "Essentially, yes. “Gaster language” is a fan name for standard Wingdings 1 as used by the character. This page uses the same engine as the main Wingdings translator, framed for Undertale fans, with notes on decoding his in-game messages.",
   },
+  {
+    q: "What is “Wing Ding Gaster”?",
+    a: "It is the nickname fans give W. D. Gaster, because his entire dialogue is written in Wingdings. Searches for “wing ding gaster” and “wing ding gaster translator” lead here — you can type his lines, or write new ones in his voice, with this translator.",
+  },
 ];
 
 export default function GasterTranslatorPage() {
   return (
     <>
       <BreadcrumbJsonLd trail={[{ name: "Home", path: "/" }, { name: "Gaster Translator", path: "/gaster-translator/" }]} />
+      <WebAppJsonLd name="Gaster Translator" path="/gaster-translator/" description="Free Gaster translator: convert English into W. D. Gaster's Wingdings from Undertale. Instant, no sign-up." />
     <div className="mx-auto max-w-5xl px-4 pb-16">
       <nav aria-label="Breadcrumb" className="pt-6 text-sm text-zinc-500">
         <Link href="/" className="hover:text-indigo-400">Wingdings Translator</Link>

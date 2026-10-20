@@ -7,9 +7,9 @@ import { SITE_URL } from "@/lib/site";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
-  title: "How to Write in Wingdings — Word, Google Docs & Mobile Guide",
+  title: "How to Write in Wingdings — Word & Mobile",
   description:
-    "Learn how to write in Wingdings: typing with the Wingdings font in Word, why Google Docs can't show exact glyphs, and why symbols turn into emoji on phones. Practical, honest guide.",
+    "Learn how to write in Wingdings: type with the font in Word, work around Google Docs, and stop symbols turning into emoji on phones.",
   alternates: { canonical: `${SITE_URL}/how-to-write-in-wingdings/` },
 };
 

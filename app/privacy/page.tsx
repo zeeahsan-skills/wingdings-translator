@@ -6,6 +6,7 @@ import AnimatedTitle from "@/components/AnimatedTitle";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description: `Privacy policy for ${SITE_NAME}: what data is (and isn't) collected.`,
+  alternates: { canonical: "/privacy" },
 };
 
 export default function PrivacyPage() {

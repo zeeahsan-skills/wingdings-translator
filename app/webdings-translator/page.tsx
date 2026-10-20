@@ -6,9 +6,10 @@ import SymbolReference from "@/components/SymbolReference";
 import PageFaq from "@/components/PageFaq";
 import { SITE_URL } from "@/lib/site";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
+import WebAppJsonLd from "@/components/WebAppJsonLd";
 
 export const metadata: Metadata = {
-  title: "Webdings Translator — Convert Text to Webdings Symbols",
+  title: "Webdings Translator — Free & Instant",
   description:
     "Free Webdings translator and generator: turn English into Webdings web-style icons with live conversion, copy button and no sign-up.",
   alternates: { canonical: `${SITE_URL}/webdings-translator/` },
@@ -33,6 +34,7 @@ export default function WebdingsPage() {
   return (
     <>
       <BreadcrumbJsonLd trail={[{ name: "Home", path: "/" }, { name: "Webdings Translator", path: "/webdings-translator/" }]} />
+      <WebAppJsonLd name="Webdings Translator" path="/webdings-translator/" description="Free Webdings translator and generator: turn English into Webdings web-style icons with live conversion and copy button." />
     <div className="mx-auto max-w-5xl px-4 pb-16">
       <nav aria-label="Breadcrumb" className="pt-6 text-sm text-zinc-500">
         <Link href="/" className="hover:text-indigo-400">Wingdings Translator</Link>
