@@ -13,6 +13,6 @@ export const SITE_URL = "https://wingdings-translator-local-6536.vercel.app";
 export const CONTACT_EMAIL = "contact@example.com";
 
 export const SITE_NAME = "Wingdings Translator";
-export const SITE_TAGLINE = "Convert English to Wingdings symbols and decode them back — free, instant, no sign-up.";
+export const SITE_TAGLINE = "Convert English to Wingdings symbols instantly — free online Wingdings translator, generator and symbol chart. No sign-up.";
 export const SITE_LOCALE = "en_US";
 export const SITE_AUTHOR = SITE_NAME;

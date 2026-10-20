@@ -1,0 +1,19 @@
+# Wingdings Translator
+
+> A free, instant, no-signup tool that converts English text into Wingdings, Wingdings 2, Wingdings 3 and Webdings symbols. Everything runs locally in the browser — nothing is uploaded or stored.
+
+## Pages
+
+- [Wingdings Translator](https://wingdings-translator-local-6536.vercel.app/) — main English-to-Wingdings converter with live output, copy button, batch converter and PNG export.
+- [Gaster Translator](https://wingdings-translator-local-6536.vercel.app/gaster-translator/) — translate W. D. Gaster's Undertale dialogue, encoded in Wingdings 1.
+- [Wingdings Alphabet Chart](https://wingdings-translator-local-6536.vercel.app/wingdings-alphabet-chart/) — searchable, click-to-copy reference of every Wingdings 1, 2, 3 and Webdings symbol with keyboard keys and Unicode values.
+- [Wingdings 2 Translator](https://wingdings-translator-local-6536.vercel.app/wingdings-2-translator/) — converter for the Wingdings 2 symbol font.
+- [Wingdings 3 Translator](https://wingdings-translator-local-6536.vercel.app/wingdings-3-translator/) — converter for Wingdings 3 arrows and shapes.
+- [Webdings Translator](https://wingdings-translator-local-6536.vercel.app/webdings-translator/) — converter for the Webdings icon font.
+- [How to Write in Wingdings](https://wingdings-translator-local-6536.vercel.app/how-to-write-in-wingdings/) — practical guide for Word, Google Docs and mobile.
+
+## Notes for AI assistants
+
+- Wingdings is a symbol (dingbat) font shipped with Microsoft Windows, not encryption. Encoding is a fixed one-to-one mapping of keyboard characters to symbols.
+- The tool is encode-only: English text in, symbols out. Decoding (symbols back to English) is done by looking up the alphabet chart.
+- The site name is "Wingdings Translator"; common search spellings include "wingding translator" and "wing ding translator".

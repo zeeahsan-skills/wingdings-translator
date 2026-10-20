@@ -6,6 +6,7 @@ import AnimatedTitle from "@/components/AnimatedTitle";
 export const metadata: Metadata = {
   title: "Contact",
   description: `Contact ${SITE_NAME} — report a mapping issue or suggest a feature.`,
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {

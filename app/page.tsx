@@ -9,11 +9,12 @@ import CompatibilityGuide from "@/components/CompatibilityGuide";
 import SymbolField from "@/components/SymbolField";
 import SymbolTicker from "@/components/SymbolTicker";
 import Faq from "@/components/Faq";
+import WebAppJsonLd from "@/components/WebAppJsonLd";
 import { VARIANTS } from "@/lib/wingdings-maps";
 import { SITE_NAME, SITE_TAGLINE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: `${SITE_NAME} — Convert English to Wingdings Symbols & Back`,
+  title: `${SITE_NAME} — English to Wingdings Converter`,
   description: SITE_TAGLINE,
 };
 
@@ -22,6 +23,11 @@ const TOTAL_SYMBOLS = VARIANTS.reduce((n, v) => n + v.entries.length, 0);
 export default function Home() {
   return (
     <div className="mx-auto max-w-5xl px-4 pb-16">
+      <WebAppJsonLd
+        name="Wingdings Translator"
+        path="/"
+        description="Free online Wingdings translator: convert English text to Wingdings, Wingdings 2, Wingdings 3 and Webdings symbols instantly. No sign-up."
+      />
       {/* Hero — a living cipher universe */}
       <div className="relative overflow-hidden py-14 text-center sm:py-20">
         <SymbolField />
@@ -109,6 +115,13 @@ export default function Home() {
         <SymbolReference />
         <CompatibilityGuide />
         <Faq />
+
+        <section aria-label="History of Wingdings" className="bento-card rounded-3xl border border-zinc-800 bg-zinc-900/70 p-6 shadow-sm backdrop-blur sm:p-8">
+          <h2 className="font-display text-xl font-bold text-zinc-100">A short history of Wingdings</h2>
+          <p className="mt-3 text-sm leading-relaxed text-zinc-400">
+            Wingdings began life in 1990 as three typefaces drawn by type designers Charles Bigelow and Kris Holmes — <em>Lucida Icons</em>, <em>Lucida Arrows</em> and <em>Lucida Stars</em>. Microsoft licensed the designs and shipped the combined font as Wingdings with Windows 3.1 in 1992, so almost every Windows PC since has carried the symbols. Because each keyboard key maps to a picture, people started using it for puzzles, hidden messages and decoration — some even search for it as a &ldquo;wingding translator&rdquo; or &ldquo;wing ding translator&rdquo;, nicknames that stuck even though the font&rsquo;s official name ends with an S. A famous 1990s urban legend claimed certain letter combinations spelled hidden messages; it was a coincidence of the symbol set, but it made Wingdings notorious and kept it famous long after most fonts are forgotten.
+          </p>
+        </section>
 
         <section aria-label="About this tool" className="bento-card rounded-3xl border border-zinc-800 bg-zinc-900/70 p-6 shadow-sm backdrop-blur sm:p-8">
           <h2 className="font-display text-xl font-bold text-zinc-100">Why this translator is different</h2>

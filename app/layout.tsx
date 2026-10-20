@@ -14,7 +14,7 @@ const fraunces = Fraunces({ variable: "--font-fraunces", subsets: ["latin"] });
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} — Convert English to Wingdings Symbols & Back`,
+    default: `${SITE_NAME} — English to Wingdings Converter`,
     template: `%s | ${SITE_NAME}`,
   },
   description: SITE_TAGLINE,
@@ -22,13 +22,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: SITE_NAME,
-    title: `${SITE_NAME} — Convert English to Wingdings Symbols & Back`,
+    title: `${SITE_NAME} — English to Wingdings Converter`,
     description: SITE_TAGLINE,
     url: "/",
   },
   twitter: {
     card: "summary",
-    title: `${SITE_NAME} — Convert English to Wingdings Symbols & Back`,
+    title: `${SITE_NAME} — English to Wingdings Converter`,
     description: SITE_TAGLINE,
   },
   robots: { index: true, follow: true },

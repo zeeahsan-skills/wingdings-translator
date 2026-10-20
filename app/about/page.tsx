@@ -6,6 +6,7 @@ import AnimatedTitle from "@/components/AnimatedTitle";
 export const metadata: Metadata = {
   title: "About",
   description: `What ${SITE_NAME} is, how the translator works, and how its symbol mappings were built.`,
+  alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {

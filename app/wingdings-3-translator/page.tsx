@@ -6,9 +6,10 @@ import SymbolReference from "@/components/SymbolReference";
 import PageFaq from "@/components/PageFaq";
 import { SITE_URL } from "@/lib/site";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
+import WebAppJsonLd from "@/components/WebAppJsonLd";
 
 export const metadata: Metadata = {
-  title: "Wingdings 3 Translator — Arrows & Directional Symbols Converter",
+  title: "Wingdings 3 Translator — Arrows & Symbols",
   description:
     "Free Wingdings 3 translator: convert English to Wingdings 3 arrow and shape symbols with live conversion, copy button and no sign-up.",
   alternates: { canonical: `${SITE_URL}/wingdings-3-translator/` },
@@ -33,6 +34,7 @@ export default function Wingdings3Page() {
   return (
     <>
       <BreadcrumbJsonLd trail={[{ name: "Home", path: "/" }, { name: "Wingdings 3 Translator", path: "/wingdings-3-translator/" }]} />
+      <WebAppJsonLd name="Wingdings 3 Translator" path="/wingdings-3-translator/" description="Free Wingdings 3 translator: convert English to Wingdings 3 arrow and shape symbols with live conversion and copy button." />
     <div className="mx-auto max-w-5xl px-4 pb-16">
       <nav aria-label="Breadcrumb" className="pt-6 text-sm text-zinc-500">
         <Link href="/" className="hover:text-indigo-400">Wingdings Translator</Link>
