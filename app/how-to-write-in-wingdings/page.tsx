@@ -3,14 +3,13 @@ import Link from "next/link";
 import CompatibilityGuide from "@/components/CompatibilityGuide";
 import AnimatedTitle from "@/components/AnimatedTitle";
 import PageFaq from "@/components/PageFaq";
-import { SITE_URL } from "@/lib/site";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "How to Write in Wingdings — Tutorial",
   description:
     "Learn how to write in Wingdings: type with the font in Word, work around Google Docs, and stop symbols turning into emoji on phones.",
-  alternates: { canonical: `${SITE_URL}/how-to-write-in-wingdings/` },
+  alternates: { canonical: "/how-to-write-in-wingdings" },
 };
 
 const FAQS = [
