@@ -3,15 +3,14 @@ import Link from "next/link";
 import SymbolReference from "@/components/SymbolReference";
 import AnimatedTitle from "@/components/AnimatedTitle";
 import PageFaq from "@/components/PageFaq";
-import { SITE_URL } from "@/lib/site";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import WebAppJsonLd from "@/components/WebAppJsonLd";
 
 export const metadata: Metadata = {
-  title: "Wingdings Alphabet Chart — Click to Copy",
+  title: "Wingdings Alphabet Chart — Click Copy",
   description:
     "Browse every Wingdings 1, 2, 3 and Webdings symbol in one searchable chart. Click any symbol to copy it, with its keyboard key and Unicode value.",
-  alternates: { canonical: `${SITE_URL}/wingdings-alphabet-chart/` },
+  alternates: { canonical: "/wingdings-alphabet-chart" },
 };
 
 const FAQS = [

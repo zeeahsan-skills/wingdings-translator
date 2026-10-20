@@ -4,7 +4,6 @@ import VariantTool from "@/components/VariantTool";
 import AnimatedTitle from "@/components/AnimatedTitle";
 import SymbolReference from "@/components/SymbolReference";
 import PageFaq from "@/components/PageFaq";
-import { SITE_URL } from "@/lib/site";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import WebAppJsonLd from "@/components/WebAppJsonLd";
 
@@ -12,7 +11,7 @@ export const metadata: Metadata = {
   title: "Webdings Translator — Free & Instant",
   description:
     "Free Webdings translator and generator: turn English into Webdings web-style icons with live conversion, copy button and no sign-up.",
-  alternates: { canonical: `${SITE_URL}/webdings-translator/` },
+  alternates: { canonical: "/webdings-translator" },
 };
 
 const FAQS = [
