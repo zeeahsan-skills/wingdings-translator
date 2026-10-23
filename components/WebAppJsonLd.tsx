@@ -14,7 +14,7 @@ export default function WebAppJsonLd({
     "@context": "https://schema.org",
     "@type": "WebApplication",
     name,
-    url: `${SITE_URL}${path}`,
+    url: `${SITE_URL}${path === "/" ? "" : path.replace(/\/+$/, "")}`,
     description,
     applicationCategory: "UtilitiesApplication",
     operatingSystem: "Any (Web)",

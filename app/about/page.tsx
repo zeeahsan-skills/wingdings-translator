@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { SITE_NAME } from "@/lib/site";
+import { pageOpenGraph, SITE_NAME } from "@/lib/site";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import AnimatedTitle from "@/components/AnimatedTitle";
 
@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "About",
   description: `What ${SITE_NAME} is, how the translator works, and how its symbol mappings were built.`,
   alternates: { canonical: "/about" },
+  openGraph: pageOpenGraph("/about"),
 };
 
 export default function AboutPage() {

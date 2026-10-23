@@ -3,6 +3,7 @@ import Link from "next/link";
 import CompatibilityGuide from "@/components/CompatibilityGuide";
 import AnimatedTitle from "@/components/AnimatedTitle";
 import PageFaq from "@/components/PageFaq";
+import { pageOpenGraph } from "@/lib/site";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
   description:
     "Learn how to write in Wingdings: type with the font in Word, work around Google Docs, and stop symbols turning into emoji on phones.",
   alternates: { canonical: "/how-to-write-in-wingdings" },
+  openGraph: pageOpenGraph("/how-to-write-in-wingdings"),
 };
 
 const FAQS = [

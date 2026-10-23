@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import VariantTool from "@/components/VariantTool";
 import PageFaq from "@/components/PageFaq";
+import { pageOpenGraph } from "@/lib/site";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import WebAppJsonLd from "@/components/WebAppJsonLd";
 import AnimatedTitle from "@/components/AnimatedTitle";
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
   description:
     "Translate W. D. Gaster's Undertale dialogue with this free Gaster translator. Type English to write like Gaster — instant, no sign-up.",
   alternates: { canonical: "/gaster-translator" },
+  openGraph: pageOpenGraph("/gaster-translator"),
 };
 
 const FAQS = [

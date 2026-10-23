@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { CONTACT_EMAIL, SITE_NAME } from "@/lib/site";
+import { CONTACT_EMAIL, pageOpenGraph, SITE_NAME } from "@/lib/site";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import AnimatedTitle from "@/components/AnimatedTitle";
 
@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Privacy Policy",
   description: `Privacy policy for ${SITE_NAME}: what data is (and isn't) collected.`,
   alternates: { canonical: "/privacy" },
+  openGraph: pageOpenGraph("/privacy"),
 };
 
 export default function PrivacyPage() {

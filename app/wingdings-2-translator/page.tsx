@@ -4,6 +4,7 @@ import VariantTool from "@/components/VariantTool";
 import AnimatedTitle from "@/components/AnimatedTitle";
 import SymbolReference from "@/components/SymbolReference";
 import PageFaq from "@/components/PageFaq";
+import { pageOpenGraph } from "@/lib/site";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import WebAppJsonLd from "@/components/WebAppJsonLd";
 
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
   description:
     "Free Wingdings 2 translator and generator: convert English to Wingdings 2 symbols with live conversion and a copy button. No sign-up.",
   alternates: { canonical: "/wingdings-2-translator" },
+  openGraph: pageOpenGraph("/wingdings-2-translator"),
 };
 
 const FAQS = [

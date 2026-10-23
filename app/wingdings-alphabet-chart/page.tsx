@@ -3,14 +3,16 @@ import Link from "next/link";
 import SymbolReference from "@/components/SymbolReference";
 import AnimatedTitle from "@/components/AnimatedTitle";
 import PageFaq from "@/components/PageFaq";
+import { pageOpenGraph } from "@/lib/site";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import WebAppJsonLd from "@/components/WebAppJsonLd";
 
 export const metadata: Metadata = {
-  title: "Wingdings Alphabet Chart — Click Copy",
+  title: "Wingdings Chart: Alphabet & Symbols",
   description:
     "Browse every Wingdings 1, 2, 3 and Webdings symbol in one searchable chart. Click any symbol to copy it, with its keyboard key and Unicode value.",
   alternates: { canonical: "/wingdings-alphabet-chart" },
+  openGraph: pageOpenGraph("/wingdings-alphabet-chart"),
 };
 
 const FAQS = [
@@ -39,22 +41,22 @@ const FAQS = [
 export default function AlphabetChartPage() {
   return (
     <>
-      <BreadcrumbJsonLd trail={[{ name: "Home", path: "/" }, { name: "Wingdings Alphabet Chart", path: "/wingdings-alphabet-chart/" }]} />
-      <WebAppJsonLd name="Wingdings Alphabet Chart" path="/wingdings-alphabet-chart/" description="Searchable Wingdings alphabet chart: every Wingdings 1, 2, 3 and Webdings symbol with keyboard key and Unicode value. Click to copy." />
+      <BreadcrumbJsonLd trail={[{ name: "Home", path: "/" }, { name: "Wingdings Chart", path: "/wingdings-alphabet-chart/" }]} />
+      <WebAppJsonLd name="Wingdings Chart" path="/wingdings-alphabet-chart/" description="Searchable Wingdings alphabet chart: every Wingdings 1, 2, 3 and Webdings symbol with keyboard key and Unicode value. Click to copy." />
     <div className="mx-auto max-w-5xl px-4 pb-16">
       <nav aria-label="Breadcrumb" className="pt-6 text-sm text-zinc-500">
         <Link href="/" className="hover:text-indigo-400">Wingdings Translator</Link>
         <span aria-hidden="true"> / </span>
-        <span aria-current="page">Wingdings Alphabet Chart</span>
+        <span aria-current="page">Wingdings Chart</span>
       </nav>
 
       <div className="py-8 text-center">
-        <h1 className="font-title mx-auto max-w-3xl text-5xl font-extrabold tracking-tight sm:text-6xl" aria-label="Wingdings Alphabet Chart">
-          <AnimatedTitle text="Wingdings Alphabet Chart" />
+        <h1 className="font-title mx-auto max-w-3xl text-5xl font-extrabold tracking-tight sm:text-6xl" aria-label="Wingdings Chart">
+          <AnimatedTitle text="Wingdings Chart" />
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-lg text-zinc-400">
           Every Wingdings 1, Wingdings 2, Wingdings 3 and Webdings symbol in one searchable
-          character map — the complete list of Wingdings symbols with the original font mapping,
+          Wingdings chart — the complete list of Wingdings symbols with the original font mapping,
           including hard-to-find checkbox &#9744; &#9745; glyphs. <strong>Click any symbol to copy
           it</strong> — no retyping from a static image.
         </p>

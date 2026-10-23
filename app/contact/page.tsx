@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { CONTACT_EMAIL, SITE_NAME } from "@/lib/site";
+import { CONTACT_EMAIL, pageOpenGraph, SITE_NAME } from "@/lib/site";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import AnimatedTitle from "@/components/AnimatedTitle";
 
@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Contact",
   description: `Contact ${SITE_NAME} — report a mapping issue or suggest a feature.`,
   alternates: { canonical: "/contact" },
+  openGraph: pageOpenGraph("/contact"),
 };
 
 export default function ContactPage() {

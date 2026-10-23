@@ -7,6 +7,7 @@ const path = require("path");
 const pairs = [
   ["public/logo.png.b64", "public/logo.png"],
   ["app/icon.png.b64", "app/icon.png"],
+  ["public/og-image.jpg.b64", "public/og-image.jpg"],
 ];
 
 for (const [src, dest] of pairs) {

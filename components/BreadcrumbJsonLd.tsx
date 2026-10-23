@@ -19,7 +19,7 @@ export default function BreadcrumbJsonLd({ trail }: { trail: Crumb[] }) {
       "@type": "ListItem",
       position: i + 1,
       name: c.name,
-      item: `${SITE_URL}${c.path}`,
+      item: `${SITE_URL}${c.path === "/" ? "" : c.path.replace(/\/+$/, "")}`,
     })),
   };
 
