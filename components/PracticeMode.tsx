@@ -87,7 +87,7 @@ export default function PracticeMode() {
           symbol, you pick the key that produces it. Explanations appear after every answer.
         </p>
         <div className="mt-4 rounded-2xl border border-zinc-800 bg-zinc-900 p-6 shadow-sm" aria-busy="true">
-          <p className="text-sm text-zinc-500">Loading your first question…</p>
+          <p className="text-sm text-zinc-400">Loading your first question…</p>
         </div>
       </section>
     );
@@ -136,7 +136,7 @@ export default function PracticeMode() {
         </div>
 
         <div className="mt-6 text-center">
-          <p className="text-xs font-semibold uppercase tracking-widest text-zinc-500">
+          <p className="text-xs font-semibold uppercase tracking-widest text-zinc-400">
             Which key makes this symbol in {variantLabel}?
           </p>
           <p className="mt-2 text-7xl" aria-label={`Symbol to identify: ${question.entry.name}`}>

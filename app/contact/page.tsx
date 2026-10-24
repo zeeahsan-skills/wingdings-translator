@@ -34,7 +34,7 @@ export default function ContactPage() {
           <li>The exact text or symbol involved.</li>
           <li>What you expected vs. what you got — screenshots help.</li>
         </ul>
-        <p className="text-sm text-zinc-500">{SITE_NAME} is a free tool; we read every message but can&apos;t promise a reply timeline.</p>
+        <p className="text-sm text-zinc-400">{SITE_NAME} is a free tool; we read every message but can&apos;t promise a reply timeline.</p>
       </div>
     </div>
     </>

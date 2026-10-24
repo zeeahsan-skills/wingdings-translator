@@ -76,7 +76,7 @@ export default function BatchConverter() {
         </div>
 
         <label htmlFor="batch-input" className="mt-4 block text-sm font-semibold text-zinc-100">
-          Entries <span className="font-normal text-zinc-500">(one per line)</span>
+          Entries <span className="font-normal text-zinc-400">(one per line)</span>
         </label>
         <textarea
           id="batch-input"
@@ -112,7 +112,7 @@ export default function BatchConverter() {
           >
             ⬇ Download .txt
           </button>
-          <p className="ml-auto text-xs text-zinc-500" aria-live="polite">{lines.length} line{lines.length === 1 ? "" : "s"}</p>
+          <p className="ml-auto text-xs text-zinc-400" aria-live="polite">{lines.length} line{lines.length === 1 ? "" : "s"}</p>
         </div>
 
         {results.length > 0 && (
@@ -122,7 +122,7 @@ export default function BatchConverter() {
                 <span className="mt-0.5 grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-indigo-950 text-xs font-bold text-indigo-300">
                   {i + 1}
                 </span>
-                <p className="min-w-0 flex-1 break-words text-base text-zinc-100">{r || <span className="text-zinc-500">(empty)</span>}</p>
+                <p className="min-w-0 flex-1 break-words text-base text-zinc-100">{r || <span className="text-zinc-400">(empty)</span>}</p>
                 <button
                   type="button"
                   onClick={() => copyOne(i)}

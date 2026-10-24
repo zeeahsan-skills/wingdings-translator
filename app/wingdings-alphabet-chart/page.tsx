@@ -44,7 +44,7 @@ export default function AlphabetChartPage() {
       <BreadcrumbJsonLd trail={[{ name: "Home", path: "/" }, { name: "Wingdings Chart", path: "/wingdings-alphabet-chart/" }]} />
       <WebAppJsonLd name="Wingdings Chart" path="/wingdings-alphabet-chart/" description="Searchable Wingdings alphabet chart: every Wingdings 1, 2, 3 and Webdings symbol with keyboard key and Unicode value. Click to copy." />
     <div className="mx-auto max-w-5xl px-4 pb-16">
-      <nav aria-label="Breadcrumb" className="pt-6 text-sm text-zinc-500">
+      <nav aria-label="Breadcrumb" className="pt-6 text-sm text-zinc-400">
         <Link href="/" className="hover:text-indigo-400">Wingdings Translator</Link>
         <span aria-hidden="true"> / </span>
         <span aria-current="page">Wingdings Chart</span>
@@ -62,7 +62,9 @@ export default function AlphabetChartPage() {
         </p>
       </div>
 
-      <SymbolReference />
+      <div className="cv-section">
+        <SymbolReference />
+      </div>
 
       <section className="mt-14 rounded-2xl border border-zinc-800 bg-zinc-900 p-6 shadow-sm">
         <h2 className="text-xl font-bold text-zinc-100">How to use this chart</h2>

@@ -80,16 +80,22 @@ export default function SymbolReference({ defaultFilter = "all" }: { defaultFilt
             ))}
           </select>
         </div>
-        <p className="mt-2 text-xs text-zinc-500" aria-live="polite">
+        <p className="mt-2 text-xs text-zinc-400" aria-live="polite">
           {results.length} symbol{results.length === 1 ? "" : "s"} shown — click a card to copy it.
         </p>
 
         {results.length === 0 ? (
-          <p className="mt-4 rounded-xl bg-zinc-900 p-4 text-sm text-zinc-500">
+          <p className="mt-4 rounded-xl bg-zinc-900 p-4 text-sm text-zinc-400">
             No symbols match “{query}”. Try a simpler word like “arrow” or “check”.
           </p>
         ) : (
-          <ul className="mt-4 grid grid-cols-3 gap-2 sm:grid-cols-4 md:grid-cols-6">
+          <>
+          {/* Keyboard users can jump past the whole grid instead of tabbing
+              through every card (WCAG 2.4.1-friendly bypass). */}
+          <a href="#symbol-grid-end" className="skip-link">
+            Skip symbol grid
+          </a>
+          <ul className="symbol-grid mt-4 grid grid-cols-3 gap-2 sm:grid-cols-4 md:grid-cols-6">
             {results.map((e) => {
               const key = `${e.variantId}:${e.char}`;
               const copied = copiedKey === key;
@@ -98,7 +104,6 @@ export default function SymbolReference({ defaultFilter = "all" }: { defaultFilt
                   <button
                     type="button"
                     onClick={() => handleCopy(key, e.symbol)}
-                    aria-label={`Copy ${e.name} symbol, key ${e.char}, ${e.codepoint}`}
                     className={`flex h-full w-full flex-col items-center gap-1 rounded-xl border p-3 text-center transition ${
                       copied
                         ? "border-emerald-700 bg-emerald-950"
@@ -109,10 +114,10 @@ export default function SymbolReference({ defaultFilter = "all" }: { defaultFilt
                     <span className="font-mono text-xs font-bold text-zinc-300">
                       key: <kbd className="rounded bg-zinc-800 px-1">{e.char}</kbd>
                     </span>
-                    <span className="font-mono text-[11px] text-zinc-500">{e.codepoint}</span>
+                    <span className="font-mono text-[11px] text-zinc-400">{e.codepoint}</span>
                     <span className="text-[11px] capitalize leading-tight text-zinc-400">{e.name}</span>
                     <span className="text-[11px] font-semibold text-indigo-400">{e.variantLabel}</span>
-                    <span className={`text-[11px] font-bold ${copied ? "text-emerald-400" : "text-zinc-500"}`}>
+                    <span className={`text-[11px] font-bold ${copied ? "text-emerald-400" : "text-zinc-400"}`}>
                       {copied ? "✓ Copied!" : "Click to copy"}
                     </span>
                   </button>
@@ -120,8 +125,11 @@ export default function SymbolReference({ defaultFilter = "all" }: { defaultFilt
               );
             })}
           </ul>
+          </>
         )}
       </div>
+      {/* Skip-link landing spot: focus moves here, past the grid. */}
+      <div id="symbol-grid-end" tabIndex={-1} className="scroll-mt-24 outline-none" />
     </section>
   );
 }

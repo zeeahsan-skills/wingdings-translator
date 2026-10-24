@@ -44,7 +44,7 @@ export default function GasterTranslatorPage() {
       <BreadcrumbJsonLd trail={[{ name: "Home", path: "/" }, { name: "Gaster Translator", path: "/gaster-translator/" }]} />
       <WebAppJsonLd name="Gaster Translator" path="/gaster-translator/" description="Free Gaster translator: convert English into W. D. Gaster's Wingdings from Undertale. Instant, no sign-up." />
     <div className="mx-auto max-w-5xl px-4 pb-16">
-      <nav aria-label="Breadcrumb" className="pt-6 text-sm text-zinc-500">
+      <nav aria-label="Breadcrumb" className="pt-6 text-sm text-zinc-400">
         <Link href="/" className="hover:text-indigo-400">Wingdings Translator</Link>
         <span aria-hidden="true"> / </span>
         <span aria-current="page">Gaster Translator</span>

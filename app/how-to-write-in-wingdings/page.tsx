@@ -46,7 +46,7 @@ export default function HowToWritePage() {
     <>
       <BreadcrumbJsonLd trail={[{ name: "Home", path: "/" }, { name: "How to Write in Wingdings", path: "/how-to-write-in-wingdings/" }]} />
     <div className="mx-auto max-w-5xl px-4 pb-16">
-      <nav aria-label="Breadcrumb" className="pt-6 text-sm text-zinc-500">
+      <nav aria-label="Breadcrumb" className="pt-6 text-sm text-zinc-400">
         <Link href="/" className="hover:text-indigo-400">Wingdings Translator</Link>
         <span aria-hidden="true"> / </span>
         <span aria-current="page">How to Write in Wingdings</span>

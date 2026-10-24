@@ -15,15 +15,24 @@ interface Props {
 /** Renders output glyphs so newly arrived characters flip into existence. */
 function MorphingOutput({ output }: { output: string }) {
   const prev = useRef("");
+  // Split by CODE POINT, never with split(""): several Wingdings 2/3 and
+  // Webdings glyphs are astral-plane characters stored as UTF-16 surrogate
+  // pairs. split("") tears each pair into lone surrogates, which cannot be
+  // serialized into HTML — the browser parses them back as U+FFFD, so the
+  // hydrated text no longer matches the server HTML and React throws error
+  // #418 (hydration text mismatch) and re-renders the subtree. That was the
+  // bug seen only on the non-Wingdings-1 pages, whose default output text
+  // ("Hello World!") contains astral glyphs; Wingdings 1 output is all BMP.
+  const chars = Array.from(output);
   // Characters appended since the last render get the materialize animation.
-  const freshFrom = output.startsWith(prev.current) ? prev.current.length : 0;
+  const freshFrom = output.startsWith(prev.current) ? Array.from(prev.current).length : 0;
   useEffect(() => {
     prev.current = output;
   }, [output]);
 
   if (!output) {
     return (
-      <span className="text-zinc-500">
+      <span className="text-zinc-400">
         Your symbols will materialize here…
       </span>
     );
@@ -31,7 +40,7 @@ function MorphingOutput({ output }: { output: string }) {
   let n = 0;
   return (
     <>
-      {output.split("").map((ch, i) => {
+      {chars.map((ch, i) => {
         if (ch === "\n") return <br key={i} />;
         const fresh = i >= freshFrom;
         const k = n++;
@@ -147,7 +156,7 @@ export default function Translator({ text, setText, variant, setVariant }: Props
                       {preview}
                     </span>
                     <span className="mt-1.5 block text-sm font-bold text-zinc-100">{v.label}</span>
-                    <span className="mt-0.5 line-clamp-2 block text-xs leading-snug text-zinc-500">{v.description}</span>
+                    <span className="mt-0.5 line-clamp-2 block text-xs leading-snug text-zinc-400">{v.description}</span>
                   </button>
                 );
               })}
@@ -167,10 +176,10 @@ export default function Translator({ text, setText, variant, setVariant }: Props
                 onChange={(e) => setText(e.target.value)}
                 rows={6}
                 placeholder="Type English here — watch it become symbols…"
-                className="mt-2.5 w-full resize-y rounded-2xl border border-zinc-800 bg-black/60 p-4 text-base leading-relaxed text-zinc-100 placeholder:text-zinc-600 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/30"
+                className="mt-2.5 w-full resize-y rounded-2xl border border-zinc-800 bg-black/60 p-4 text-base leading-relaxed text-zinc-100 placeholder:text-zinc-400 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/30"
               />
               <div className="mt-2.5 flex flex-wrap items-center gap-2">
-                <span className="text-xs font-medium text-zinc-600">Try:</span>
+                <span className="text-xs font-medium text-zinc-400">Try:</span>
                 {["Hello World!", "I love you", "Secret message"].map((ex) => (
                   <button
                     key={ex}
@@ -182,7 +191,7 @@ export default function Translator({ text, setText, variant, setVariant }: Props
                   </button>
                 ))}
               </div>
-              <p className="mt-1.5 text-xs text-zinc-600" aria-live="polite">
+              <p className="mt-1.5 text-xs text-zinc-400" aria-live="polite">
                 {text.length} character{text.length === 1 ? "" : "s"} · converts live as you type
               </p>
             </div>

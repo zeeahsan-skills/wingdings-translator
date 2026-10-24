@@ -37,7 +37,7 @@ export default function Wingdings2Page() {
       <BreadcrumbJsonLd trail={[{ name: "Home", path: "/" }, { name: "Wingdings 2 Translator", path: "/wingdings-2-translator/" }]} />
       <WebAppJsonLd name="Wingdings 2 Translator" path="/wingdings-2-translator/" description="Free Wingdings 2 translator and generator: convert English to Wingdings 2 symbols with live conversion and copy button." />
     <div className="mx-auto max-w-5xl px-4 pb-16">
-      <nav aria-label="Breadcrumb" className="pt-6 text-sm text-zinc-500">
+      <nav aria-label="Breadcrumb" className="pt-6 text-sm text-zinc-400">
         <Link href="/" className="hover:text-indigo-400">Wingdings Translator</Link>
         <span aria-hidden="true"> / </span>
         <span aria-current="page">Wingdings 2 Translator</span>
@@ -78,7 +78,7 @@ export default function Wingdings2Page() {
         </p>
       </section>
 
-      <div className="mt-14">
+      <div className="cv-section mt-14">
         <SymbolReference defaultFilter="wingdings2" />
       </div>
 

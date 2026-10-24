@@ -38,7 +38,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-zinc-800">
-        <p className="mx-auto max-w-5xl px-4 py-4 text-xs text-zinc-500">
+        <p className="mx-auto max-w-5xl px-4 py-4 text-xs text-zinc-400">
           © 2026 {SITE_NAME}. Wingdings is a trademark of Microsoft Corporation;
           this is an independent tool and is not affiliated with Microsoft.
         </p>

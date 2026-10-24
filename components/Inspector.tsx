@@ -32,7 +32,7 @@ export default function Inspector({ text, variant }: Props) {
       </p>
 
       {chars.length === 0 ? (
-        <p className="mt-4 rounded-xl border border-dashed border-zinc-700 bg-zinc-900 p-4 text-sm text-zinc-500">
+        <p className="mt-4 rounded-xl border border-dashed border-zinc-700 bg-zinc-900 p-4 text-sm text-zinc-400">
           Type something in the translator above and its characters will appear here for inspection.
         </p>
       ) : (
@@ -56,37 +56,37 @@ export default function Inspector({ text, variant }: Props) {
             ))}
           </div>
           {text.length > MAX_CHIPS && (
-            <p className="mt-2 text-xs text-zinc-500">Showing the first {MAX_CHIPS} characters.</p>
+            <p className="mt-2 text-xs text-zinc-400">Showing the first {MAX_CHIPS} characters.</p>
           )}
 
           <div className="mt-4 min-h-32 rounded-xl bg-zinc-900 p-4" aria-live="polite">
             {selectedChar === null || detail === null ? (
-              <p className="text-sm text-zinc-500">Select a character above to inspect its mapping.</p>
+              <p className="text-sm text-zinc-400">Select a character above to inspect its mapping.</p>
             ) : (
               <dl className="grid grid-cols-2 gap-3 text-sm sm:grid-cols-3">
                 <div>
-                  <dt className="font-semibold text-zinc-500">Source character</dt>
+                  <dt className="font-semibold text-zinc-400">Source character</dt>
                   <dd className="mt-0.5 font-mono text-2xl text-zinc-100">{selectedChar === " " ? "␣ (space)" : selectedChar}</dd>
                 </div>
                 <div>
-                  <dt className="font-semibold text-zinc-500">Mapped symbol</dt>
+                  <dt className="font-semibold text-zinc-400">Mapped symbol</dt>
                   <dd className="mt-0.5 text-2xl text-zinc-100">{detail.entry.symbol}</dd>
                 </div>
                 <div>
-                  <dt className="font-semibold text-zinc-500">Unicode code point</dt>
+                  <dt className="font-semibold text-zinc-400">Unicode code point</dt>
                   <dd className="mt-0.5 font-mono text-lg text-zinc-100">{detail.entry.codepoint}</dd>
-                  <dd className="text-xs text-zinc-500">actual: {formatCodepoint(detail.entry.symbol.codePointAt(0) ?? 0)}</dd>
+                  <dd className="text-xs text-zinc-400">actual: {formatCodepoint(detail.entry.symbol.codePointAt(0) ?? 0)}</dd>
                 </div>
                 <div>
-                  <dt className="font-semibold text-zinc-500">Symbol name</dt>
+                  <dt className="font-semibold text-zinc-400">Symbol name</dt>
                   <dd className="mt-0.5 capitalize text-zinc-100">{detail.entry.name}</dd>
                 </div>
                 <div>
-                  <dt className="font-semibold text-zinc-500">Font variant</dt>
+                  <dt className="font-semibold text-zinc-400">Font variant</dt>
                   <dd className="mt-0.5 text-zinc-100">{variantLabel}</dd>
                 </div>
                 <div>
-                  <dt className="font-semibold text-zinc-500">Mapping status</dt>
+                  <dt className="font-semibold text-zinc-400">Mapping status</dt>
                   <dd className="mt-0.5">
                     {detail.entry.verified ? (
                       <span className="rounded-full bg-emerald-900 px-2 py-0.5 text-xs font-semibold text-emerald-300">Verified mapping</span>
@@ -99,7 +99,7 @@ export default function Inspector({ text, variant }: Props) {
                 </div>
                 {detail.alternatives.length > 0 && (
                   <div className="col-span-2 sm:col-span-3">
-                    <dt className="font-semibold text-zinc-500">Decode note</dt>
+                    <dt className="font-semibold text-zinc-400">Decode note</dt>
                     <dd className="mt-0.5 text-zinc-300">
                       This symbol is also the approximation for {detail.alternatives.join(", ")} — when decoding,
                       <strong> {detail.entry.char}</strong> is preferred.

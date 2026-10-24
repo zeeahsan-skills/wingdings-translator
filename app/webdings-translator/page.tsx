@@ -37,7 +37,7 @@ export default function WebdingsPage() {
       <BreadcrumbJsonLd trail={[{ name: "Home", path: "/" }, { name: "Webdings Translator", path: "/webdings-translator/" }]} />
       <WebAppJsonLd name="Webdings Translator" path="/webdings-translator/" description="Free Webdings translator and generator: turn English into Webdings web-style icons with live conversion and copy button." />
     <div className="mx-auto max-w-5xl px-4 pb-16">
-      <nav aria-label="Breadcrumb" className="pt-6 text-sm text-zinc-500">
+      <nav aria-label="Breadcrumb" className="pt-6 text-sm text-zinc-400">
         <Link href="/" className="hover:text-indigo-400">Wingdings Translator</Link>
         <span aria-hidden="true"> / </span>
         <span aria-current="page">Webdings Translator</span>
@@ -76,7 +76,7 @@ export default function WebdingsPage() {
         </p>
       </section>
 
-      <div className="mt-14">
+      <div className="cv-section mt-14">
         <SymbolReference defaultFilter="webdings" />
       </div>
 

@@ -251,6 +251,9 @@ select option {
 [data-theme="light"] .placeholder\:text-zinc-500::placeholder {
   color: #a1a1aa;
 }
+[data-theme="light"] .placeholder\:text-zinc-400::placeholder {
+  color: #52525b;
+}
 [data-theme="light"] .border-zinc-800 {
   border-color: #e4e4e7;
 }
@@ -300,7 +303,10 @@ select option {
   color: #047857;
 }
 [data-theme="light"] .text-emerald-400 {
-  color: #059669;
+  /* Was #059669 = 3.77:1 on white (fails WCAG 1.4.3 AA for the transient
+     "Copied!" state text). Emerald-700 gives 5.48:1 on white / 5.21:1 on the
+     light copied-card background (#ecfdf5). */
+  color: #047857;
 }
 [data-theme="light"] .bg-emerald-950 {
   background-color: #ecfdf5;
@@ -332,6 +338,52 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ---- Skip link (symbol grid bypass) ----
+   Visually hidden until focused, then revealed in-flow above the grid so
+   keyboard users can jump past hundreds of symbol cards. */
+.skip-link {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.skip-link:focus-visible {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
+  clip-path: none;
+  white-space: normal;
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #4f46e5; /* indigo-600 */
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+/* ---- Render containment (mobile performance) ----
+   Heavy below-the-fold blocks stay in the server-rendered HTML (SEO and
+   no-JS behaviour unchanged) but the browser skips their layout/paint work
+   until they approach the viewport, cutting main-thread style/layout cost
+   on the large pages. contain-intrinsic-size reserves a plausible box so
+   the scrollbar and layout stay stable; `auto` lets the browser remember
+   each element's real rendered size after its first paint. */
+.cv-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 560px;
+}
+.symbol-grid > li {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 152px;
 }
 
 /* ============================================================

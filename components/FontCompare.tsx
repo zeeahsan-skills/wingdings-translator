@@ -71,9 +71,9 @@ export default function FontCompare() {
                 </button>
               </div>
               <p className="mt-2 min-h-12 break-words text-2xl leading-relaxed text-zinc-100">
-                {output || <span className="text-base text-zinc-500">—</span>}
+                {output || <span className="text-base text-zinc-400">—</span>}
               </p>
-              <p className="mt-1 text-xs text-zinc-500">{variant.description}</p>
+              <p className="mt-1 text-xs text-zinc-400">{variant.description}</p>
             </li>
           ))}
         </ul>
