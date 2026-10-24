@@ -52,7 +52,13 @@ export default function GasterTranslatorPage() {
 
       <div className="py-8 text-center">
         <h1 className="font-title mx-auto max-w-3xl text-5xl font-extrabold tracking-tight sm:text-6xl" aria-label="Gaster Translator">
-          <AnimatedTitle text="Gaster Translator" />
+          {/* stackWordsBelow: same measured font-swap wrap as the chart
+              title — "Gaster Translator" fits one line in the fallback font
+              but wraps to two lines in Fraunces at ≤440px (48px → 96px),
+              shifting the page by 48px. The 445 value follows Tailwind v4's
+              exclusive max-* semantics (rule applies only BELOW N), and at
+              ≥445px both states already agree on one line. */}
+          <AnimatedTitle text="Gaster Translator" stackWordsBelow="max-[445px]:block" />
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-lg text-zinc-400">
           Decode W. D. (WD) Gaster&apos;s mysterious Undertale messages — translate any Gaster text
