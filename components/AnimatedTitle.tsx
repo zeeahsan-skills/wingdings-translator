@@ -7,6 +7,14 @@ interface Props {
   delayBase?: number;
   /** Seconds between consecutive letters. */
   stagger?: number;
+  /** Narrow-viewport stacking class applied to every word after the first,
+      e.g. "max-[420px]:block". Use ONLY on titles whose fallback-font and
+      webfont line counts disagree in a measured viewport band (a font-swap
+      wrap grows the title by one line and shifts the whole page = CLS):
+      the value must be the full literal class for the band's upper edge,
+      so that both font states render the same line count there. Without
+      this prop the component is byte-for-byte unchanged. */
+  stackWordsBelow?: string;
 }
 
 /**
@@ -17,7 +25,7 @@ interface Props {
  * The parent h1 should carry aria-label={text} for screen readers; the
  * individual letters are aria-hidden.
  */
-export default function AnimatedTitle({ text, delayBase = 0.1, stagger = 0.035 }: Props) {
+export default function AnimatedTitle({ text, delayBase = 0.1, stagger = 0.035, stackWordsBelow }: Props) {
   const n = text.replace(/ /g, "").length;
   const words: { word: string; start: number }[] = [];
   let pos = 0;
@@ -28,7 +36,10 @@ export default function AnimatedTitle({ text, delayBase = 0.1, stagger = 0.035 }
   return (
     <>
       {words.map(({ word, start }, wi) => (
-        <span key={wi} className="inline-block whitespace-nowrap">
+        <span
+          key={wi}
+          className={`inline-block whitespace-nowrap${wi > 0 && stackWordsBelow ? ` ${stackWordsBelow}` : ""}`}
+        >
           {word.split("").map((ch, i) => (
             <span
               key={i}

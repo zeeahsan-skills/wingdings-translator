@@ -52,7 +52,17 @@ export default function AlphabetChartPage() {
 
       <div className="py-8 text-center">
         <h1 className="font-title mx-auto max-w-3xl text-5xl font-extrabold tracking-tight sm:text-6xl" aria-label="Wingdings Chart">
-          <AnimatedTitle text="Wingdings Chart" />
+          {/* stackWordsBelow: measured font-swap wrap — at ≤420px the title
+              fits one line in the fallback font but wraps to two lines in
+              Fraunces (48px → 96px), shifting the whole page by 48px
+              (Lighthouse CLS ~0.098). Forcing "Chart" onto its own line
+              makes both font states two lines, so the swap moves nothing.
+              NOTE the 421 value, not 420: Tailwind v4 compiles max-[Npx]
+              to "@media not all and (min-width:Npx)", i.e. the rule applies
+              only BELOW N — so N must be one above the last disagreeing
+              width (420 measured, 422 already agrees). Same pattern as the
+              header brand fix. */}
+          <AnimatedTitle text="Wingdings Chart" stackWordsBelow="max-[421px]:block" />
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-lg text-zinc-400">
           Every Wingdings 1, Wingdings 2, Wingdings 3 and Webdings symbol in one searchable

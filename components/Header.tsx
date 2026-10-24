@@ -55,26 +55,48 @@ export default function Header() {
             priority
           />
           <span className="font-title text-lg font-bold tracking-tight" aria-label={SITE_NAME} role="text">
-            {SITE_NAME.split("").map((ch, i) => (
-              <span
-                key={i}
-                aria-hidden="true"
-                className="animate-letter-flip"
-                style={{
-                  animationDelay: `${0.05 + i * 0.15}s`,
-                  backgroundImage:
-                    "linear-gradient(to right, #4338ca, #7c3aed, #a21caf)",
-                  backgroundSize: "2000% 100%",
-                  backgroundPosition: `${(i / (SITE_NAME.length - 1)) * 100}% 0`,
-                  WebkitBackgroundClip: "text",
-                  backgroundClip: "text",
-                  color: "transparent",
-                  WebkitTextFillColor: "transparent",
-                }}
-              >
-                {ch === " " ? "\u00A0" : ch}
-              </span>
-            ))}
+            {/* Words are grouped into nowrap units. On narrow screens
+                (<=440px) the second word drops to its own line in BOTH the
+                fallback-font and webfont states: Fraunces is wider than its
+                metric-adjusted fallback, so without this the brand wrapped
+                only after the webfont loaded, growing the header by 20px
+                and shifting the whole page (CLS ~0.18 on ~412px phones).
+                Letter indices (animation delay / gradient slice) still run
+                across the full name including the space, as before. */}
+            {(() => {
+              let idx = 0;
+              return SITE_NAME.split(" ").map((word, wi, words) => {
+                const group = (
+                  <span key={wi} className={`inline-block whitespace-nowrap${wi > 0 ? " max-[440px]:block" : ""}`}>
+                    {word.split("").map((ch) => {
+                      const i = idx++;
+                      return (
+                        <span
+                          key={i}
+                          aria-hidden="true"
+                          className="animate-letter-flip"
+                          style={{
+                            animationDelay: `${0.05 + i * 0.15}s`,
+                            backgroundImage:
+                              "linear-gradient(to right, #4338ca, #7c3aed, #a21caf)",
+                            backgroundSize: "2000% 100%",
+                            backgroundPosition: `${(i / (SITE_NAME.length - 1)) * 100}% 0`,
+                            WebkitBackgroundClip: "text",
+                            backgroundClip: "text",
+                            color: "transparent",
+                            WebkitTextFillColor: "transparent",
+                          }}
+                        >
+                          {ch}
+                        </span>
+                      );
+                    })}
+                  </span>
+                );
+                idx++; // the space keeps its index, as in the original map
+                return wi < words.length - 1 ? [group, "\u00A0"] : group;
+              });
+            })()}
           </span>
         </Link>
         <nav aria-label="Primary" className="hidden items-center gap-1 md:flex">
