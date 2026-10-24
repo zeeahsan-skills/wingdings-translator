@@ -10,15 +10,12 @@ import SymbolField from "@/components/SymbolField";
 import SymbolTicker from "@/components/SymbolTicker";
 import Faq from "@/components/Faq";
 import WebAppJsonLd from "@/components/WebAppJsonLd";
-import { VARIANTS } from "@/lib/wingdings-maps";
 import { SITE_NAME, SITE_TAGLINE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: `${SITE_NAME} — English to Wingdings Converter`,
   description: SITE_TAGLINE,
 };
-
-const TOTAL_SYMBOLS = VARIANTS.reduce((n, v) => n + v.entries.length, 0);
 
 export default function Home() {
   return (
@@ -55,7 +52,7 @@ export default function Home() {
                       className="animate-letter-jerk text-gradient-flow-letter"
                       style={
                         {
-                          animationDelay: `${0.15 + idx * 0.05}s`,
+                          animationDelay: `${0.15 + idx * 0.11}s`,
                           "--i": idx,
                         } as React.CSSProperties
                       }
@@ -73,33 +70,6 @@ export default function Home() {
             symbols live as you type — get an instant Wingdings translation across{" "}
             <strong className="text-zinc-200">Wingdings 1, Wingdings 2, Wingdings 3 and Webdings</strong>.
           </p>
-          <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
-            <Link
-              href="#translator"
-              className="font-display rounded-2xl bg-gradient-to-r from-indigo-600 via-violet-600 to-fuchsia-600 px-7 py-3.5 text-sm font-bold tracking-wide text-white shadow-xl shadow-violet-900/40 transition hover:brightness-110 active:scale-95"
-            >
-              ⚡ START TRANSLATING
-            </Link>
-            <Link
-              href="/wingdings-alphabet-chart/"
-              className="font-display rounded-2xl border border-zinc-700 bg-zinc-900/70 px-7 py-3.5 text-sm font-bold tracking-wide text-zinc-200 backdrop-blur transition hover:border-indigo-500/60 hover:text-white"
-            >
-              BROWSE SYMBOL CHART
-            </Link>
-          </div>
-          <dl className="mx-auto mt-9 grid max-w-xl grid-cols-3 gap-3">
-            {[
-              ["4", "symbol fonts"],
-              [String(TOTAL_SYMBOLS), "mapped symbols"],
-              ["100%", "free, private"],
-            ].map(([num, label]) => (
-              <div key={label} className="rounded-2xl border border-zinc-800/80 bg-black/50 px-3 py-3.5 backdrop-blur">
-                <dt className="sr-only">{label}</dt>
-                <dd className="font-display bg-gradient-to-r from-indigo-400 via-violet-400 to-fuchsia-400 bg-clip-text text-2xl font-extrabold text-transparent">{num}</dd>
-                <dd className="mt-0.5 text-xs font-medium text-zinc-500">{label}</dd>
-              </div>
-            ))}
-          </dl>
         </div>
       </div>
 
