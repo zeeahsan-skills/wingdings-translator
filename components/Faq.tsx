@@ -11,7 +11,11 @@ const FAQS = [
   },
   {
     q: "How do I decode Wingdings back to English?",
-    a: "Match each symbol against the Wingdings alphabet chart — every symbol is listed with the key that produces it, so you can read the letters off one by one. This site's chart covers all four fonts, so make sure you're looking at the right font's table.",
+    a: "Match each symbol against the Wingdings alphabet chart — every symbol is listed with the key that produces it, so you can read the letters off one by one. This Wingdings translator's chart covers all four fonts, so make sure you're looking at the right font's table.",
+  },
+  {
+    q: "Can a Wingdings translator decode symbols back to English?",
+    a: "Yes. A Wingdings translator encodes with a fixed key-to-symbol map, so the same map reads symbols back: match each symbol on the Wingdings translator's alphabet chart and note the key beneath it. This Wingdings translator keeps the chart on the same page, so decoding never needs a second tool.",
   },
   {
     q: "What is the difference between Wingdings 1, 2 and 3?",
@@ -19,7 +23,7 @@ const FAQS = [
   },
   {
     q: "Why do my Wingdings symbols show up as emoji?",
-    a: "This tool outputs portable Unicode characters, not the proprietary font. Some of those characters (like 👍 or 💣) have emoji presentation, so phones render them as colorful emoji while desktops may show plain dingbats. The underlying characters are identical — only the rendering differs by device.",
+    a: "This Wingdings translator outputs portable Unicode characters, not the proprietary font. Some of those characters (like 👍 or 💣) have emoji presentation, so phones render them as colorful emoji while desktops may show plain dingbats. The underlying characters are identical — only the rendering differs by device.",
   },
   {
     q: "What is the Gaster / Undertale connection?",
@@ -43,7 +47,7 @@ const FAQS = [
   },
   {
     q: "Can I copy and paste Wingdings symbols?",
-    a: "Yes. Convert your text, hit “Copy result”, and paste the symbols into chats, bios, documents or social posts. For individual glyphs, use the Wingdings alphabet chart — every symbol card copies on click. That covers “wingdings copy paste” and “wingding copy paste” searches in one go.",
+    a: "Yes. Convert your text, hit “Copy result”, and paste the symbols into chats, bios, documents or social posts. For individual glyphs, use the Wingdings translator's alphabet chart — every symbol card copies on click. That covers “wingdings copy paste” and “wingding copy paste” searches in one go.",
   },
 ];
 

@@ -54,7 +54,7 @@ export default function BatchConverter() {
       <h2 className="text-2xl font-bold tracking-tight text-zinc-100">Batch-convert with the Wingdings translator</h2>
       <p className="mt-2 max-w-2xl text-zinc-400">
         Run the Wingdings translator on many lines at once — one phrase per line. Handy for puzzles, worksheets or
-        message lists. Everything still happens privately in your browser.
+        message lists. Everything still happens privately in your browser — the Wingdings translator never uploads your text.
       </p>
 
       <div className="mt-4 rounded-2xl border border-zinc-800 bg-zinc-900 p-4 shadow-sm sm:p-6">

@@ -5,7 +5,7 @@ const NOTES = [
   },
   {
     title: "Google Docs does not ship the Wingdings font",
-    body: "Google Docs does not include Microsoft's proprietary Wingdings fonts, so applying “Wingdings” there is not an option and pasted text will not show the original glyphs. For Docs, use this tool's Unicode approximations instead — they are real characters that paste anywhere.",
+    body: "Google Docs does not include Microsoft's proprietary Wingdings fonts, so applying “Wingdings” there is not an option and pasted text will not show the original glyphs. For Docs, use this Wingdings translator's Unicode approximations instead — they are real characters that paste anywhere.",
   },
   {
     title: "Symbols may render as emoji on phones",
