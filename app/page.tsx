@@ -134,7 +134,7 @@ export default function Home() {
             Most people arrive at a Wingdings translator to turn plain English into symbols. The Wingdings translator above does that letter by letter, matching every character to its symbol in the Wingdings font map — full sentences and whole paragraphs included, not just single words.
           </p>
           <img
-            src="/images/wingdings-translator-example.png"
+            src="/images/wingdings-translator-example.svg"
             alt="Wingdings translator example: the English word Hello converted into Wingdings 1 symbols"
             width={1200}
             height={630}
