@@ -50,10 +50,10 @@ export default function SymbolReference({ defaultFilter = "all" }: { defaultFilt
 
   return (
     <section id="symbols" aria-label="Searchable symbol reference" className="scroll-mt-24">
-      <h2 className="text-2xl font-bold tracking-tight text-zinc-100">Symbol reference</h2>
+      <h2 className="text-2xl font-bold tracking-tight text-zinc-100">Wingdings translator symbol reference</h2>
       <p className="mt-2 max-w-2xl text-zinc-400">
-        Search every mapped symbol by name — try “arrow”, “heart”, “check”, “star” — or filter
-        by font. <strong>Click any card to copy that symbol instantly.</strong>
+        Search every mapped symbol in the Wingdings translator by name — try “arrow”, “heart”, “check”, “star” — or filter
+        by font. <strong>Click any card to copy that symbol instantly.</strong> It is the same chart the Wingdings translator itself converts with.
       </p>
 
       <div className="mt-4 rounded-2xl border border-zinc-800 bg-zinc-900 p-4 shadow-sm sm:p-6">

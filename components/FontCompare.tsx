@@ -33,11 +33,11 @@ export default function FontCompare() {
 
   return (
     <section aria-label="Compare Wingdings fonts side by side" className="scroll-mt-24">
-      <h2 className="text-2xl font-bold tracking-tight text-zinc-100">Compare all four fonts</h2>
+      <h2 className="text-2xl font-bold tracking-tight text-zinc-100">One Wingdings translator, all four fonts</h2>
       <p className="mt-2 max-w-2xl text-zinc-400">
-        Type once and see your text in <strong>Wingdings 1, 2, 3 and Webdings</strong> at the same
+        Type once in this Wingdings translator and see your text in <strong>Wingdings 1, 2, 3 and Webdings</strong> at the same
         time — the fastest way to pick the right look, or to work out which font a mystery message
-        was written in.
+        was written in, without leaving this Wingdings translator.
       </p>
 
       <div className="mt-4 rounded-2xl border border-zinc-800 bg-zinc-900 p-4 shadow-sm sm:p-6">
