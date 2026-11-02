@@ -133,6 +133,14 @@ export default function Home() {
           <p className="mt-3 text-sm leading-relaxed text-zinc-400">
             Most people arrive at a Wingdings translator to turn plain English into symbols. The Wingdings translator above does that letter by letter, matching every character to its symbol in the Wingdings font map — full sentences and whole paragraphs included, not just single words.
           </p>
+          <img
+            src="/images/wingdings-translator-example.png"
+            alt="Wingdings translator example: the English word Hello converted into Wingdings 1 symbols"
+            width={1200}
+            height={630}
+            loading="lazy"
+            className="mt-4 w-full rounded-2xl border border-zinc-800"
+          />
           <p className="mt-3 text-sm leading-relaxed text-zinc-400">
             Reading is the other half of the job. When a friend sends you a row of symbols, this Wingdings translator&apos;s alphabet chart works as the decoder: find each symbol, read off the key that produced it, and the message spells itself out. Fans use exactly this Wingdings translator workflow to read W. D. Gaster&apos;s lines in Undertale. Encode with the Wingdings translator, decode with its chart — the pair covers both directions.
           </p>
