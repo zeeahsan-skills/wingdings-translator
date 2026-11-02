@@ -51,9 +51,9 @@ export default function BatchConverter() {
 
   return (
     <section id="batch" aria-label="Batch converter" className="scroll-mt-24">
-      <h2 className="text-2xl font-bold tracking-tight text-zinc-100">Batch converter</h2>
+      <h2 className="text-2xl font-bold tracking-tight text-zinc-100">Batch-convert with the Wingdings translator</h2>
       <p className="mt-2 max-w-2xl text-zinc-400">
-        Convert many lines at once — one phrase per line. Handy for puzzles, worksheets or
+        Run the Wingdings translator on many lines at once — one phrase per line. Handy for puzzles, worksheets or
         message lists. Everything still happens privately in your browser.
       </p>
 

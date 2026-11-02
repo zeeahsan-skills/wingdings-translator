@@ -101,15 +101,25 @@ export default function Home() {
           <Faq />
         </div>
 
+        <section aria-label="What is a Wingdings translator" className="bento-card rounded-3xl border border-zinc-800 bg-zinc-900/70 p-6 shadow-sm backdrop-blur sm:p-8">
+          <h2 className="font-display text-xl font-bold text-zinc-100">What is a Wingdings translator?</h2>
+          <p className="mt-3 text-sm leading-relaxed text-zinc-400">
+            A Wingdings translator converts ordinary English text into Wingdings symbols — and helps you read symbol text back into English. Wingdings itself is not a language with grammar or vocabulary; it is a font in which every keyboard key draws a picture instead of a letter. A Wingdings translator applies that key-to-symbol mapping for you, character by character, so a word like &ldquo;Hello&rdquo; becomes ☟♏●●□ in Wingdings 1.
+          </p>
+          <p className="mt-3 text-sm leading-relaxed text-zinc-400">
+            People reach for a Wingdings translator to make puzzles and classroom worksheets, write game messages — W. D. Gaster speaks in Wingdings in Undertale — and send secret notes that only friends with the chart can read. This Wingdings translator covers all four Microsoft symbol fonts (Wingdings 1, 2, 3 and Webdings), runs entirely in your browser with nothing uploaded, and works alongside the alphabet chart when you need to decode a message symbol by symbol.
+          </p>
+        </section>
+
         <section aria-label="History of Wingdings" className="bento-card rounded-3xl border border-zinc-800 bg-zinc-900/70 p-6 shadow-sm backdrop-blur sm:p-8">
           <h2 className="font-display text-xl font-bold text-zinc-100">A short history of Wingdings</h2>
           <p className="mt-3 text-sm leading-relaxed text-zinc-400">
-            Wingdings began life in 1990 as three typefaces drawn by type designers Charles Bigelow and Kris Holmes — <em>Lucida Icons</em>, <em>Lucida Arrows</em> and <em>Lucida Stars</em>. Microsoft licensed the designs and shipped the combined font as Wingdings with Windows 3.1 in 1992, so almost every Windows PC since has carried the symbols. Because each keyboard key maps to a picture, people started using it for puzzles, hidden messages and decoration — some even search for it as a &ldquo;wingding translator&rdquo; or &ldquo;wing ding translator&rdquo;, nicknames that stuck even though the font&rsquo;s official name ends with an S. A famous 1990s urban legend claimed certain letter combinations spelled hidden messages; it was a coincidence of the symbol set, but it made Wingdings notorious and kept it famous long after most fonts are forgotten.
+            Wingdings began life in 1990 as three typefaces drawn by type designers Charles Bigelow and Kris Holmes — <em>Lucida Icons</em>, <em>Lucida Arrows</em> and <em>Lucida Stars</em>. Microsoft licensed the designs and shipped the combined font as Wingdings with Windows 3.1 in 1992, so almost every Windows PC since has carried the symbols. Because each keyboard key maps to a picture, people started using it for puzzles, hidden messages and decoration — some even search for it as a &ldquo;wingding translator&rdquo; or &ldquo;wing ding translator&rdquo;, nicknames that stuck even though the font&rsquo;s official name ends with an S. A famous 1990s urban legend claimed certain letter combinations spelled hidden messages; it was a coincidence of the symbol set, but it made Wingdings notorious and kept it famous long after most fonts are forgotten. That everyday job — turning symbols back into readable text, and plain text into symbols — is exactly what a Wingdings translator is for.
           </p>
         </section>
 
         <section aria-label="About this tool" className="bento-card rounded-3xl border border-zinc-800 bg-zinc-900/70 p-6 shadow-sm backdrop-blur sm:p-8">
-          <h2 className="font-display text-xl font-bold text-zinc-100">Why this translator is different</h2>
+          <h2 className="font-display text-xl font-bold text-zinc-100">Why this Wingdings translator is different</h2>
           <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-relaxed text-zinc-400">
             <li><strong className="text-zinc-200">Four real converters, not one.</strong> Most tools only do Wingdings 1 — here Wingdings 1, 2, 3 and Webdings each get a full converter with per-variant results.</li>
             <li><strong className="text-zinc-200">Click-to-copy symbol reference.</strong> Every symbol card copies on click — no static charts you have to retype from.</li>

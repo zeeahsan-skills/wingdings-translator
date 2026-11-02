@@ -3,11 +3,11 @@ import { SITE_NAME } from "@/lib/site";
 const FAQS = [
   {
     q: "What is Wingdings?",
-    a: "Wingdings is a symbol font Microsoft has shipped with Windows since 1992. Instead of letters, each key shows a small picture — hands, arrows, faces, office icons. Typing a word with the Wingdings font applied turns it into a row of symbols, which is why people use it for puzzles and hidden messages — and why some casually call it the Wingdings language.",
+    a: "Wingdings is a symbol font Microsoft has shipped with Windows since 1992. Instead of letters, each key shows a small picture — hands, arrows, faces, office icons. Typing a word with the Wingdings font applied turns it into a row of symbols, which is why people use it for puzzles and hidden messages — and why some casually call it the Wingdings language. A Wingdings translator turns that font into something anyone can write — type English, get symbols — and read back with the chart.",
   },
   {
     q: "How do I translate English into Wingdings?",
-    a: "Type or paste English text into the translator above and pick a font — Wingdings 1, 2, 3 or Webdings. Each character is converted to its symbol instantly as you type. Hit “Copy result” and paste the symbols anywhere: chats, bios, documents.",
+    a: "Type or paste English text into the Wingdings translator above and pick a font — Wingdings 1, 2, 3 or Webdings. Each character is converted to its symbol instantly as you type. Hit “Copy result” and paste the symbols anywhere: chats, bios, documents.",
   },
   {
     q: "How do I decode Wingdings back to English?",
@@ -23,7 +23,7 @@ const FAQS = [
   },
   {
     q: "What is the Gaster / Undertale connection?",
-    a: "In the game Undertale, the hidden character W. D. Gaster “speaks” in Wingdings — his dialogue (notably Lab Entry 17) is encoded with the standard Wingdings 1 mapping. Fans use the Wingdings alphabet chart to read his messages and this translator to write their own. Select Wingdings 1 to match the game's mapping.",
+    a: "In the game Undertale, the hidden character W. D. Gaster “speaks” in Wingdings — his dialogue (notably Lab Entry 17) is encoded with the standard Wingdings 1 mapping. Fans use the Wingdings alphabet chart to read his messages and this Wingdings translator to write their own. Select Wingdings 1 to match the game's mapping.",
   },
   {
     q: "Is Wingdings a secret code or encryption?",
@@ -60,7 +60,7 @@ export default function Faq() {
 
   return (
     <section id="faq" aria-label="Frequently asked questions" className="scroll-mt-24">
-      <h2 className="text-2xl font-bold tracking-tight text-zinc-100">Frequently asked questions</h2>
+      <h2 className="text-2xl font-bold tracking-tight text-zinc-100">Wingdings translator: frequently asked questions</h2>
       <div className="mt-4 space-y-2">
         {FAQS.map((f) => (
           <details key={f.q} className="group rounded-2xl border border-zinc-800 bg-zinc-900 px-5 py-4 shadow-sm">

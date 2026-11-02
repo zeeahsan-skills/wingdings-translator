@@ -28,7 +28,7 @@ export default function Inspector({ text, variant }: Props) {
       <p className="mt-2 max-w-2xl text-zinc-400">
         Click any character from the translator input above to see exactly what it becomes:
         the mapped symbol, its Unicode code point, and which font variant produced it — a
-        char-by-char breakdown no other translator shows.
+        char-by-char breakdown no other Wingdings translator shows.
       </p>
 
       {chars.length === 0 ? (
