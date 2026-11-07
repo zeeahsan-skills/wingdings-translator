@@ -9,6 +9,7 @@ import ThemeToggle from "./ThemeToggle";
 
 const NAV = [
   { href: "/", label: "Translator" },
+  { href: "/wingdings-image-translator/", label: "Image translator" },
   { href: "/#batch", label: "Batch" },
   { href: "/#symbols", label: "Symbol reference" },
   { href: "/#compatibility", label: "Compatibility" },

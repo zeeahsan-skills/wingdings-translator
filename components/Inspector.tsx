@@ -26,9 +26,9 @@ export default function Inspector({ text, variant }: Props) {
     <section id="inspector" aria-label="Character inspector" className="scroll-mt-24">
       <h2 className="text-2xl font-bold tracking-tight text-zinc-100">Character inspector</h2>
       <p className="mt-2 max-w-2xl text-zinc-400">
-        Click any character from the translator input above to see exactly what it becomes:
+        Click any character from the Wingdings translator input above to see exactly what it becomes:
         the mapped symbol, its Unicode code point, and which font variant produced it — a
-        char-by-char breakdown no other translator shows.
+        char-by-char breakdown no other Wingdings translator shows.
       </p>
 
       {chars.length === 0 ? (

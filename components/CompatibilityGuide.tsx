@@ -5,7 +5,7 @@ const NOTES = [
   },
   {
     title: "Google Docs does not ship the Wingdings font",
-    body: "Google Docs does not include Microsoft's proprietary Wingdings fonts, so applying “Wingdings” there is not an option and pasted text will not show the original glyphs. For Docs, use this tool's Unicode approximations instead — they are real characters that paste anywhere.",
+    body: "Google Docs does not include Microsoft's proprietary Wingdings fonts, so applying “Wingdings” there is not an option and pasted text will not show the original glyphs. For Docs, use this Wingdings translator's Unicode approximations instead — they are real characters that paste anywhere.",
   },
   {
     title: "Symbols may render as emoji on phones",
@@ -22,7 +22,7 @@ export default function CompatibilityGuide() {
     <section id="compatibility" aria-label="Compatibility guide" className="scroll-mt-24">
       <h2 className="text-2xl font-bold tracking-tight text-zinc-100">Compatibility guide</h2>
       <p className="mt-2 max-w-2xl text-zinc-400">
-        Honest notes on where Wingdings text works, where it doesn&apos;t, and why — so you&apos;re
+        Honest notes on where text from the Wingdings translator works, where it doesn&apos;t, and why — so you&apos;re
         never surprised after hitting copy.
       </p>
       <div className="mt-4 grid gap-3 md:grid-cols-2">
