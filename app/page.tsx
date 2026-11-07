@@ -69,6 +69,7 @@ export default function Home() {
             This free online Wingdings translator and generator converts English into Wingdings
             symbols live as you type — get an instant Wingdings translation across{" "}
             <strong className="text-zinc-200">Wingdings 1, Wingdings 2, Wingdings 3 and Webdings</strong>.
+            One Wingdings translator for writing symbols, reading them back, and copying them anywhere.
           </p>
         </div>
       </div>
@@ -101,17 +102,68 @@ export default function Home() {
           <Faq />
         </div>
 
+        <section aria-label="What is a Wingdings translator" className="bento-card rounded-3xl border border-zinc-800 bg-zinc-900/70 p-6 shadow-sm backdrop-blur sm:p-8">
+          <h2 className="font-display text-xl font-bold text-zinc-100">What is a Wingdings translator?</h2>
+          <p className="mt-3 text-sm leading-relaxed text-zinc-400">
+            A Wingdings translator converts ordinary English text into Wingdings symbols — and helps you read symbol text back into English. Wingdings itself is not a language with grammar or vocabulary; it is a font in which every keyboard key draws a picture instead of a letter. A Wingdings translator applies that key-to-symbol mapping for you, character by character, so a word like &ldquo;Hello&rdquo; becomes ☟♏●●□ in Wingdings 1.
+          </p>
+          <p className="mt-3 text-sm leading-relaxed text-zinc-400">
+            People reach for a Wingdings translator to make puzzles and classroom worksheets, write game messages — W. D. Gaster speaks in Wingdings in Undertale — and send secret notes that only friends with the chart can read. This Wingdings translator covers all four Microsoft symbol fonts (Wingdings 1, 2, 3 and Webdings), runs entirely in your browser with nothing uploaded, and works alongside the alphabet chart when you need to decode a message symbol by symbol.
+          </p>
+        </section>
+
+        <section aria-label="How to use the Wingdings translator" className="bento-card rounded-3xl border border-zinc-800 bg-zinc-900/70 p-6 shadow-sm backdrop-blur sm:p-8">
+          <h2 className="font-display text-xl font-bold text-zinc-100">How to use the Wingdings translator</h2>
+          <p className="mt-3 text-sm leading-relaxed text-zinc-400">
+            Using the Wingdings translator takes seconds — there is nothing to install and no account to create:
+          </p>
+          <ol className="mt-3 list-decimal space-y-2 pl-5 text-sm leading-relaxed text-zinc-400">
+            <li>Type or paste your text into the Wingdings translator&apos;s input box at the top of this page.</li>
+            <li>Pick a font — the Wingdings translator converts into Wingdings 1, Wingdings 2, Wingdings 3 or Webdings.</li>
+            <li>Watch the symbols appear live: the Wingdings translator converts every character as you type.</li>
+            <li>Hit &ldquo;Copy result&rdquo; and paste your symbols anywhere — chats, bios, documents, posts.</li>
+          </ol>
+          <p className="mt-3 text-sm leading-relaxed text-zinc-400">
+            That is all a Wingdings translator needs: text in, symbols out.
+          </p>
+        </section>
+
+        <section aria-label="English to Wingdings and back" className="bento-card rounded-3xl border border-zinc-800 bg-zinc-900/70 p-6 shadow-sm backdrop-blur sm:p-8">
+          <h2 className="font-display text-xl font-bold text-zinc-100">English to Wingdings — and back to English</h2>
+          <p className="mt-3 text-sm leading-relaxed text-zinc-400">
+            Most people arrive at a Wingdings translator to turn plain English into symbols. The Wingdings translator above does that letter by letter, matching every character to its symbol in the Wingdings font map — full sentences and whole paragraphs included, not just single words.
+          </p>
+          <img
+            src="/images/wingdings-translator-example.svg"
+            alt="Wingdings translator example: the English word Hello converted into Wingdings 1 symbols"
+            width={1200}
+            height={630}
+            loading="lazy"
+            className="mt-4 w-full rounded-2xl border border-zinc-800"
+          />
+          <p className="mt-3 text-sm leading-relaxed text-zinc-400">
+            Reading is the other half of the job. When a friend sends you a row of symbols, this Wingdings translator&apos;s alphabet chart works as the decoder: find each symbol, read off the key that produced it, and the message spells itself out. Fans use exactly this Wingdings translator workflow to read W. D. Gaster&apos;s lines in Undertale. Encode with the Wingdings translator, decode with its chart — the pair covers both directions.
+          </p>
+        </section>
+
+        <section aria-label="Which Wingdings font to use" className="bento-card rounded-3xl border border-zinc-800 bg-zinc-900/70 p-6 shadow-sm backdrop-blur sm:p-8">
+          <h2 className="font-display text-xl font-bold text-zinc-100">Which font should the Wingdings translator use?</h2>
+          <p className="mt-3 text-sm leading-relaxed text-zinc-400">
+            The four fonts are separate alphabets, not versions of one another, and the Wingdings translator handles each one natively. Wingdings 1 is the classic 1990 set — hands, faces, zodiac and office icons — and the one most people picture when they search for a Wingdings translator. Wingdings 2 adds stationery and circled numbers, Wingdings 3 is almost all arrows and keyboard keys, and Webdings is the web-era pictogram font. Not sure which font produced a message you received? Compare mode runs the same text through all four in this Wingdings translator at once.
+          </p>
+        </section>
+
         <section aria-label="History of Wingdings" className="bento-card rounded-3xl border border-zinc-800 bg-zinc-900/70 p-6 shadow-sm backdrop-blur sm:p-8">
           <h2 className="font-display text-xl font-bold text-zinc-100">A short history of Wingdings</h2>
           <p className="mt-3 text-sm leading-relaxed text-zinc-400">
-            Wingdings began life in 1990 as three typefaces drawn by type designers Charles Bigelow and Kris Holmes — <em>Lucida Icons</em>, <em>Lucida Arrows</em> and <em>Lucida Stars</em>. Microsoft licensed the designs and shipped the combined font as Wingdings with Windows 3.1 in 1992, so almost every Windows PC since has carried the symbols. Because each keyboard key maps to a picture, people started using it for puzzles, hidden messages and decoration — some even search for it as a &ldquo;wingding translator&rdquo; or &ldquo;wing ding translator&rdquo;, nicknames that stuck even though the font&rsquo;s official name ends with an S. A famous 1990s urban legend claimed certain letter combinations spelled hidden messages; it was a coincidence of the symbol set, but it made Wingdings notorious and kept it famous long after most fonts are forgotten.
+            Wingdings began life in 1990 as three typefaces drawn by type designers Charles Bigelow and Kris Holmes — <em>Lucida Icons</em>, <em>Lucida Arrows</em> and <em>Lucida Stars</em>. Microsoft licensed the designs and shipped the combined font as Wingdings with Windows 3.1 in 1992, so almost every Windows PC since has carried the symbols. Because each keyboard key maps to a picture, people started using it for puzzles, hidden messages and decoration — some even search for it as a &ldquo;wingding translator&rdquo; or &ldquo;wing ding translator&rdquo;, nicknames that stuck even though the font&rsquo;s official name ends with an S. A famous 1990s urban legend claimed certain letter combinations spelled hidden messages; it was a coincidence of the symbol set, but it made Wingdings notorious and kept it famous long after most fonts are forgotten. That everyday job — turning symbols back into readable text, and plain text into symbols — is exactly what a Wingdings translator is for.
           </p>
         </section>
 
         <section aria-label="About this tool" className="bento-card rounded-3xl border border-zinc-800 bg-zinc-900/70 p-6 shadow-sm backdrop-blur sm:p-8">
-          <h2 className="font-display text-xl font-bold text-zinc-100">Why this translator is different</h2>
+          <h2 className="font-display text-xl font-bold text-zinc-100">Why this Wingdings translator is different</h2>
           <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-relaxed text-zinc-400">
-            <li><strong className="text-zinc-200">Four real converters, not one.</strong> Most tools only do Wingdings 1 — here Wingdings 1, 2, 3 and Webdings each get a full converter with per-variant results.</li>
+            <li><strong className="text-zinc-200">Four real converters, not one.</strong> Most Wingdings translator tools only do Wingdings 1 — this Wingdings translator gives Wingdings 1, 2, 3 and Webdings each a full converter with per-variant results.</li>
             <li><strong className="text-zinc-200">Click-to-copy symbol reference.</strong> Every symbol card copies on click — no static charts you have to retype from.</li>
             <li><strong className="text-zinc-200">Honest conversion.</strong> Unsupported characters are named, not silently swallowed.</li>
             <li><strong className="text-zinc-200">Doubles as a Wingdings decoder.</strong> Need to read symbols instead of writing them? The alphabet chart works as a decoder — look up any symbol to find its letter.</li>
@@ -122,6 +174,7 @@ export default function Home() {
         <nav aria-label="More translators" className="bento-card rounded-3xl border border-zinc-800 bg-zinc-900/70 p-6 shadow-sm backdrop-blur sm:p-8">
           <h2 className="font-display text-xl font-bold text-zinc-100">More Wingdings tools</h2>
           <ul className="mt-3 grid gap-2 text-sm sm:grid-cols-2">
+            <li><Link href="/wingdings-image-translator/" className="font-semibold text-indigo-400 hover:underline">Wingdings image translator</Link><span className="text-zinc-400"> — decode symbols from a screenshot or photo</span></li>
             <li><Link href="/gaster-translator/" className="font-semibold text-indigo-400 hover:underline">Gaster translator</Link><span className="text-zinc-400"> — decode W. D. Gaster&apos;s Undertale messages</span></li>
             <li><Link href="/wingdings-alphabet-chart/" className="font-semibold text-indigo-400 hover:underline">Wingdings alphabet chart</Link><span className="text-zinc-400"> — searchable symbols, click to copy</span></li>
             <li><Link href="/wingdings-2-translator/" className="font-semibold text-indigo-400 hover:underline">Wingdings 2 translator</Link><span className="text-zinc-400"> — stationery &amp; ornament symbols</span></li>

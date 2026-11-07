@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/wingdings-2-translator`, lastModified, changeFrequency: "monthly", priority: 0.8 },
     { url: `${SITE_URL}/wingdings-3-translator`, lastModified, changeFrequency: "monthly", priority: 0.8 },
     { url: `${SITE_URL}/webdings-translator`, lastModified, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${SITE_URL}/wingdings-image-translator`, lastModified, changeFrequency: "monthly", priority: 0.8 },
     { url: `${SITE_URL}/how-to-write-in-wingdings`, lastModified, changeFrequency: "monthly", priority: 0.7 },
     { url: `${SITE_URL}/about`, lastModified, changeFrequency: "monthly", priority: 0.6 },
     { url: `${SITE_URL}/privacy`, lastModified, changeFrequency: "yearly", priority: 0.3 },
