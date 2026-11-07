@@ -17,6 +17,7 @@ export default function Footer() {
           <p className="text-sm font-bold text-zinc-100">Pages</p>
           <ul className="mt-2 space-y-1.5 text-sm">
             <li><Link className="text-zinc-400 hover:text-indigo-400" href="/">Translator</Link></li>
+            <li><Link className="text-zinc-400 hover:text-indigo-400" href="/wingdings-image-translator/">Image translator</Link></li>
             <li><Link className="text-zinc-400 hover:text-indigo-400" href="/gaster-translator/">Gaster translator</Link></li>
             <li><Link className="text-zinc-400 hover:text-indigo-400" href="/wingdings-alphabet-chart/">Alphabet chart</Link></li>
             <li><Link className="text-zinc-400 hover:text-indigo-400" href="/wingdings-2-translator/">Wingdings 2 translator</Link></li>

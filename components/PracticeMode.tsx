@@ -83,7 +83,7 @@ export default function PracticeMode() {
       <section aria-label="Wingdings practice mode" className="scroll-mt-24">
         <h2 className="text-2xl font-bold tracking-tight text-zinc-100">Practice mode</h2>
         <p className="mt-2 max-w-2xl text-sm text-zinc-400">
-          Learning Wingdings for puzzles, worksheets or Undertale lore? Quiz yourself: we show a
+          Learning Wingdings for puzzles, worksheets or Undertale lore? Quiz yourself with the Wingdings translator: we show a
           symbol, you pick the key that produces it. Explanations appear after every answer.
         </p>
         <div className="mt-4 rounded-2xl border border-zinc-800 bg-zinc-900 p-6 shadow-sm" aria-busy="true">
@@ -97,7 +97,7 @@ export default function PracticeMode() {
     <section aria-label="Wingdings practice mode" className="scroll-mt-24">
       <h2 className="text-2xl font-bold tracking-tight text-zinc-100">Practice mode</h2>
       <p className="mt-2 max-w-2xl text-sm text-zinc-400">
-        Learning Wingdings for puzzles, worksheets or Undertale lore? Quiz yourself: we show a
+        Learning Wingdings for puzzles, worksheets or Undertale lore? Quiz yourself with the Wingdings translator: we show a
         symbol, you pick the key that produces it. Explanations appear after every answer.
       </p>
 
