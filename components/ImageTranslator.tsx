@@ -538,7 +538,7 @@ export default function ImageTranslator() {
           id="img-font"
           value={variant}
           onChange={(e) => onVariantChange(e.target.value as VariantId)}
-          className="rounded-xl border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-100 focus:border-indigo-500 focus:outline-none"
+          className="rounded-xl border border-zinc-700 bg-black/60 px-3 py-2 text-sm text-zinc-100 focus:border-indigo-500 focus:outline-none"
         >
           {VARIANT_OPTIONS.map((o) => (
             <option key={o.id} value={o.id}>
@@ -570,7 +570,7 @@ export default function ImageTranslator() {
         className={`mt-5 cursor-pointer rounded-2xl border-2 border-dashed px-6 py-10 text-center transition ${
           dragOver
             ? "border-indigo-400 bg-indigo-500/10"
-            : "border-zinc-700 bg-zinc-950/60 hover:border-indigo-500/60"
+            : "border-zinc-700 bg-black/60 hover:border-indigo-500/60"
         }`}
       >
         <input
@@ -627,7 +627,7 @@ export default function ImageTranslator() {
             value={result}
             onChange={(e) => setResult(e.target.value)}
             rows={Math.min(8, Math.max(2, result.split("\n").length))}
-            className="mt-3 w-full rounded-xl border border-zinc-700 bg-zinc-950 px-4 py-3 text-base text-zinc-100 focus:border-indigo-500 focus:outline-none"
+            className="mt-3 w-full rounded-xl border border-zinc-700 bg-black/60 px-4 py-3 text-base text-zinc-100 focus:border-indigo-500 focus:outline-none"
           />
           {stats && (
             <p className="mt-2 text-sm text-zinc-400">
